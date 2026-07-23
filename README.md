@@ -102,7 +102,7 @@ independently verifiable source, build, and binary chain.
 | Phase | Status |
 |---|---|
 | Phase 1 — read-only repository inventory | Completed |
-| Phase 2 — dependency provenance investigation | In progress |
+| Phase 2 — dependency provenance investigation | Completed |
 | Build A — controlled reference build | Pending |
 | Build B — independent verification build | Pending |
 | Artifact comparison and `diffoscope` analysis | Pending |
@@ -125,6 +125,10 @@ During Phase 1:
 Full report:
 
 [Phase 1: IVXV Build Investigation](reports/build-investigation-en.md)
+
+Phase 2 report:
+
+[Phase 2: Dependency Provenance](reports/dependency-provenance.md)
 
 ### Main findings
 

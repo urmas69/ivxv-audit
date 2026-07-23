@@ -8,24 +8,30 @@ Updated: 2026-07-23 UTC
 - Confirmed the IVXV evidence repository starts at commit
   `2785872f84dffb56bbecc41b096a7ee0f2876e64` with a clean worktree.
 - Preserved the full Phase 2 request at `phase2-codex-prompt.md`.
+- Completed repository/ref and related-repository provenance.
+- Completed the full published `common/external` history investigation.
+- Completed Go, Gradle/Maven, Python, and JavaScript manifests.
+- Completed ETCD/database and OS build-environment investigations.
+- Created and validated the 380-row canonical dependency manifest.
+- Completed all 16 required report sections.
 
 ## Current work
 
-- Repository and remote provenance.
-- Parallel Go, Java/Gradle, Python, JavaScript, `common/external`, ETCD, OS,
-  and release-artifact investigations.
+- Final clean-state, secret, and Git validation; final commit and push.
 
 ## Remaining work
 
-- Reconcile ecosystem manifests into the canonical CSV.
-- Complete the report and unresolved-question register.
 - Verify source and audit repository state.
 - Commit and push all completed Phase 2 work.
-- Mark Phase 2 complete in `README.md` only after validation.
 
 ## Failed approaches
 
-- None recorded yet.
+- The audit host has no Go executable. Published `h1:` sums were retained and
+  proxy objects were independently hashed, but `go mod verify` was not run.
+- The Go proxy returned 404 for exact `tivi.io/core` pseudo-version endpoints;
+  its reported vanity VCS hostname did not resolve.
+- Selected official/mirror/fork paths for database artifacts returned 404.
+  These are scoped timestamped negatives, not proof of universal absence.
 
 ## Important paths
 
@@ -42,8 +48,10 @@ Updated: 2026-07-23 UTC
 
 ## Unresolved blockers
 
-- None recorded yet.
+- Exact `tivi.io/core` pseudo-version, external dependency repository, ETCD
+  payload, offline cache selections, JavaScript bundle, and OS package snapshot
+  are not reconstructable from published information.
 
 ## Last successful commit
 
-- `d693559` — Phase 1 baseline; no Phase 2 commit yet.
+- `4919070` — Add Go dependency provenance manifest.
