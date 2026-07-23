@@ -1,0 +1,13 @@
+UTC timestamp: 2026-07-23T12:29:31Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: git -C /home/audit/audit/ivxv show -s --format=fuller 2785872f84dffb56bbecc41b096a7ee0f2876e64
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 0
+--- combined stdout and stderr ---
+commit 2785872f84dffb56bbecc41b096a7ee0f2876e64
+Author:     Sven Heiberg <sven@ivotingcentre.ee>
+AuthorDate: Fri Oct 3 12:55:32 2025 +0000
+Commit:     Sven Heiberg <sven@ivotingcentre.ee>
+CommitDate: Fri Oct 3 12:55:32 2025 +0000
+
+    KOV2025:

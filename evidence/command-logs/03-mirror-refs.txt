@@ -1,0 +1,17 @@
+UTC timestamp: 2026-07-23T12:29:16Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: git ls-remote --symref https://github.com/urmas69/ivxv.git
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 0
+--- combined stdout and stderr ---
+ref: refs/heads/published	HEAD
+2785872f84dffb56bbecc41b096a7ee0f2876e64	HEAD
+2785872f84dffb56bbecc41b096a7ee0f2876e64	refs/heads/published
+7c3b9902471c92e9cfd20f10f9226ae5f8299de2	refs/tags/v1.10.4-KOV2025
+2785872f84dffb56bbecc41b096a7ee0f2876e64	refs/tags/v1.10.4-KOV2025^{}
+64d6ef255df947a3c7aa0fa52bd18b6f1408fdca	refs/tags/v1.7.7-KOV2021
+49160800174473502e0bee4c8fa87b7ec75bd6f6	refs/tags/v1.7.7-KOV2021^{}
+cfacf6cda888aa46c809171acb106ee400b61509	refs/tags/v1.8.2-RK2023
+8a432f7b8d4ed0bb0871f005f650c13bf3250766	refs/tags/v1.8.2-RK2023^{}
+6d572ede7626bfb6bad690d6374394d53ff2c701	refs/tags/v1.9.10-EP2024
+023e072ad22b70f56b0b174789ea4ea349753ee6	refs/tags/v1.9.10-EP2024^{}

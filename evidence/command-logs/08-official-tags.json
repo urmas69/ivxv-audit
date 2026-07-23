@@ -1,0 +1,48 @@
+UTC timestamp: 2026-07-23T12:29:32Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: curl -fsS -L -H Accept:\ application/vnd.github+json https://api.github.com/repos/valimised/ivxv/tags\?per_page=100
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 0
+--- combined stdout and stderr ---
+[
+  {
+    "name": "v1.10.4-KOV2025",
+    "zipball_url": "https://api.github.com/repos/valimised/ivxv/zipball/refs/tags/v1.10.4-KOV2025",
+    "tarball_url": "https://api.github.com/repos/valimised/ivxv/tarball/refs/tags/v1.10.4-KOV2025",
+    "commit": {
+      "sha": "2785872f84dffb56bbecc41b096a7ee0f2876e64",
+      "url": "https://api.github.com/repos/valimised/ivxv/commits/2785872f84dffb56bbecc41b096a7ee0f2876e64"
+    },
+    "node_id": "MDM6UmVmMTAyNDU3ODEzOnJlZnMvdGFncy92MS4xMC40LUtPVjIwMjU="
+  },
+  {
+    "name": "v1.9.10-EP2024",
+    "zipball_url": "https://api.github.com/repos/valimised/ivxv/zipball/refs/tags/v1.9.10-EP2024",
+    "tarball_url": "https://api.github.com/repos/valimised/ivxv/tarball/refs/tags/v1.9.10-EP2024",
+    "commit": {
+      "sha": "023e072ad22b70f56b0b174789ea4ea349753ee6",
+      "url": "https://api.github.com/repos/valimised/ivxv/commits/023e072ad22b70f56b0b174789ea4ea349753ee6"
+    },
+    "node_id": "MDM6UmVmMTAyNDU3ODEzOnJlZnMvdGFncy92MS45LjEwLUVQMjAyNA=="
+  },
+  {
+    "name": "v1.8.2-RK2023",
+    "zipball_url": "https://api.github.com/repos/valimised/ivxv/zipball/refs/tags/v1.8.2-RK2023",
+    "tarball_url": "https://api.github.com/repos/valimised/ivxv/tarball/refs/tags/v1.8.2-RK2023",
+    "commit": {
+      "sha": "8a432f7b8d4ed0bb0871f005f650c13bf3250766",
+      "url": "https://api.github.com/repos/valimised/ivxv/commits/8a432f7b8d4ed0bb0871f005f650c13bf3250766"
+    },
+    "node_id": "MDM6UmVmMTAyNDU3ODEzOnJlZnMvdGFncy92MS44LjItUksyMDIz"
+  },
+  {
+    "name": "v1.7.7-KOV2021",
+    "zipball_url": "https://api.github.com/repos/valimised/ivxv/zipball/refs/tags/v1.7.7-KOV2021",
+    "tarball_url": "https://api.github.com/repos/valimised/ivxv/tarball/refs/tags/v1.7.7-KOV2021",
+    "commit": {
+      "sha": "49160800174473502e0bee4c8fa87b7ec75bd6f6",
+      "url": "https://api.github.com/repos/valimised/ivxv/commits/49160800174473502e0bee4c8fa87b7ec75bd6f6"
+    },
+    "node_id": "MDM6UmVmMTAyNDU3ODEzOnJlZnMvdGFncy92MS43LjctS09WMjAyMQ=="
+  }
+]

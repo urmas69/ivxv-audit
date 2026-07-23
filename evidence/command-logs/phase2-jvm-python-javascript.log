@@ -1,0 +1,63 @@
+2026-07-23T12:33:01Z
+cwd=/home/audit/audit/ivxv-audit
+environment: uname, Python, Node, Java availability
+Linux ivxv-audit 6.8.0-134-generic #134~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Jun 30 14:05:04 UTC  x86_64 x86_64 x86_64 GNU/Linux
+Python 3.10.12
+v24.18.0
+/bin/bash: line 1: java: command not found
+exit_status_java=127
+command: git -C /home/audit/audit/ivxv rev-parse HEAD; git -C /home/audit/audit/ivxv status --porcelain=v1
+2785872f84dffb56bbecc41b096a7ee0f2876e64
+exit_status=0
+command: git ls-tree fixed common/external
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	.gitignore
+exit_status=0
+command: python metadata scripts (arguments recorded in script-generated retrieval metadata and ecosystem CSV)
+exit_status=0
+command: sha256sum generated ecosystem evidence
+57679ccbc8c6d5f410a0b57b2c4573ee33d49b4d5fdbd6f700a423076e1eca7f  evidence/dependency-manifests/java/graphs/ch.qos.cal10n.cal10n-api-0.8.1.depsdev.json
+f87d6ae1ac2999a6f49c0cd8cb1d6b1720916164c50082519b0c373b8ef016f7  evidence/dependency-manifests/java/graphs/ch.qos.logback.contrib.logback-jackson-0.1.5.depsdev.json
+533ad92c37e35e90b6fa6e54f641759d625b94c0dcfcc43400db13da43b157fb  evidence/dependency-manifests/java/graphs/ch.qos.logback.contrib.logback-json-classic-0.1.5.depsdev.json
+b5f6043fcb2fe21dab9bdf2c15c9daa350ca4b93b4ce03706bf3d8f9034249cd  evidence/dependency-manifests/java/graphs/ch.qos.logback.logback-classic-1.5.12.depsdev.json
+80360f9978a89494ade66e3d2b62d88ba0a92a29e45a9c940f792ab0ff2d3fec  evidence/dependency-manifests/java/graphs/com.fasterxml.jackson.core.jackson-databind-2.18.1.depsdev.json
+c54a850448dcabad2e88534530d7841ff66afbe641cfb21047d4aed95e2c95a8  evidence/dependency-manifests/java/graphs/junit.junit-4.13.2.depsdev.json
+d136467501b5985aaf9f896b0a647970a6537008031a5091843f79dc78fd96bd  evidence/dependency-manifests/java/graphs/maven-resolved-graphs.csv
+93fb955f25f0752699c3afa23524e97ac6592aff77ccda889ff7f1c2f6449078  evidence/dependency-manifests/java/graphs/org.apache.commons.commons-collections4-4.4.depsdev.json
+ab5711dc270d7e49d2309bbd1f5a42e7dfc1093db470c17c7a5113d02ac07c14  evidence/dependency-manifests/java/graphs/org.apache.pdfbox.pdfbox-3.0.3.depsdev.json
+13f0f118678a7657fe19b9936c6b00e8d5c6ce7b71d7712dbf9d83a06d0cabaa  evidence/dependency-manifests/java/graphs/org.bouncycastle.bcpkix-jdk15on-1.70.depsdev.json
+c167dc58a13fba718625f2fb700ea547d0cff74810408b8c48c9abc43a140139  evidence/dependency-manifests/java/graphs/org.bouncycastle.bcprov-jdk15on-1.70.depsdev.json
+7551385d628df2f8818043a9c803bbfc5a581739fe7f5f47a71c4e1ae8ba68a2  evidence/dependency-manifests/java/graphs/org.digidoc4j.digidoc4j-5.3.1.depsdev.json
+e751513b0f087e13df1c876419f173ea878aca6f817d615996165e850377377b  evidence/dependency-manifests/java/graphs/org.glassfish.jaxb.jaxb-runtime-4.0.5.depsdev.json
+a4af5b59ac28910bd3f66518dae3f8b85dd74d9c2432df2311e5f4fcb35bfaa6  evidence/dependency-manifests/java/graphs/org.hamcrest.hamcrest-library-3.0.depsdev.json
+6bd4bc51f3a373be220ab92ed6668d40519bff9ef97b2c9b000de8c368fc32d8  evidence/dependency-manifests/java/graphs/org.mockito.mockito-core-5.14.2.depsdev.json
+e3643d52565ff25282aa9e4bbc2564cf8c39169c5bfdcbbd6a4e28206cbcee92  evidence/dependency-manifests/java/graphs/org.yaml.snakeyaml-2.3.depsdev.json
+516c93866ee8f0b9824613a4ae1418dfdfe78d5e76281d57eaad61ef2dc866ad  evidence/dependency-manifests/java/graphs/pl.pragmatists.JUnitParams-1.1.1.depsdev.json
+21a2e96aa5e73c38515b3838b054fc78d2aac6cbce9fb05510732cc632559272  evidence/dependency-manifests/java/graphs/retrieval.json
+9ab14d8c8e7b5a29a6fb0f6cd040865a6c02e7728363b5d343c0129e1835961f  evidence/dependency-manifests/java/maven-direct-dependencies.csv
+b960e14d384297269967502611cfc4b24abc1f9794fc6b8e4e8a1b6ef3e08c5a  evidence/dependency-manifests/javascript/javascript-dependencies.csv
+400ef4919ae44d952e51b6b61f4bfb0ac22da3e1ccb8ea00a6884d2e7ccf05ea  evidence/dependency-manifests/python/python-dependencies.csv
+4c0dec7bda93b4e4ce5001da19c1004b3531b34832bbe7fba2f0298b9a02d064  evidence/hashes/gradle/gradle-8.11-bin.txt
+dd98c171e1f54f2842adffb7e9125927b0acef4531cbc3586e60100b54ff840e  evidence/hashes/java/maven-direct-artifacts.csv
+edb76891cdad6311c87f92f05c93d4bf0602a1828ba6e1b631af4c7a94d053b8  evidence/hashes/java/retrieval.json
+d5dc29b66d20b09d6585d8a19d384d2acbe784073cd5d8de82f440c3c79e19b2  evidence/hashes/javascript/@fortawesome__fontawesome-free-6.7.2.json
+dcf57da660bdddd193f003d866f7b66c4ee89a13dd98135722370322aa45d649  evidence/hashes/javascript/bootstrap-3.4.1.json
+4f84ccb3a46fa6392c726a0a5bc8feac0554659936212e78a82e7da9dfd31e37  evidence/hashes/javascript/datatables.net-2.3.2.json
+1074b92b17e586198ed4a1686fcf326d3c18da296c685c0a1a26ce4f21b95123  evidence/hashes/javascript/jquery-3.7.1.json
+a73bb6736d658e8e0ea5e0336f5cfa8d2dd091d6eb5331319ddff4c45920dd78  evidence/hashes/javascript/metismenu-1.1.3.json
+21ba65214f4921c31b312dcfe1e40f140002653a653941f62b0b469f5265dd7e  evidence/hashes/javascript/npm-artifacts.csv
+34472720e547bdcfcd589a674087b85d52396934a899d0b69f8dd69932570f5f  evidence/hashes/javascript/retrieval.json
+0b43de0feee4b2c0d1cfe4220614b4ef3ad74f8099d50381e825bafa8a1d3422  evidence/hashes/javascript/startbootstrap-sb-admin-2-3.3.7.json
+783ed1c834b9efd24602b8a74b8f84e511e0e5c21d4cef744850c7d34d6786ab  evidence/hashes/python/Jinja2-3.1.4.json
+b0c0c215b80dbd5afc17cf6962b43a64c8234b468fb7185c56fa4174f0b1c648  evidence/hashes/python/PyYAML-6.0.2.json
+dccaf602911db117e027a454af1502c4970117c6f3ff6813b22bb344f5e385da  evidence/hashes/python/bottle-0.13.2.json
+aedfede8a53188bb77f91759db52bf482efe4934cb6e77879cfd96fa921c8801  evidence/hashes/python/docopt-0.6.2.json
+19787302a193d4ed7010286b8750bec8a7ec486bbba85aaf1b283acaf7110996  evidence/hashes/python/fasteners-0.19.json
+d3dbd3231e74a925ede39a13da820cd72d05d67b4d1af3f1c896c95b42794f9d  evidence/hashes/python/jsonschema-4.23.0.json
+bb7213de33f95d006c8f607dc34198d3d64e80887ab6eb10d1eff25635092ccb  evidence/hashes/python/pyOpenSSL-24.2.1.json
+4292ba3029ec5702447863e036d03f06d28cd02c66df52d9c8bc323cb15b96d9  evidence/hashes/python/pypi-release-files.csv
+a380cde4e6efad8411d9435ec2819684ee99f9d0dab4c5889937cfc8f44aa637  evidence/hashes/python/python-crontab-3.3.0.json
+8cdd6bf9fcc43d769206565d13ff9088a917a922f196241448a763b36f9e18f8  evidence/hashes/python/python-dateutil-2.9.0.json
+824b5befe1697073557d36a209d7635520484007c06ab40c5053ebef9aa42883  evidence/hashes/python/python-debian-0.1.49.json
+c4a6bec702eb39a0085d5879420d524edf4b9355b1e4001bd4ecfaa8a0cf1ee8  evidence/hashes/python/retrieval.json
+de1b569e3a1af8fba2569e89cfbf400600f5ce979fcffb45b4cbc7bff7c28e7a  evidence/hashes/python/schematics-2.1.1.json
+exit_status=0
