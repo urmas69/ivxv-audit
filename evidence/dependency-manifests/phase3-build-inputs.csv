@@ -1,0 +1,8 @@
+track,ecosystem,name,version,required_by,source_or_path,sha256,status,evidence,notes
+strict,git,IVXV source,2785872f84dffb56bbecc41b096a7ee0f2876e64,all,/tmp/ivxv-phase3-strict-1784814341,,available,evidence/build-a/environment.txt,fixed detached checkout
+strict,toolchain,make,unknown,all,OS package,,unavailable,evidence/command-logs/phase3-strict-make.txt,entry point could not execute
+strict,toolchain,go,1.23 required,Go components,OS package,,unavailable,evidence/build-a/environment.txt,not installed
+strict,toolchain,java,21 required,Java components,OS package,,unavailable,evidence/build-a/environment.txt,not installed
+strict,toolchain,dpkg-buildpackage,unknown,Debian packages,OS package,,unavailable,evidence/command-logs/phase3-reconstruction-package.txt,not installed
+reconstructed,git,IVXV source,2785872f84dffb56bbecc41b096a7ee0f2876e64,all,/home/audit/audit/ivxv-reconstructed,,available,evidence/command-logs/phase3-reconstructed-patch.txt,fixed checkout plus explicit patch
+reconstructed,patch,local tivi.io/core replacement,experimental,Go components,patches/reconstruction/0001-use-published-local-core.patch,,applied,evidence/command-logs/phase3-reconstructed-patch.txt,not equivalent to KOV2025 proven

@@ -103,6 +103,7 @@ independently verifiable source, build, and binary chain.
 |---|---|
 | Phase 1 — read-only repository inventory | Completed |
 | Phase 2 — dependency provenance investigation | Completed |
+| Phase 3 — clean-room build and controlled reconstruction | Completed |
 | Build A — controlled reference build | Pending |
 | Build B — independent verification build | Pending |
 | Artifact comparison and `diffoscope` analysis | Pending |
@@ -129,6 +130,12 @@ Full report:
 Phase 2 report:
 
 [Phase 2: Dependency Provenance](reports/dependency-provenance.md)
+
+Phase 3 reports:
+
+- [Strict clean-room build](reports/clean-room-build.md)
+- [Controlled reconstruction](reports/reconstructed-build.md)
+- [Test execution](reports/test-execution.md)
 
 ### Main findings
 
