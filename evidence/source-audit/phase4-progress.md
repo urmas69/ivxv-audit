@@ -1,13 +1,13 @@
 # Phase 4 progress
 
-Completed: fixed-source checkout verification; architecture, trust-boundary, entry-point, data-flow and component coverage inventories; collector/voting, lifecycle/anonymization, cryptography, verification/auditor, storage/admin/configuration/logging, parser and test-gap reports; deterministic findings CSV/JSON and unresolved-lead register.
+Completed substantive workstream: bounded ZIP parser (`common/collector/zip`) source trace, `go vet ./zip`, `go test ./zip`, and review evidence. Preliminary inventories and reports exist for the other areas but are not completed reviews.
 
-Current: substantive source tracing and isolated parser/static-analysis execution; Phase 4 remains In progress.
+Current: collector/parser execution and partial auth/qualification/storage trace. `safereader` is blocked by missing generated `LimitExceededError`; `auth`, OCSP and TSP remain in progress; network server/application paths are not yet reviewed.
 
 Remaining: Phase 5 isolated fixtures should validate revocation ordering, anonymization linkage absence, malformed signed containers/proofs, certificate/OCSP failures and storage retry/concurrency. These are explicit limitations, not silently treated as passed.
 
 Scripts: `scripts/source-audit/generate_phase4_evidence.sh`.
 
-Last successful commit: 5101b00 (reopened Phase 4 and corrected preliminary coverage).
+Last successful commit: 1372171; collector/parser workstream pending commit.
 
 Validation completed UTC 2026-07-23T15:27:44Z

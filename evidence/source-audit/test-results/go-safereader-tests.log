@@ -1,10 +1,5 @@
-start=2026-07-23T15:57:43Z
-workdir=/home/audit/audit/ivxv/common/collector
-source=/home/audit/audit/ivxv
-go version go1.23.12 linux/amd64
 # ivxv.ee/common/collector/safereader [ivxv.ee/common/collector/safereader.test]
 safereader/reader.go:12:9: undefined: LimitExceededError
 safereader/reader.go:20:6: undefined: LimitExceededError
 FAIL	ivxv.ee/common/collector/safereader [build failed]
-ok  	ivxv.ee/common/collector/zip	(cached)
 FAIL

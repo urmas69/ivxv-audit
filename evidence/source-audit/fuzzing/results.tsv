@@ -1,1 +1,1 @@
-target=common/collector/zip	status=1	duration=10s
+target=common/collector/zip	module=/home/audit/audit/ivxv/common/collector	status=4	started=no	reason=no-fuzz-target

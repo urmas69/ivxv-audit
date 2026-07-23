@@ -1,0 +1,3 @@
+tool	package	module	start	end	status	started
+ go-vet	zip	/home/audit/audit/ivxv/common/collector	2026-07-23T15:58:13Z	2026-07-23T15:58:13Z	0	yes
+ go-vet	safereader	/home/audit/audit/ivxv/common/collector	2026-07-23T15:58:13Z	2026-07-23T15:58:13Z	1	yes

@@ -14,3 +14,8 @@ storage	Go	storage	security-sensitive component	storage/**	storage/**/*_test*	no
 verification	Go	verification	security-sensitive component	verification/**	verification/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
 voting	Go	voting	security-sensitive component	voting/**	voting/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
 webeid	Go	webeid	security-sensitive component	webeid/**	webeid/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+common/collector/zip	Go	library	bounded ZIP parser	common/collector/zip/zip.go; zip_test.go	zip_test.go:148-430	reviewed	manual source trace; go vet and go test passed		
+common/collector/safereader	Go	library	bounded stream reader	common/collector/safereader/reader.go; reader_test.go	reader_test.go:17-108	in-progress	source traced; compile blocked by missing generated LimitExceededError		LEAD-004
+common/collector/auth	Go	library	identity authenticator dispatch	common/collector/auth/auth.go	none isolated	in-progress	Configure/Verify/Data traced; backend paths pending		
+common/collector/q11n/ocsp	Go	library	OCSP qualification	common/collector/q11n/ocsp/ocsp.go; types.go	ocsp_test.go	in-progress	Qualify/error path traced; live fixture pending		
+common/collector/q11n/tsp	Go	library	TSP qualification	common/collector/q11n/tsp/tsp.go; cms.go	tsp_test.go	in-progress	Qualify/error path traced; live fixture pending		

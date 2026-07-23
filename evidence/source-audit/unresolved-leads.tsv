@@ -2,3 +2,4 @@ lead_id\ttitle\tstatus\treason\tsource\tnext_step
 LEAD-001\tPyYAML unsafe constructors\tunresolved\tReachability depends on signed-container trust boundary\tcollector-admin/ivxv_admin/command_file.py:408-424\tisolated malicious-tag fixture
 LEAD-002\tNaive datetime comparisons in admin daemon\tunresolved\tTimezone behavior depends on deployment locale and input format\tcollector-admin/ivxv_admin/agent_daemon.py:143-149\tUTC/offset fixture tests
 LEAD-003\tAnonymization residual linkage in reports\tunresolved\tReporter writes voter IDs before anonymization; final output requires fixture trace\tprocessor/src/main/java/ee/ivxv/processor/tool/RevokeAndAnonymizeTool.java:191-203\tsynthetic ballot-box audit test
+LEAD-004\tMissing generated LimitExceededError blocks safereader tests\tblocked-build\treader.go references generated type absent from fixed checkout\tcommon/collector/safereader/reader.go:10-20\treconstruct generator output in isolated checkout and rerun
