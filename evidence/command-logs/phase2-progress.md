@@ -17,12 +17,12 @@ Updated: 2026-07-23 UTC
 
 ## Current work
 
-- Final clean-state, secret, and Git validation; final commit and push.
+- Phase 2 complete.
 
 ## Remaining work
 
-- Verify source and audit repository state.
-- Commit and push all completed Phase 2 work.
+- Build A, Build B, artifact comparison, and the final audit report remain
+  pending and are outside Phase 2.
 
 ## Failed approaches
 
@@ -54,4 +54,5 @@ Updated: 2026-07-23 UTC
 
 ## Last successful commit
 
-- `4919070` — Add Go dependency provenance manifest.
+- `fb6f500` — Complete Phase 2 dependency provenance report (pushed to
+  `origin/phase-2`).
