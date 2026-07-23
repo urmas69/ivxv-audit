@@ -1,0 +1,457 @@
+timestamp_utc=2026-07-23T12:32:57Z
+cwd=/home/audit/audit/ivxv-audit
+command=scripts/phase2-related-repositories.sh
+git_version=git version 2.34.1
+curl_version=curl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8 libidn2/2.3.2 libpsl/0.21.0 (+libidn2/2.3.2) libssh/0.9.6/openssl/zlib nghttp2/1.43.0 librtmp/2.3 OpenLDAP/2.5.20
+jq_version=jq-1.6
+
+[git ls-remote --symref https://github.com/valimised/ivxv.git]
+ref: refs/heads/published	HEAD
+2785872f84dffb56bbecc41b096a7ee0f2876e64	HEAD
+2785872f84dffb56bbecc41b096a7ee0f2876e64	refs/heads/published
+c41b2d5d7c4962fc3750491b03d4cc8e3256e576	refs/pull/10/head
+02bfa07e419ac56f661e3222a4a0f51faa9888c7	refs/pull/11/head
+f75772d4e38af0508348dfdf0c15cb1c2265bb85	refs/pull/12/head
+45ba5c32acedf0dab8af6be6ab3d9501351e8e90	refs/pull/13/head
+0ad701963f6fa26f1bbc821753123ef72720cee0	refs/pull/14/head
+a4274de1a3301acc6d85c5adcbcee53384e1326d	refs/pull/4/head
+0a33af4a0c80650c47caba5c3ec16d638146a23a	refs/pull/5/head
+93f1cf5a3c2f9de33a4a31dec1c36387ff631a56	refs/pull/6/head
+45456370882cd2058a8f5d2c4aec5ba60130abbf	refs/pull/9/head
+7c3b9902471c92e9cfd20f10f9226ae5f8299de2	refs/tags/v1.10.4-KOV2025
+2785872f84dffb56bbecc41b096a7ee0f2876e64	refs/tags/v1.10.4-KOV2025^{}
+64d6ef255df947a3c7aa0fa52bd18b6f1408fdca	refs/tags/v1.7.7-KOV2021
+49160800174473502e0bee4c8fa87b7ec75bd6f6	refs/tags/v1.7.7-KOV2021^{}
+cfacf6cda888aa46c809171acb106ee400b61509	refs/tags/v1.8.2-RK2023
+8a432f7b8d4ed0bb0871f005f650c13bf3250766	refs/tags/v1.8.2-RK2023^{}
+6d572ede7626bfb6bad690d6374394d53ff2c701	refs/tags/v1.9.10-EP2024
+023e072ad22b70f56b0b174789ea4ea349753ee6	refs/tags/v1.9.10-EP2024^{}
+
+[git ls-remote --symref https://github.com/urmas69/ivxv.git]
+ref: refs/heads/published	HEAD
+2785872f84dffb56bbecc41b096a7ee0f2876e64	HEAD
+2785872f84dffb56bbecc41b096a7ee0f2876e64	refs/heads/published
+7c3b9902471c92e9cfd20f10f9226ae5f8299de2	refs/tags/v1.10.4-KOV2025
+2785872f84dffb56bbecc41b096a7ee0f2876e64	refs/tags/v1.10.4-KOV2025^{}
+64d6ef255df947a3c7aa0fa52bd18b6f1408fdca	refs/tags/v1.7.7-KOV2021
+49160800174473502e0bee4c8fa87b7ec75bd6f6	refs/tags/v1.7.7-KOV2021^{}
+cfacf6cda888aa46c809171acb106ee400b61509	refs/tags/v1.8.2-RK2023
+8a432f7b8d4ed0bb0871f005f650c13bf3250766	refs/tags/v1.8.2-RK2023^{}
+6d572ede7626bfb6bad690d6374394d53ff2c701	refs/tags/v1.9.10-EP2024
+023e072ad22b70f56b0b174789ea4ea349753ee6	refs/tags/v1.9.10-EP2024^{}
+
+[GET https://api.github.com/orgs/valimised/repos?per_page=100]
+[
+  {
+    "archived": false,
+    "clone_url": "https://github.com/valimised/crypto.git",
+    "default_branch": "published",
+    "description": null,
+    "full_name": "valimised/crypto"
+  },
+  {
+    "archived": true,
+    "clone_url": "https://github.com/valimised/evalimine.git",
+    "default_branch": "master",
+    "description": "e-hääletamise tarkvara",
+    "full_name": "valimised/evalimine"
+  },
+  {
+    "archived": false,
+    "clone_url": "https://github.com/valimised/intcheck.git",
+    "default_branch": "published",
+    "description": "Integrity-checks for dir-tree",
+    "full_name": "valimised/intcheck"
+  },
+  {
+    "archived": false,
+    "clone_url": "https://github.com/valimised/ios-ivotingverification.git",
+    "default_branch": "published",
+    "description": "iOS based vote verification application for Estonian I-voting system",
+    "full_name": "valimised/ios-ivotingverification"
+  },
+  {
+    "archived": false,
+    "clone_url": "https://github.com/valimised/ivotingverification.git",
+    "default_branch": "published",
+    "description": "Android based vote verification application for Estonian I-voting system",
+    "full_name": "valimised/ivotingverification"
+  },
+  {
+    "archived": false,
+    "clone_url": "https://github.com/valimised/ivxv.git",
+    "default_branch": "published",
+    "description": "IVXV online voting system",
+    "full_name": "valimised/ivxv"
+  },
+  {
+    "archived": false,
+    "clone_url": "https://github.com/valimised/ivxv-mixnet-adapter.git",
+    "default_branch": "master",
+    "description": "Tools to use Verificatum mixnet and IVXV together",
+    "full_name": "valimised/ivxv-mixnet-adapter"
+  },
+  {
+    "archived": true,
+    "clone_url": "https://github.com/valimised/wp-ivotingverification.git",
+    "default_branch": "master",
+    "description": "Vote verification application for Estonian i-voting system, Windows Phone",
+    "full_name": "valimised/wp-ivotingverification"
+  }
+]
+
+[GET https://api.github.com/repos/valimised/ivxv/releases?per_page=100]
+[]
+
+[GET https://api.github.com/repos/valimised/ivxv/tags?per_page=100]
+[
+  {
+    "commit": {
+      "sha": "2785872f84dffb56bbecc41b096a7ee0f2876e64",
+      "url": "https://api.github.com/repos/valimised/ivxv/commits/2785872f84dffb56bbecc41b096a7ee0f2876e64"
+    },
+    "name": "v1.10.4-KOV2025",
+    "node_id": "MDM6UmVmMTAyNDU3ODEzOnJlZnMvdGFncy92MS4xMC40LUtPVjIwMjU=",
+    "tarball_url": "https://api.github.com/repos/valimised/ivxv/tarball/refs/tags/v1.10.4-KOV2025",
+    "zipball_url": "https://api.github.com/repos/valimised/ivxv/zipball/refs/tags/v1.10.4-KOV2025"
+  },
+  {
+    "commit": {
+      "sha": "023e072ad22b70f56b0b174789ea4ea349753ee6",
+      "url": "https://api.github.com/repos/valimised/ivxv/commits/023e072ad22b70f56b0b174789ea4ea349753ee6"
+    },
+    "name": "v1.9.10-EP2024",
+    "node_id": "MDM6UmVmMTAyNDU3ODEzOnJlZnMvdGFncy92MS45LjEwLUVQMjAyNA==",
+    "tarball_url": "https://api.github.com/repos/valimised/ivxv/tarball/refs/tags/v1.9.10-EP2024",
+    "zipball_url": "https://api.github.com/repos/valimised/ivxv/zipball/refs/tags/v1.9.10-EP2024"
+  },
+  {
+    "commit": {
+      "sha": "8a432f7b8d4ed0bb0871f005f650c13bf3250766",
+      "url": "https://api.github.com/repos/valimised/ivxv/commits/8a432f7b8d4ed0bb0871f005f650c13bf3250766"
+    },
+    "name": "v1.8.2-RK2023",
+    "node_id": "MDM6UmVmMTAyNDU3ODEzOnJlZnMvdGFncy92MS44LjItUksyMDIz",
+    "tarball_url": "https://api.github.com/repos/valimised/ivxv/tarball/refs/tags/v1.8.2-RK2023",
+    "zipball_url": "https://api.github.com/repos/valimised/ivxv/zipball/refs/tags/v1.8.2-RK2023"
+  },
+  {
+    "commit": {
+      "sha": "49160800174473502e0bee4c8fa87b7ec75bd6f6",
+      "url": "https://api.github.com/repos/valimised/ivxv/commits/49160800174473502e0bee4c8fa87b7ec75bd6f6"
+    },
+    "name": "v1.7.7-KOV2021",
+    "node_id": "MDM6UmVmMTAyNDU3ODEzOnJlZnMvdGFncy92MS43LjctS09WMjAyMQ==",
+    "tarball_url": "https://api.github.com/repos/valimised/ivxv/tarball/refs/tags/v1.7.7-KOV2021",
+    "zipball_url": "https://api.github.com/repos/valimised/ivxv/zipball/refs/tags/v1.7.7-KOV2021"
+  }
+]
+
+[GET https://api.github.com/repos/valimised/ivxv/forks?per_page=100&sort=oldest]
+[
+  {
+    "clone_url": "https://github.com/192524102simats-code/ivxv.git",
+    "default_branch": "published",
+    "full_name": "192524102simats-code/ivxv",
+    "pushed_at": "2025-10-03T12:56:42Z"
+  },
+  {
+    "clone_url": "https://github.com/AnnualMedia1328/ivxv.git",
+    "default_branch": "published",
+    "full_name": "AnnualMedia1328/ivxv",
+    "pushed_at": "2024-05-30T09:57:35Z"
+  },
+  {
+    "clone_url": "https://github.com/AshNotGrey/ivxv.git",
+    "default_branch": "published",
+    "full_name": "AshNotGrey/ivxv",
+    "pushed_at": "2025-10-03T12:56:42Z"
+  },
+  {
+    "clone_url": "https://github.com/BudongJW/ivxv.git",
+    "default_branch": "published",
+    "full_name": "BudongJW/ivxv",
+    "pushed_at": "2025-10-03T12:56:42Z"
+  },
+  {
+    "clone_url": "https://github.com/Gravity-I-Pull-You-Down/ivxv.git",
+    "default_branch": "master",
+    "full_name": "Gravity-I-Pull-You-Down/ivxv",
+    "pushed_at": "2026-01-30T21:35:25Z"
+  },
+  {
+    "clone_url": "https://github.com/GroenieG/ivxv.git",
+    "default_branch": "published",
+    "full_name": "GroenieG/ivxv",
+    "pushed_at": "2024-05-30T09:57:35Z"
+  },
+  {
+    "clone_url": "https://github.com/Harmitage/ivxv.git",
+    "default_branch": "master",
+    "full_name": "Harmitage/ivxv",
+    "pushed_at": "2021-10-10T22:14:56Z"
+  },
+  {
+    "clone_url": "https://github.com/KuoHsiangYu2/ivxv.git",
+    "default_branch": "master",
+    "full_name": "KuoHsiangYu2/ivxv",
+    "pushed_at": "2023-08-29T10:18:23Z"
+  },
+  {
+    "clone_url": "https://github.com/Littlelonglong/ivxv.git",
+    "default_branch": "master",
+    "full_name": "Littlelonglong/ivxv",
+    "pushed_at": "2019-05-14T11:48:13Z"
+  },
+  {
+    "clone_url": "https://github.com/Muzosh/pq-ivxv.git",
+    "default_branch": "master",
+    "full_name": "Muzosh/pq-ivxv",
+    "pushed_at": "2023-08-29T10:18:23Z"
+  },
+  {
+    "clone_url": "https://github.com/NormannTan/ivxv.git",
+    "default_branch": "master",
+    "full_name": "NormannTan/ivxv",
+    "pushed_at": "2017-09-05T11:57:16Z"
+  },
+  {
+    "clone_url": "https://github.com/Nyahon/ivxv.git",
+    "default_branch": "master",
+    "full_name": "Nyahon/ivxv",
+    "pushed_at": "2019-05-14T11:48:13Z"
+  },
+  {
+    "clone_url": "https://github.com/Nyerokenneth/ivxv.git",
+    "default_branch": "master",
+    "full_name": "Nyerokenneth/ivxv",
+    "pushed_at": "2022-07-24T20:11:18Z"
+  },
+  {
+    "clone_url": "https://github.com/Ritikraj21/online-voati.git",
+    "default_branch": "master",
+    "full_name": "Ritikraj21/online-voati",
+    "pushed_at": "2023-08-29T10:18:23Z"
+  },
+  {
+    "clone_url": "https://github.com/Santhosh15074/ivxv.git",
+    "default_branch": "master",
+    "full_name": "Santhosh15074/ivxv",
+    "pushed_at": "2023-08-29T10:18:23Z"
+  },
+  {
+    "clone_url": "https://github.com/Vaskata84/ivxv.git",
+    "default_branch": "master",
+    "full_name": "Vaskata84/ivxv",
+    "pushed_at": "2023-08-29T10:18:23Z"
+  },
+  {
+    "clone_url": "https://github.com/aivarask/ivxv.git",
+    "default_branch": "published",
+    "full_name": "aivarask/ivxv",
+    "pushed_at": "2025-10-03T12:56:42Z"
+  },
+  {
+    "clone_url": "https://github.com/alvarlaigna/ivxv.git",
+    "default_branch": "master",
+    "full_name": "alvarlaigna/ivxv",
+    "pushed_at": "2023-02-24T01:04:51Z"
+  },
+  {
+    "clone_url": "https://github.com/arunwij/ivxv.git",
+    "default_branch": "master",
+    "full_name": "arunwij/ivxv",
+    "pushed_at": "2017-09-05T11:57:16Z"
+  },
+  {
+    "clone_url": "https://github.com/christiankiller/ivxv.git",
+    "default_branch": "master",
+    "full_name": "christiankiller/ivxv",
+    "pushed_at": "2019-05-14T11:48:13Z"
+  },
+  {
+    "clone_url": "https://github.com/dejanbosnjak/ivxv.git",
+    "default_branch": "published",
+    "full_name": "dejanbosnjak/ivxv",
+    "pushed_at": "2025-06-14T16:41:56Z"
+  },
+  {
+    "clone_url": "https://github.com/elnerd/ivxv.git",
+    "default_branch": "published",
+    "full_name": "elnerd/ivxv",
+    "pushed_at": "2024-05-30T09:57:35Z"
+  },
+  {
+    "clone_url": "https://github.com/gabrieljlorca/cvft.git",
+    "default_branch": "master",
+    "full_name": "gabrieljlorca/cvft",
+    "pushed_at": "2023-06-01T20:26:19Z"
+  },
+  {
+    "clone_url": "https://github.com/gerlion/ivxv.git",
+    "default_branch": "master",
+    "full_name": "gerlion/ivxv",
+    "pushed_at": "2021-10-10T22:14:56Z"
+  },
+  {
+    "clone_url": "https://github.com/guyayiruru/ivxv.git",
+    "default_branch": "published",
+    "full_name": "guyayiruru/ivxv",
+    "pushed_at": "2024-05-30T09:57:35Z"
+  },
+  {
+    "clone_url": "https://github.com/hillar/ivxv.git",
+    "default_branch": "master",
+    "full_name": "hillar/ivxv",
+    "pushed_at": "2017-09-05T11:57:16Z"
+  },
+  {
+    "clone_url": "https://github.com/iAnanich/ivxv.git",
+    "default_branch": "master",
+    "full_name": "iAnanich/ivxv",
+    "pushed_at": "2017-09-05T11:57:16Z"
+  },
+  {
+    "clone_url": "https://github.com/ibilux/ivxv.git",
+    "default_branch": "master",
+    "full_name": "ibilux/ivxv",
+    "pushed_at": "2019-02-28T12:21:28Z"
+  },
+  {
+    "clone_url": "https://github.com/imaginal/ivxv.git",
+    "default_branch": "master",
+    "full_name": "imaginal/ivxv",
+    "pushed_at": "2019-05-14T11:48:13Z"
+  },
+  {
+    "clone_url": "https://github.com/imenehakem/ivxv.git",
+    "default_branch": "master",
+    "full_name": "imenehakem/ivxv",
+    "pushed_at": "2019-02-28T12:21:28Z"
+  },
+  {
+    "clone_url": "https://github.com/ivokub/ivxv.git",
+    "default_branch": "master",
+    "full_name": "ivokub/ivxv",
+    "pushed_at": "2021-11-12T19:06:13Z"
+  },
+  {
+    "clone_url": "https://github.com/junichi-chiba/ivxv.git",
+    "default_branch": "master",
+    "full_name": "junichi-chiba/ivxv",
+    "pushed_at": "2021-08-20T00:45:04Z"
+  },
+  {
+    "clone_url": "https://github.com/kk-boop/ivxv.git",
+    "default_branch": "master",
+    "full_name": "kk-boop/ivxv",
+    "pushed_at": "2020-04-11T19:39:53Z"
+  },
+  {
+    "clone_url": "https://github.com/landrews/ivxv.git",
+    "default_branch": "master",
+    "full_name": "landrews/ivxv",
+    "pushed_at": "2017-09-05T11:57:16Z"
+  },
+  {
+    "clone_url": "https://github.com/ljube/ivxv.git",
+    "default_branch": "master",
+    "full_name": "ljube/ivxv",
+    "pushed_at": "2023-08-29T10:18:23Z"
+  },
+  {
+    "clone_url": "https://github.com/marc-bouvier-forks/ivxv.git",
+    "default_branch": "master",
+    "full_name": "marc-bouvier-forks/ivxv",
+    "pushed_at": "2021-09-27T23:05:01Z"
+  },
+  {
+    "clone_url": "https://github.com/mmadraimov92/ivxv.git",
+    "default_branch": "master",
+    "full_name": "mmadraimov92/ivxv",
+    "pushed_at": "2025-07-30T08:46:11Z"
+  },
+  {
+    "clone_url": "https://github.com/panbin2018/ivxv.git",
+    "default_branch": "master",
+    "full_name": "panbin2018/ivxv",
+    "pushed_at": "2019-05-14T11:48:13Z"
+  },
+  {
+    "clone_url": "https://github.com/pjx-unite/ivxv.git",
+    "default_branch": "master",
+    "full_name": "pjx-unite/ivxv",
+    "pushed_at": "2023-08-29T10:18:23Z"
+  },
+  {
+    "clone_url": "https://github.com/pringinacio/ivxv.git",
+    "default_branch": "master",
+    "full_name": "pringinacio/ivxv",
+    "pushed_at": "2025-02-23T22:28:57Z"
+  },
+  {
+    "clone_url": "https://github.com/reynsys/ivxv.git",
+    "default_branch": "master",
+    "full_name": "reynsys/ivxv",
+    "pushed_at": "2023-08-29T10:18:23Z"
+  },
+  {
+    "clone_url": "https://github.com/rrtcze/ivxv.git",
+    "default_branch": "published",
+    "full_name": "rrtcze/ivxv",
+    "pushed_at": "2026-04-17T12:32:15Z"
+  },
+  {
+    "clone_url": "https://github.com/ruchishrestha/ivxv.git",
+    "default_branch": "master",
+    "full_name": "ruchishrestha/ivxv",
+    "pushed_at": "2019-05-14T11:48:13Z"
+  },
+  {
+    "clone_url": "https://github.com/s13026626-sam/java-and-javascript-online-voting.git",
+    "default_branch": "published",
+    "full_name": "s13026626-sam/java-and-javascript-online-voting",
+    "pushed_at": "2025-10-29T14:07:27Z"
+  },
+  {
+    "clone_url": "https://github.com/tungnk-dev/ivxv.git",
+    "default_branch": "master",
+    "full_name": "tungnk-dev/ivxv",
+    "pushed_at": "2023-02-24T01:04:51Z"
+  },
+  {
+    "clone_url": "https://github.com/urmas69/ivxv.git",
+    "default_branch": "published",
+    "full_name": "urmas69/ivxv",
+    "pushed_at": "2025-10-03T12:56:42Z"
+  },
+  {
+    "clone_url": "https://github.com/worldpeaceworker/ivxv.git",
+    "default_branch": "published",
+    "full_name": "worldpeaceworker/ivxv",
+    "pushed_at": "2024-05-30T09:57:35Z"
+  },
+  {
+    "clone_url": "https://github.com/xzxzzxzxzca/ivxv.git",
+    "default_branch": "master",
+    "full_name": "xzxzzxzxzca/ivxv",
+    "pushed_at": "2023-06-01T20:26:19Z"
+  }
+]
+
+[expected-negative GET https://api.github.com/repos/urmas69/ivxv/contents/common/external/database/etcd]
+http_status=404
+
+[expected-negative GET https://api.github.com/repos/worldpeaceworker/ivxv/contents/common/external/database/etcd]
+http_status=404
+
+[expected-negative GET https://api.github.com/repos/tungnk-dev/ivxv/contents/common/external/database/etcd]
+http_status=404
+
+[expected-negative GET https://api.github.com/repos/ivokub/ivxv/contents/common/external/database/etcd]
+http_status=404
+
+[expected-negative GET https://api.github.com/repos/Gravity-I-Pull-You-Down/ivxv/contents/common/external/database/etcd]
+http_status=404
+
+exit_status=0

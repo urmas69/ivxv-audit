@@ -1,0 +1,660 @@
+timestamp_utc=2026-07-23T12:33:37Z
+cwd=/home/audit/audit/ivxv-audit
+command=scripts/phase2-external-etcd-os-evidence.sh /home/audit/audit/ivxv 2785872f84dffb56bbecc41b096a7ee0f2876e64
+source=/home/audit/audit/ivxv
+commit=2785872f84dffb56bbecc41b096a7ee0f2876e64
+git_version=git version 2.34.1
+source_head=2785872f84dffb56bbecc41b096a7ee0f2876e64
+source_status_begin
+source_status_end
+
+[common/external commits]
+023e072ad22b70f56b0b174789ea4ea349753ee6	2024-05-30T09:50:55+00:00	Sven Heiberg	IVXV 1.9.10, EP2024
+8a432f7b8d4ed0bb0871f005f650c13bf3250766	2023-02-24T00:55:35+00:00	Sven Heiberg	RK2023
+e5a6ceafc8fa373f79ff0a72b8e7ff62c731d84e	2022-07-24T09:59:52+00:00	Sven Heiberg	common/external: Add missing installation file
+9e36a72aaec7c6bf4602310aa6f346e5c128e68a	2019-01-28T16:08:01+02:00	Sven Heiberg	IVXV 1.4.1
+003282512343a08ec88ab547d4b1a8e83ac9369d	2017-09-05T14:55:58+03:00	Sven Heiberg	IVXV RC 0.9
+
+[common/external name-status history]
+commit 023e072ad22b70f56b0b174789ea4ea349753ee6 2024-05-30T09:50:55+00:00 IVXV 1.9.10, EP2024
+
+D	common/external/.gitattributes
+M	common/external/.gitignore
+D	common/external/README.rst
+D	common/external/install_java_dep
+commit 8a432f7b8d4ed0bb0871f005f650c13bf3250766 2023-02-24T00:55:35+00:00 RK2023
+
+A	common/external/.gitattributes
+A	common/external/.gitignore
+commit e5a6ceafc8fa373f79ff0a72b8e7ff62c731d84e 2022-07-24T09:59:52+00:00 common/external: Add missing installation file
+
+A	common/external/install_java_dep
+commit 9e36a72aaec7c6bf4602310aa6f346e5c128e68a 2019-01-28T16:08:01+02:00 IVXV 1.4.1
+
+M	common/external/README.rst
+commit 003282512343a08ec88ab547d4b1a8e83ac9369d 2017-09-05T14:55:58+03:00 IVXV RC 0.9
+
+A	common/external/README.rst
+
+[common/external objects across all refs]
+35086e15f081441446a65eb87a076e9ad1fb7f17 common/external
+50c8e767f1600a3d642a481e5952ca31df9cd40a common/external
+82e3a754b6a0fcb238b03c0e47d05219fbf9cf89 common/external
+c1cfe3ae845562d78ade7c38ab9b05ce356627d4 common/external
+cc8a4c5c5d8fa26d8a3c971da6072ab98d32f1c2 common/external
+8bb3ae2ef75ca8e08abcdf3db7b69e171da60795 common/external/.gitattributes
+68644dbdf65ade00f0c59f2aa0c350de8fc48dee common/external/.gitignore
+7fddcf88dd90aee0664b9e714012cc0c66f60a7e common/external/README.rst
+902f6b618bd4de59456ca74946363f861efa3f97 common/external/README.rst
+058c37730790657e924f9c80b3d0d4c2453b3db2 common/external/install_java_dep
+
+[fixed tree]
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391       0	common/external/.gitignore
+
+[submodule metadata history]
+023e072ad22b70f56b0b174789ea4ea349753ee6	2024-05-30T09:50:55+00:00	IVXV 1.9.10, EP2024
+[submodule "Documentation/public/liidesed/VIS3-EHS"]
+  path = Documentation/public/liidesed/VIS3-EHS
+  url = https://github.com/e-gov/VIS3-EHS.git
+  branch = feature/tervikdokument
+
+[historical file contents]
+--- 003282512343a08ec88ab547d4b1a8e83ac9369d:common/external/README.rst
+====================================================
+IVXV Internet voting framework external dependencies
+====================================================
+
+This directory contains source code and build artifacts of all
+external dependencies of the IVXV Internet voting framework.
+
+Dependencies required in this directory are listed in
+:file:`../../Documentation/et/arhitektuur/tehnoloogiad.rst`.
+
+Note that the source code for all Go dependencies must be in a `gopath/src/`
+subdirectory.
+--- 9e36a72aaec7c6bf4602310aa6f346e5c128e68a:common/external/README.rst
+====================================================
+IVXV Internet voting framework external dependencies
+====================================================
+
+This directory contains source code and build artifacts of all
+external dependencies of the IVXV Internet voting framework.
+
+Dependencies required in this directory are listed in
+:file:`../../Documentation/et/arhitektuur/tehnoloogiad.rst`.
+
+Note that the source code for all Go dependencies must be in a `gopath/src/`
+subdirectory.
+
+Java
+----
+
+To get Java applications' (auditor, key, processor) dependencies on a Linux
+machine, run the script :file:`install_java_dep`.
+
+In order to achieve the same on Windows, do the following:
+
+1. Install Gradle 3.0 globally (or see point 4)
+2. In :file:`../java/` directory, run :code:`gradle syncRemoteRepositories`
+3. Manually download and add the following jars
+  - commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+  - xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
+4. To build or test Java applications with Make, Gradle 3.0 has to be manually
+installed into this directory. See :file:`../java/common.mk` for exact path.
+--- 8a432f7b8d4ed0bb0871f005f650c13bf3250766:common/external/.gitattributes
+*.deb filter=lfs diff=lfs merge=lfs -text
+*.jar filter=lfs diff=lfs merge=lfs -text
+--- 8a432f7b8d4ed0bb0871f005f650c13bf3250766:common/external/.gitignore
+*/*/ivydata*.properties
+
+--- e5a6ceafc8fa373f79ff0a72b8e7ff62c731d84e:common/external/install_java_dep
+#!/bin/bash
+
+GRADLE="https://services.gradle.org/distributions/gradle-6.4-bin.zip"
+
+function installGradle {
+    wget -O gradle-6.4.zip $GRADLE
+    unzip gradle-6.4.zip
+    rm gradle-6.4.zip
+}
+
+function syncRemoteRepositories {
+    make -C ../java/ sync
+}
+
+echo "Downloading Gradle"
+installGradle
+
+echo "Downloading dependencies. This may take a while."
+syncRemoteRepositories
+
+[ETCD bundle declarations at fixed commit]
+--- storage/Makefile
+include ../common/go/common.mk
+
+db=etcd
+
+.PHONY:ivxv_storage_db
+ivxv_storage_db:
+	cp $(ROOTDIR)/common/external/database/$(db)/ivxv-storage_db_install.sh bin/
+	cp $(ROOTDIR)/common/external/database/$(db)/ivxv-storage_db_uninstall.sh bin/
+	cp $(ROOTDIR)/common/external/database/$(db)/ivxv-storage_db.tar.gz bin/
+--- debian/ivxv-storage.install
+#!/usr/bin/dh-exec
+usr/bin/storage    => usr/bin/ivxv-storage
+usr/bin/storageidx => usr/bin/ivxv-storageidx
+usr/bin/storageorder => usr/bin/ivxv-storageorder
+
+usr/lib/systemd/user/ivxv-storage@.service
+
+usr/bin/ivxv-storage_db_install.sh
+usr/bin/ivxv-storage_db_uninstall.sh
+usr/bin/ivxv-storage_db.tar.gz => usr/ivxv-storage_db.tar.gz
+--- debian/ivxv-storage.postinst
+#!/bin/sh
+# postinst script for ivxv-storage
+#
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see https://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+
+case "$1" in
+    configure)
+        # install db for ivxv-storage
+        if [ -f "/usr/bin/ivxv-storage_db_install.sh" ]; then
+            /usr/bin/ivxv-storage_db_install.sh
+        fi
+
+        # CONFIGURE ivxv-storage USER
+        # add user account
+        if ! getent passwd ivxv-storage > /dev/null; then
+            echo "# Adding user 'ivxv-storage'"
+            adduser --quiet --home /var/lib/ivxv/user/ivxv-storage \
+                --shell /bin/bash --system --ingroup ivxv ivxv-storage
+        fi
+
+        # prepare ssh directory for user account
+        test -d ~ivxv-storage/.ssh ||
+        mkdir --parents ~ivxv-storage/.ssh
+        chmod 700 ~ivxv-storage/.ssh
+        chown ivxv-storage:ivxv ~ivxv-storage/.ssh
+        test -e ~ivxv-storage/.ssh/authorized_keys ||
+            touch ~ivxv-storage/.ssh/authorized_keys
+        chmod 600 ~ivxv-storage/.ssh/authorized_keys
+        chown ivxv-storage:ivxv ~ivxv-storage/.ssh/authorized_keys
+
+        mkdir --parents /var/log/ivxv
+        chown --changes syslog:syslog /var/log/ivxv
+        chmod --changes 755 /var/log/ivxv
+
+        # enable user to automatically start service
+        loginctl enable-linger ivxv-storage
+
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# reload the systemd manager configuration
+if [ -d /run/systemd/users ]; then
+    systemctl daemon-reload >/dev/null || true
+fi
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+#DEBHELPER#
+
+exit 0
+--- debian/ivxv-storage.postrm
+#!/bin/sh
+# postrm script for ivxv-storage
+#
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postrm> `remove'
+#        * <postrm> `purge'
+#        * <old-postrm> `upgrade' <new-version>
+#        * <new-postrm> `failed-upgrade' <old-version>
+#        * <new-postrm> `abort-install'
+#        * <new-postrm> `abort-install' <old-version>
+#        * <new-postrm> `abort-upgrade' <old-version>
+#        * <disappearer's-postrm> `disappear' <overwriter>
+#          <overwriter-version>
+# for details, see https://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+
+case "$1" in
+    remove)
+        # stop ivxv-storage service
+        deb-systemd-invoke stop "ivxv-storage@*service"
+
+        # uninstall db for ivxv-storage
+        if [ -f "/usr/bin/ivxv-storage_db_uninstall.sh" ]; then
+            /usr/bin/ivxv-storage_db_uninstall.sh
+        fi
+    ;;
+
+    purge)
+        # Remove user account
+        USER_ACCOUNT="ivxv-storage"
+        if getent passwd "${USER_ACCOUNT}" > /dev/null; then
+            # terminate user sessions
+            loginctl terminate-user "${USER_ACCOUNT}"
+
+            # kill user processes
+            pkill --uid "${USER_ACCOUNT}" || true && sleep 1
+
+            # kill user processes
+            if pgrep --count --uid "${USER_ACCOUNT}" > /dev/null ; then
+                pkill --uid "${USER_ACCOUNT}" || true
+                sleep 1
+                pkill --signal KILL --uid "${USER_ACCOUNT}" || true
+                sleep 1
+            fi
+
+            USER_HOME_DIR="$(getent passwd ${USER_ACCOUNT} | cut -d: -f6)"
+            # remove user home directory using local hack
+            # to avoid dependency of perl-modules
+            # that is required for use deluser --remove-home option.
+            deluser --system "${USER_ACCOUNT}"
+            rm -rf ${USER_HOME_DIR}
+
+        fi
+
+        # uninstall db for ivxv-storage
+        if [ -f "/usr/bin/ivxv-storage_db_uninstall.sh" ]; then
+            /usr/bin/ivxv-storage_db_uninstall.sh
+        fi
+    ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        # uninstall db for ivxv-storage
+        if [ -f "/usr/bin/ivxv-storage_db_uninstall.sh" ]; then
+            /usr/bin/ivxv-storage_db_uninstall.sh
+        fi
+    ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# reload the systemd manager configuration
+if [ -d /run/systemd/users ]; then
+    systemctl daemon-reload >/dev/null || true
+fi
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+#DEBHELPER#
+
+exit 0
+--- debian/control
+Source: ivxv
+Section: misc
+Priority: optional
+Maintainer: IVXV Developer <info@ivotingcentre.ee>
+# Dependencies for admin-ui: dh-python, python3-all, python3-setuptools
+# Dependencies for services: dh-exec
+Build-Depends: debhelper-compat (= 13), dh-exec, dh-python, python3-all, python3-debian, python3-setuptools
+Standards-Version: 3.9.8
+
+Package: ivxv-common
+Architecture: all
+Depends: ${misc:Depends}, adduser, openssh-server, openssl, rsync, rsyslog, rsyslog-relp, sudo, tzdata
+Recommends: locales | locales-all
+Description: IVXV alamteenuste ühispakk
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse alamteenuste ühisosa
+
+Package: python3-ivxv-common
+Architecture: all
+Depends: ${misc:Depends}, python3, python3-pip
+Description: IVXV admin välised Python sõltuvused
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab hääletamise admin consooli välised Python sõltuvused.
+
+Package: ivxv-admin
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, apache2, cron, ivxv-common, python3-ivxv-common, language-pack-et, libapache2-mod-wsgi-py3, python3-gdbm, ssl-cert
+Description: IVXV kogumisteenuse haldusteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse haldusteenust
+
+Package: ivxv-proxy
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, haproxy, ivxv-common, libpam-systemd
+Description: IVXV vahendusteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse vahendusteenust
+
+Package: ivxv-choices
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ivxv-common, libpam-systemd
+Description: IVXV nimekirjateenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse nimekirjateenust
+
+Package: ivxv-verification
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ivxv-common, libpam-systemd
+Description: IVXV kontrolliteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse kontrolliteenust
+
+Package: ivxv-voting
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ca-certificates, ivxv-common, libpam-systemd
+Description: IVXV hääletamisteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse hääletamisteenust
+
+Package: ivxv-storage
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ivxv-common, libpam-systemd
+Description: IVXV talletamisteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse talletamisteenust
+
+Package: ivxv-mid
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ca-certificates, ivxv-common, libpam-systemd
+Description: IVXV mobiil-ID tugiteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse mobiil-ID tugiteenust
+
+Package: ivxv-smartid
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ca-certificates, ivxv-common, libpam-systemd
+Description: IVXV Smart-ID tugiteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse Smart-ID tugiteenust
+
+Package: ivxv-webeid
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ca-certificates, ivxv-common, libpam-systemd
+Description: IVXV Web eID tugiteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse Web eID tugiteenust
+
+Package: ivxv-log
+Architecture: all
+Depends: ${misc:Depends}, ivxv-common, rsync
+Conflicts: ivxv-admin, ivxv-backup, ivxv-choices, ivxv-mid, ivxv-proxy, ivxv-storage, ivxv-verification, ivxv-voting
+Description: IVXV logikogumisteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse logikogumisteenust
+
+Package: ivxv-backup
+Architecture: amd64
+Depends: ${misc:Depends}, ivxv-common, rsync
+Conflicts: ivxv-admin, ivxv-choices, ivxv-log, ivxv-mid, ivxv-proxy, ivxv-storage, ivxv-verification, ivxv-voting
+Description: IVXV varundusteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab kogumisteenuse varundusteenust
+
+Package: ivxv-votesorder
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ivxv-common, libpam-systemd
+Description: IVXV häälte kirjete edastusteenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab häälte nimekirja edastusteenust
+
+Package: ivxv-sessionstatus
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, ivxv-common, libpam-systemd
+Description: IVXV SessionID staatuse raporteeriv teenus
+ Elektroonilise hääletamise infosüsteem IVXV
+ .
+ Käesolev pakk sisaldab staatuse reporteermisteenust
+
+[ETCD bundle introduction]
+023e072ad22b70f56b0b174789ea4ea349753ee6	2024-05-30T09:50:55+00:00	IVXV 1.9.10, EP2024
+
+[OS declarations]
+ivxv (1.10.3) jammy; urgency=medium
+
+  * Documentation release - review, translation, spelling
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Fri, 05 Sep 2025 12:13:28 +0000
+
+ivxv (1.10.2) jammy; urgency=medium
+
+  * Change log rotation frequency to hourly basis
+  * Update javascript dependencies
+  * Add support for voters as young as 14 years
+  * Update Smart-ID flows to support smoother user experience
+  * Improve testing and releasing tools
+  * Update ZIP handling to strict format validations
+  * Update voterlist download strategy from VIS to avoid bottlenecks
+  * Resolve memory-leak in the administrative interface
+  * Various minor bugfixes
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Sun, 24 Aug 2025 09:48:28 +0000
+
+ivxv (1.10.1) jammy; urgency=medium
+
+  * Hotfix to SmartID service to accomodate for the changed cert profile
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Thu, 03 Apr 2025 18:18:13 +0000
+
+ivxv (1.10.0) jammy; urgency=medium
+
+  * Add backend log documentation
+  * Update OCSP URL handling
+  * Add support for ECC
+  * Update disaster recovery documentation
+  * Update protocol documentation
+  * Add invalid ciphertext detection to collection service
+  * Update dependencies
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Tue, 17 Dec 2024 07:20:16 +0000
+
+ivxv (1.9.10) jammy; urgency=medium
+
+  * Hotfix to admin web, don't export detailstats to VIS when downloading
+  * Hotfix to ivxv-storage install/uninstall .deb scripts
+  * Hotfix to admin web, removed old CAs to validate ID-card certificate
+  * Hotfix to admin web, check client certificate with OCSP
+  * Hotfix to disable Apache web server directories indexing
+  * Hotfix to admin web, disable weak ciphers, only allow TLSv1.3
+  * Hotfix to admin web, remove sensitive info from server response
+  * Hotfix to ivxv-admin-sudo install-pkg, extract filename only from path
+  * ivxv-storageorder runs under cron
+  * Processor should check a ballot size to prevent zip-bomb attack
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Tue, 14 May 2024 05:37:36 +0000
+
+ivxv (1.9.9) jammy; urgency=medium
+
+  * Add script to prepare csv for ivxv-storageorder
+  * Hotfix to ivxv-storageorder SeqNo == successful vote per voterid check
+  * Hotfix to xroad-service HTTP errors handling
+  * Hotfix to IVXV logs directory creation
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Tue, 30 Apr 2024 10:45:58 +0000
+
+ivxv (1.9.8) jammy; urgency=medium
+
+  * Add backend error logs monitoring docs
+  * Check qualification times, that set in "qualification:" (election.yml) as
+    [a.Time <= b.Time <= ...]
+  * Refactor election.yml period processing
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Fri, 19 Apr 2024 14:27:30 +0000
+
+ivxv (1.9.7) jammy; urgency=medium
+
+  * Ensure that votesorder data is not lost if etcd txn has "Succeeded: false"
+  * Proper logging of votesorder errors
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Thu, 11 Apr 2024 06:37:53 +0000
+
+ivxv (1.9.6) jammy; urgency=medium
+
+  * Hotfix to votesorder error handling
+  * Set systemd startup timeout for ivxv-storage service
+  * All IVXV logs are stored in /var/log/ivxv/
+  * Hotfix to ivxv-sessionstatus Documentation
+  * Hotfix to sessionstatus etcd timeouts usage
+  * Store vote as follows: vote, then tspreg, then ocsp
+  * Hotfix to xtee service docs
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Tue, 09 Apr 2024 12:06:53 +0000
+
+ivxv (1.9.4) jammy; urgency=medium
+
+  * Hotfix to sessionstatus service to return errors properly
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Mon, 01 Apr 2024 15:50:02 +0000
+
+ivxv (1.9.3) jammy; urgency=medium
+
+  *  Hotfix to processor export votes extension
+  *  Hotfix to RPC.Verify when ignorevoterlist is set
+  *  Hotfix to ivxv-storage.postrm
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Fri, 22 Mar 2024 11:50:57 +0000
+
+ivxv (1.9.2) jammy; urgency=medium
+
+  * Hotfix to VIS URL
+  * Hotfix to day-order of detailed statistics
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Tue, 12 Mar 2024 17:07:07 +0000
+
+ivxv (1.9.1) jammy; urgency=medium
+
+  * Java applications
+    - implement tools for processor integrity verification
+  * Collector
+    - improve transactions for storing votes
+  * Documentation
+    - Adjust documentation for easier translation
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Sat, 02 Mar 2024 15:10:28 +0200
+
+ivxv (1.9.0+hotfix.3) jammy; urgency=medium
+
+  * Hotfix to properly handle DER encoding in PKCS15 cards
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Tue, 30 Jan 2024 11:14:38 +0000
+
+ivxv (1.9.0+hotfix.2) jammy; urgency=medium
+
+  * Hotfix version to parse webeid origin
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Thu, 18 Jan 2024 13:02:23 +0000
+
+ivxv (1.9.0+hotfix.1) jammy; urgency=medium
+
+  * Hotfix version to include etcd dependency
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Wed, 17 Jan 2024 10:52:51 +0000
+
+ivxv (1.9.0) jammy; urgency=low
+
+  * Operating system
+    - upgrade from Ubuntu 20.04 LTS to Ubuntu 22.04 LTS
+    - upgrade debhelper from 11 to 13
+    - python dependencies for management interface are shipped in separate .deb
+    - `dpkg-buildpackage` on Ubuntu 22.04 LTS uses .zst compression instead of .xz
+  * Management interface
+    - upgrade PyPi dependencies to the latest possible
+  * Online voting components
+    - upgrade from Go 1.14 to Go 1.21
+    - switch from GOPATH layout to go.mod
+    - upgrade from Python 3.8 to 3.10
+  * Offline voting component
+    - upgrade Java from 1.11 to 1.17
+  * Tests
+    - `docker-compose` is deprecated, use `docker compose` instead
+    - newer version of systemd support in docker
+  * Web eID
+    - support Web eID authentication method for IVXV backend
+  * Session status
+    - new microservice to report SessionID status to IVXV services.
+      This could help IVXV services to detect whether SessionID
+      has been tampered or not.
+  * BDOC
+    - remove TM profiles support for backend as it is not anymore
+      supported by digidoc-tool
+
+ -- IVXV Developer <info@ivotingcentre.ee>  Mon, 23 Jan 2023 18:11:51 +0000
+
+
+- ribastamine/rööprapse, mis võimaldab kasutada paralleelsust mitmetuumalistes
+  süsteemides.
+
+Kogumisteenuse andmeedastuseks kasutatakse üldjuhul JSON-vormingut, välja
+arvatud olukordades, kus välised asjaolud tingivad mõne muu andmevormingu
+kasutamist (näiteks BDOC-vorming põhineb XML'il).
+
+Kogumisteenus toetab Riigikogu valimisi, kohaliku omavalitsuse volikogu
+valimisi, Euroopa parlamendi valimisi ning rahvahääletusi.
+
+Kogumisteenuse komponendid arvestavad virtualiseerimistehnoloogiate
+kasutamisega ning kogumisteenust on võimalik evitada nii ühel virtuaalriistvara
+instantsil, kui ka mikroteenuste kaupa erinevatel instantsidel. Kogumisteenuse
+komponendid on evitatavad Ubuntu 22.04 LTS (Jammy Jellyfish)
+operatsioonisüsteemil 64-bitisel arhitektuuril.
+
+Andmesäilitus on teostatud kasutades võti-väärtus andmebaasi (etcd).
+Testotstarbel on teostatud ka andmesäilitus failisüsteemi ning mällu, kuid neid
+ei ole soovituslik kasutada tootekeskkonnas. Lisaks on kogumisteenusel olemas
+liides uute talletusprotokollide lisamiseks. Lõplik otsus kasutatava lahenduse
+kohta tehakse kogumisteenuse haldurite poolt teenust seadistades.
+
+Mikroteenused
+-------------
+
+
+[expected-negative build-environment file search]
+EXPECTED_NEGATIVE: no matching build-environment files
+
+[source state after read-only inspection]
+source_head=2785872f84dffb56bbecc41b096a7ee0f2876e64
+source_status_begin
+source_status_end
+
+exit_status=0
