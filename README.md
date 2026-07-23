@@ -23,7 +23,7 @@ and repeated.
 
 | Phase | Status |
 |---|---|
-| Phase 4 — source-code security and correctness audit | Completed |
+| Phase 4 — source-code security and correctness audit | In progress |
 | Phase 5 — isolated deployment and end-to-end testing | Pending |
 | Phase 6 — independent rebuild and artifact comparison | Pending |
 | Phase 7 — production artifact and configuration comparison | Pending |

@@ -6,7 +6,7 @@ printf 'timestamp_utc\t%s\nsource\t%s\ncommit\t%s\n' "$(date -u +%FT%TZ)" "$SRC"
 { printf 'component\tlanguage\tprimary_executable\tsecurity_role\tfiles_reviewed\trelevant_tests\taudit_status\treviewer_notes\tlinked_findings\tlinked_leads\n';
  for d in choices common/collector core mid proxy sessionstatus smartid storage verification voting webeid processor auditor collector-admin key; do
    [ -d "$SRC/$d" ] || continue; lang=Go; case "$d" in processor|auditor|key) lang=Java;; collector-admin) lang=Python;; esac
-   printf '%s\t%s\t%s\t%s\t%s\t%s\treviewed\tfixed commit source inventory completed\t\t\n' "$d" "$lang" "$d" 'security-sensitive component' "$d/**" "$d/**/*_test*"
+   printf '%s\t%s\t%s\t%s\t%s\t%s\tnot-started\tautomated preliminary inventory only; substantive review required\t\t\n' "$d" "$lang" "$d" 'security-sensitive component' "$d/**" "$d/**/*_test*"
  done; } | sort -t $'\t' -k1,1 > "$OUT/review-coverage.tsv"
 { printf 'component\tpath\tsymbol_or_entry\tinterface\ttrust_boundary\tevidence\n';
  rg -l 'func main\(\)|public static void main|def [a-zA-Z_]+\(' "$SRC" --glob '*.go' --glob '*.java' --glob '*.py' | sort | while read -r f; do printf '%s\t%s\t%s\tlocal executable or service\tprocess/network boundary\t%s\n' "$(basename "$f")" "${f#$SRC/}" "entry point" "${f#$SRC/}"; done; } > "$OUT/entry-points.tsv"

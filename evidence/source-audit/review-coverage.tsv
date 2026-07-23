@@ -1,16 +1,16 @@
-auditor	Java	auditor	security-sensitive component	auditor/**	auditor/**/*_test*	reviewed	fixed commit source inventory completed		
-choices	Go	choices	security-sensitive component	choices/**	choices/**/*_test*	reviewed	fixed commit source inventory completed		
-collector-admin	Python	collector-admin	security-sensitive component	collector-admin/**	collector-admin/**/*_test*	reviewed	fixed commit source inventory completed		
-common/collector	Go	common/collector	security-sensitive component	common/collector/**	common/collector/**/*_test*	reviewed	fixed commit source inventory completed		
+auditor	Java	auditor	security-sensitive component	auditor/**	auditor/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+choices	Go	choices	security-sensitive component	choices/**	choices/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+collector-admin	Python	collector-admin	security-sensitive component	collector-admin/**	collector-admin/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+common/collector	Go	common/collector	security-sensitive component	common/collector/**	common/collector/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
 component	language	primary_executable	security_role	files_reviewed	relevant_tests	audit_status	reviewer_notes	linked_findings	linked_leads
-core	Go	core	security-sensitive component	core/**	core/**/*_test*	reviewed	fixed commit source inventory completed		
-key	Java	key	security-sensitive component	key/**	key/**/*_test*	reviewed	fixed commit source inventory completed		
-mid	Go	mid	security-sensitive component	mid/**	mid/**/*_test*	reviewed	fixed commit source inventory completed		
-processor	Java	processor	security-sensitive component	processor/**	processor/**/*_test*	reviewed	fixed commit source inventory completed		
-proxy	Go	proxy	security-sensitive component	proxy/**	proxy/**/*_test*	reviewed	fixed commit source inventory completed		
-sessionstatus	Go	sessionstatus	security-sensitive component	sessionstatus/**	sessionstatus/**/*_test*	reviewed	fixed commit source inventory completed		
-smartid	Go	smartid	security-sensitive component	smartid/**	smartid/**/*_test*	reviewed	fixed commit source inventory completed		
-storage	Go	storage	security-sensitive component	storage/**	storage/**/*_test*	reviewed	fixed commit source inventory completed		
-verification	Go	verification	security-sensitive component	verification/**	verification/**/*_test*	reviewed	fixed commit source inventory completed		
-voting	Go	voting	security-sensitive component	voting/**	voting/**/*_test*	reviewed	fixed commit source inventory completed		
-webeid	Go	webeid	security-sensitive component	webeid/**	webeid/**/*_test*	reviewed	fixed commit source inventory completed		
+core	Go	core	security-sensitive component	core/**	core/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+key	Java	key	security-sensitive component	key/**	key/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+mid	Go	mid	security-sensitive component	mid/**	mid/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+processor	Java	processor	security-sensitive component	processor/**	processor/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+proxy	Go	proxy	security-sensitive component	proxy/**	proxy/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+sessionstatus	Go	sessionstatus	security-sensitive component	sessionstatus/**	sessionstatus/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+smartid	Go	smartid	security-sensitive component	smartid/**	smartid/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+storage	Go	storage	security-sensitive component	storage/**	storage/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+verification	Go	verification	security-sensitive component	verification/**	verification/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+voting	Go	voting	security-sensitive component	voting/**	voting/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
+webeid	Go	webeid	security-sensitive component	webeid/**	webeid/**/*_test*	not-started	automated preliminary inventory only; substantive review required		
