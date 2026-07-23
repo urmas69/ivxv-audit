@@ -1,0 +1,894 @@
+UTC timestamp: 2026-07-23T14:27:16Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ export\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org\ GOMODCACHE=/tmp/ivxv-phase3/recon-gomodcache\ CGO_ENABLED=0\;\ cd\ /home/audit/audit/ivxv-reconstructed\;\ make\ test\ ONLINE=1\ CGO_ENABLED=0\ GOMODCACHE=/tmp/ivxv-phase3/recon-gomodcache\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 2
+--- combined stdout and stderr ---
+make -C common/java test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/java'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle test -g=/home/audit/audit/ivxv-reconstructed/common/external/java/
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :jar
+> Task :compileTestFixturesJava UP-TO-DATE
+> Task :processTestFixturesResources NO-SOURCE
+> Task :testFixturesClasses UP-TO-DATE
+> Task :testFixturesJar
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+
+BUILD SUCCESSFUL in 740ms
+5 actionable tasks: 2 executed, 3 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/java'
+make -C key test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/key'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle test -g=/home/audit/audit/ivxv-reconstructed/common/external/java/
+> Task :common:compileJava UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :common:compileTestFixturesJava UP-TO-DATE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :common:processResources UP-TO-DATE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar
+> Task :common:processTestFixturesResources NO-SOURCE
+> Task :common:testFixturesClasses UP-TO-DATE
+> Task :common:testFixturesJar
+> Task :test NO-SOURCE
+> Task :common:compileTestJava NO-SOURCE
+> Task :common:processTestResources NO-SOURCE
+> Task :common:testClasses UP-TO-DATE
+> Task :common:test SKIPPED
+
+BUILD SUCCESSFUL in 747ms
+6 actionable tasks: 2 executed, 4 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/key'
+make -C processor test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/processor'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle test -g=/home/audit/audit/ivxv-reconstructed/common/external/java/
+> Task :common:compileJava UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :common:compileTestFixturesJava UP-TO-DATE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :common:processResources UP-TO-DATE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar
+> Task :common:processTestFixturesResources NO-SOURCE
+> Task :common:testFixturesClasses UP-TO-DATE
+> Task :common:testFixturesJar
+> Task :test NO-SOURCE
+> Task :common:compileTestJava NO-SOURCE
+> Task :common:processTestResources NO-SOURCE
+> Task :common:testClasses UP-TO-DATE
+> Task :common:test SKIPPED
+
+BUILD SUCCESSFUL in 726ms
+6 actionable tasks: 2 executed, 4 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/processor'
+make -C auditor test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/auditor'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle test -g=/home/audit/audit/ivxv-reconstructed/common/external/java/
+> Task :common:compileJava UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :common:compileTestFixturesJava UP-TO-DATE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :common:processResources UP-TO-DATE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar
+> Task :common:processTestFixturesResources NO-SOURCE
+> Task :common:testFixturesClasses UP-TO-DATE
+> Task :common:testFixturesJar
+> Task :test NO-SOURCE
+> Task :common:compileTestJava NO-SOURCE
+> Task :common:processTestResources NO-SOURCE
+> Task :common:testClasses UP-TO-DATE
+> Task :common:test SKIPPED
+
+BUILD SUCCESSFUL in 749ms
+6 actionable tasks: 2 executed, 4 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/auditor'
+make -C common/collector test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk test
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/common/collector/bin \
+	/home/audit/tools/go/bin/go install ./...
+if which golangci-lint > /dev/null; then \
+	env PATH="/home/audit/tools/go/bin/:$PATH" \
+		golangci-lint run --config /home/audit/audit/ivxv-reconstructed/common/go/golangci-lint.yaml; \
+fi
+env GODEBUG=x509sha1=1 /home/audit/tools/go/bin/go test -v  ./...
+?   	ivxv.ee/common/collector/auth	[no test files]
+?   	ivxv.ee/common/collector/auth/ticket	[no test files]
+=== RUN   TestCheck
+=== RUN   TestCheck/1999-01-01_in_2016-01-01
+=== RUN   TestCheck/2000-01-01_in_2016-01-01
+=== RUN   TestCheck/2000-01-02_in_2016-02-01
+=== RUN   TestCheck/2000-02-28_in_2016-02-29
+=== RUN   TestCheck/2000-02-29_in_2016-02-29
+=== RUN   TestCheck/2000-03-01_in_2016-02-29
+=== RUN   TestCheck/2000-03-02_in_2016-03-01
+=== RUN   TestCheck/2001-01-01_in_2016-01-01
+=== RUN   TestCheck/1996-02-29_in_2017-02-28
+=== RUN   TestCheck/1996-02-29_in_2017-03-01
+=== RUN   TestCheck/1970-01-02_in_1970-01-01
+--- PASS: TestCheck (0.00s)
+    --- PASS: TestCheck/1999-01-01_in_2016-01-01 (0.00s)
+    --- PASS: TestCheck/2000-01-01_in_2016-01-01 (0.00s)
+    --- PASS: TestCheck/2000-01-02_in_2016-02-01 (0.00s)
+    --- PASS: TestCheck/2000-02-28_in_2016-02-29 (0.00s)
+    --- PASS: TestCheck/2000-02-29_in_2016-02-29 (0.00s)
+    --- PASS: TestCheck/2000-03-01_in_2016-02-29 (0.00s)
+    --- PASS: TestCheck/2000-03-02_in_2016-03-01 (0.00s)
+    --- PASS: TestCheck/2001-01-01_in_2016-01-01 (0.00s)
+    --- PASS: TestCheck/1996-02-29_in_2017-02-28 (0.00s)
+    --- PASS: TestCheck/1996-02-29_in_2017-03-01 (0.00s)
+    --- PASS: TestCheck/1970-01-02_in_1970-01-01 (0.00s)
+=== RUN   TestEstPIC
+=== RUN   TestEstPIC/10001010000
+=== RUN   TestEstPIC/25202290000
+=== RUN   TestEstPIC/37001010000
+=== RUN   TestEstPIC/49108200000
+=== RUN   TestEstPIC/51703150000
+=== RUN   TestEstPIC/69912310000
+--- PASS: TestEstPIC (0.00s)
+    --- PASS: TestEstPIC/10001010000 (0.00s)
+    --- PASS: TestEstPIC/25202290000 (0.00s)
+    --- PASS: TestEstPIC/37001010000 (0.00s)
+    --- PASS: TestEstPIC/49108200000 (0.00s)
+    --- PASS: TestEstPIC/51703150000 (0.00s)
+    --- PASS: TestEstPIC/69912310000 (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/age	0.003s
+=== RUN   TestVerify
+=== RUN   TestVerify/authenticated
+=== RUN   TestVerify/unauthenticated
+--- PASS: TestVerify (0.00s)
+    --- PASS: TestVerify/authenticated (0.00s)
+    --- PASS: TestVerify/unauthenticated (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/auth/dummy	0.004s
+?   	ivxv.ee/common/collector/auth/tls	[no test files]
+?   	ivxv.ee/common/collector/cmd/verifier	[no test files]
+?   	ivxv.ee/common/collector/command	[no test files]
+?   	ivxv.ee/common/collector/command/exit	[no test files]
+?   	ivxv.ee/common/collector/command/status	[no test files]
+?   	ivxv.ee/common/collector/conf/version	[no test files]
+?   	ivxv.ee/common/collector/container	[no test files]
+=== RUN   TestNew
+=== RUN   TestNew/dummy
+=== RUN   TestNew/prefixed
+--- PASS: TestNew (0.01s)
+    --- PASS: TestNew/dummy (0.01s)
+    --- PASS: TestNew/prefixed (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/conf	0.017s
+=== RUN   TestASiCEMagic
+=== RUN   TestASiCEMagic/short
+=== RUN   TestASiCEMagic/non-ZIP
+=== RUN   TestASiCEMagic/magic_length
+=== RUN   TestASiCEMagic/magic
+=== RUN   TestASiCEMagic/compressed
+=== RUN   TestASiCEMagic/extra
+=== RUN   TestASiCEMagic/MIME_type_length
+=== RUN   TestASiCEMagic/MIME_type
+=== RUN   TestASiCEMagic/OK
+--- PASS: TestASiCEMagic (0.00s)
+    --- PASS: TestASiCEMagic/short (0.00s)
+    --- PASS: TestASiCEMagic/non-ZIP (0.00s)
+    --- PASS: TestASiCEMagic/magic_length (0.00s)
+    --- PASS: TestASiCEMagic/magic (0.00s)
+    --- PASS: TestASiCEMagic/compressed (0.00s)
+    --- PASS: TestASiCEMagic/extra (0.00s)
+    --- PASS: TestASiCEMagic/MIME_type_length (0.00s)
+    --- PASS: TestASiCEMagic/MIME_type (0.00s)
+    --- PASS: TestASiCEMagic/OK (0.00s)
+=== RUN   TestReadManifest
+=== RUN   TestReadManifest/XML
+=== RUN   TestReadManifest/duplicate
+=== RUN   TestReadManifest/root
+=== RUN   TestReadManifest/extra
+=== RUN   TestReadManifest/signature
+=== RUN   TestReadManifest/missing
+=== RUN   TestReadManifest/OK
+--- PASS: TestReadManifest (0.00s)
+    --- PASS: TestReadManifest/XML (0.00s)
+    --- PASS: TestReadManifest/duplicate (0.00s)
+    --- PASS: TestReadManifest/root (0.00s)
+    --- PASS: TestReadManifest/extra (0.00s)
+    --- PASS: TestReadManifest/signature (0.00s)
+    --- PASS: TestReadManifest/missing (0.00s)
+    --- PASS: TestReadManifest/OK (0.00s)
+=== RUN   TestOpen
+=== RUN   TestOpen/EIDTS_as_BES
+=== RUN   TestOpen/EIDTS_as_TS
+=== RUN   TestOpen/EIDTS_as_TM
+=== RUN   TestOpen/MIDTS_as_BES
+=== RUN   TestOpen/MIDTS_as_TS
+=== RUN   TestOpen/MIDTS_as_TM
+=== RUN   TestOpen/EIDTM_as_TM
+=== RUN   TestOpen/EIDTM_as_BES
+=== RUN   TestOpen/EIDTM_as_TS
+=== RUN   TestOpen/MIDTM_as_TM
+=== RUN   TestOpen/MIDTM_as_BES
+=== RUN   TestOpen/MIDTM_as_TS
+=== RUN   TestOpen/EIDBES_as_BES
+=== RUN   TestOpen/EIDBES_as_TM
+=== RUN   TestOpen/EIDBES_as_TS
+=== RUN   TestOpen/MultipleSigners_as_TS
+=== RUN   TestOpen/MultipleFiles_as_TS
+=== RUN   TestOpen/NoManifest_as_BES
+=== RUN   TestOpen/NoSignatures_as_BES
+=== RUN   TestOpen/NoFiles_as_BES
+=== RUN   TestOpen/OCSPOld_as_TS
+=== RUN   TestOpen/OCSPDelayed_as_TS
+--- PASS: TestOpen (0.13s)
+    --- PASS: TestOpen/EIDTS_as_BES (0.02s)
+    --- PASS: TestOpen/EIDTS_as_TS (0.02s)
+    --- PASS: TestOpen/EIDTS_as_TM (0.00s)
+    --- PASS: TestOpen/MIDTS_as_BES (0.00s)
+    --- PASS: TestOpen/MIDTS_as_TS (0.01s)
+    --- PASS: TestOpen/MIDTS_as_TM (0.00s)
+    --- PASS: TestOpen/EIDTM_as_TM (0.00s)
+    --- PASS: TestOpen/EIDTM_as_BES (0.00s)
+    --- PASS: TestOpen/EIDTM_as_TS (0.00s)
+    --- PASS: TestOpen/MIDTM_as_TM (0.00s)
+    --- PASS: TestOpen/MIDTM_as_BES (0.00s)
+    --- PASS: TestOpen/MIDTM_as_TS (0.00s)
+    --- PASS: TestOpen/EIDBES_as_BES (0.00s)
+    --- PASS: TestOpen/EIDBES_as_TM (0.00s)
+    --- PASS: TestOpen/EIDBES_as_TS (0.00s)
+    --- PASS: TestOpen/MultipleSigners_as_TS (0.02s)
+    --- PASS: TestOpen/MultipleFiles_as_TS (0.01s)
+    --- PASS: TestOpen/NoManifest_as_BES (0.00s)
+    --- PASS: TestOpen/NoSignatures_as_BES (0.00s)
+    --- PASS: TestOpen/NoFiles_as_BES (0.00s)
+    --- PASS: TestOpen/OCSPOld_as_TS (0.00s)
+    --- PASS: TestOpen/OCSPDelayed_as_TS (0.01s)
+=== RUN   TestWriteXML
+=== RUN   TestWriteXML/simple
+=== RUN   TestWriteXML/prefix
+=== RUN   TestWriteXML/internal_whitespace
+=== RUN   TestWriteXML/root_namespace
+=== RUN   TestWriteXML/attributes
+=== RUN   TestWriteXML/character_data
+=== RUN   TestWriteXML/sub-elements
+=== RUN   TestWriteXML/superfluous_namespaces
+--- PASS: TestWriteXML (0.00s)
+    --- PASS: TestWriteXML/simple (0.00s)
+    --- PASS: TestWriteXML/prefix (0.00s)
+    --- PASS: TestWriteXML/internal_whitespace (0.00s)
+    --- PASS: TestWriteXML/root_namespace (0.00s)
+    --- PASS: TestWriteXML/attributes (0.00s)
+    --- PASS: TestWriteXML/character_data (0.00s)
+    --- PASS: TestWriteXML/sub-elements (0.00s)
+    --- PASS: TestWriteXML/superfluous_namespaces (0.00s)
+=== RUN   TestWriteXMLSignedInfo
+=== RUN   TestWriteXMLSignedInfo/EID
+=== RUN   TestWriteXMLSignedInfo/MID
+=== RUN   TestWriteXMLSignedInfo/Compact
+--- PASS: TestWriteXMLSignedInfo (0.00s)
+    --- PASS: TestWriteXMLSignedInfo/EID (0.00s)
+    --- PASS: TestWriteXMLSignedInfo/MID (0.00s)
+    --- PASS: TestWriteXMLSignedInfo/Compact (0.00s)
+=== RUN   TestToReaderAt
+=== RUN   TestToReaderAt/Reader
+=== RUN   TestToReaderAt/ReaderAt
+=== RUN   TestToReaderAt/ReadAtSeeker
+=== RUN   TestToReaderAt/ReadAtSizer
+--- PASS: TestToReaderAt (0.00s)
+    --- PASS: TestToReaderAt/Reader (0.00s)
+    --- PASS: TestToReaderAt/ReaderAt (0.00s)
+    --- PASS: TestToReaderAt/ReadAtSeeker (0.00s)
+    --- PASS: TestToReaderAt/ReadAtSizer (0.00s)
+=== RUN   TestParserToken
+=== RUN   TestParserToken/empty
+=== RUN   TestParserToken/raw_token_error
+=== RUN   TestParserToken/unclosed_element
+=== RUN   TestParserToken/unexpected_close_tag
+=== RUN   TestParserToken/mismatched_element
+=== RUN   TestParserToken/mismatched_element_different_prefix
+=== RUN   TestParserToken/empty_namespace_prefix
+=== RUN   TestParserToken/redeclare_xmlns_prefix
+=== RUN   TestParserToken/undeclaring_namespace
+=== RUN   TestParserToken/duplicate_attribute
+=== RUN   TestParserToken/duplicate_attribute_different_prefix
+=== RUN   TestParserToken/undeclared_prefix
+=== RUN   TestParserToken/empty_attribute
+=== RUN   TestParserToken/default
+=== RUN   TestParserToken/named
+=== RUN   TestParserToken/multiple
+=== RUN   TestParserToken/nested
+--- PASS: TestParserToken (0.00s)
+    --- PASS: TestParserToken/empty (0.00s)
+    --- PASS: TestParserToken/raw_token_error (0.00s)
+    --- PASS: TestParserToken/unclosed_element (0.00s)
+    --- PASS: TestParserToken/unexpected_close_tag (0.00s)
+    --- PASS: TestParserToken/mismatched_element (0.00s)
+    --- PASS: TestParserToken/mismatched_element_different_prefix (0.00s)
+    --- PASS: TestParserToken/empty_namespace_prefix (0.00s)
+    --- PASS: TestParserToken/redeclare_xmlns_prefix (0.00s)
+    --- PASS: TestParserToken/undeclaring_namespace (0.00s)
+    --- PASS: TestParserToken/duplicate_attribute (0.00s)
+    --- PASS: TestParserToken/duplicate_attribute_different_prefix (0.00s)
+    --- PASS: TestParserToken/undeclared_prefix (0.00s)
+    --- PASS: TestParserToken/empty_attribute (0.00s)
+    --- PASS: TestParserToken/default (0.00s)
+    --- PASS: TestParserToken/named (0.00s)
+    --- PASS: TestParserToken/multiple (0.00s)
+    --- PASS: TestParserToken/nested (0.00s)
+=== RUN   TestParseXML
+=== RUN   TestParseXML/nil
+=== RUN   TestParseXML/non-struct
+=== RUN   TestParseXML/empty_struct
+=== RUN   TestParseXML/first_field
+=== RUN   TestParseXML/untagged
+=== RUN   TestParseXML/no_name
+=== RUN   TestParseXML/no_namespace
+=== RUN   TestParseXML/malformed
+=== RUN   TestParseXML/unsupported
+=== RUN   TestParseXML/unallowed_flag
+=== RUN   TestParseXML/attr_chardata
+=== RUN   TestParseXML/non-string_attr
+=== RUN   TestParseXML/chardata_name
+=== RUN   TestParseXML/chardata_optional
+=== RUN   TestParseXML/non-string_chardata
+=== RUN   TestParseXML/chardata_subelements
+=== RUN   TestParseXML/subelement_name
+=== RUN   TestParseXML/non-struct_subelement
+=== RUN   TestParseXML/EOF
+=== RUN   TestParseXML/non-element
+=== RUN   TestParseXML/wrong_name
+=== RUN   TestParseXML/missing_attribute
+=== RUN   TestParseXML/non-unique_attribute
+=== RUN   TestParseXML/extra_attribute
+=== RUN   TestParseXML/slice_at_least_one
+=== RUN   TestParseXML/element_trailing_element
+=== RUN   TestParseXML/element_trailing_token
+=== RUN   TestParseXML/trailing_token
+=== RUN   TestParseXML/simple
+=== RUN   TestParseXML/procinst_and_whitespace
+=== RUN   TestParseXML/internal_whitespace
+=== RUN   TestParseXML/c14nroot
+=== RUN   TestParseXML/attributes
+=== RUN   TestParseXML/character_data
+=== RUN   TestParseXML/sub-elements
+=== RUN   TestParseXML/optional
+--- PASS: TestParseXML (0.00s)
+    --- PASS: TestParseXML/nil (0.00s)
+    --- PASS: TestParseXML/non-struct (0.00s)
+    --- PASS: TestParseXML/empty_struct (0.00s)
+    --- PASS: TestParseXML/first_field (0.00s)
+    --- PASS: TestParseXML/untagged (0.00s)
+    --- PASS: TestParseXML/no_name (0.00s)
+    --- PASS: TestParseXML/no_namespace (0.00s)
+    --- PASS: TestParseXML/malformed (0.00s)
+    --- PASS: TestParseXML/unsupported (0.00s)
+    --- PASS: TestParseXML/unallowed_flag (0.00s)
+    --- PASS: TestParseXML/attr_chardata (0.00s)
+    --- PASS: TestParseXML/non-string_attr (0.00s)
+    --- PASS: TestParseXML/chardata_name (0.00s)
+    --- PASS: TestParseXML/chardata_optional (0.00s)
+    --- PASS: TestParseXML/non-string_chardata (0.00s)
+    --- PASS: TestParseXML/chardata_subelements (0.00s)
+    --- PASS: TestParseXML/subelement_name (0.00s)
+    --- PASS: TestParseXML/non-struct_subelement (0.00s)
+    --- PASS: TestParseXML/EOF (0.00s)
+    --- PASS: TestParseXML/non-element (0.00s)
+    --- PASS: TestParseXML/wrong_name (0.00s)
+    --- PASS: TestParseXML/missing_attribute (0.00s)
+    --- PASS: TestParseXML/non-unique_attribute (0.00s)
+    --- PASS: TestParseXML/extra_attribute (0.00s)
+    --- PASS: TestParseXML/slice_at_least_one (0.00s)
+    --- PASS: TestParseXML/element_trailing_element (0.00s)
+    --- PASS: TestParseXML/element_trailing_token (0.00s)
+    --- PASS: TestParseXML/trailing_token (0.00s)
+    --- PASS: TestParseXML/simple (0.00s)
+    --- PASS: TestParseXML/procinst_and_whitespace (0.00s)
+    --- PASS: TestParseXML/internal_whitespace (0.00s)
+    --- PASS: TestParseXML/c14nroot (0.00s)
+    --- PASS: TestParseXML/attributes (0.00s)
+    --- PASS: TestParseXML/character_data (0.00s)
+    --- PASS: TestParseXML/sub-elements (0.00s)
+    --- PASS: TestParseXML/optional (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/container/bdoc	0.139s
+=== RUN   TestDummy
+--- PASS: TestDummy (0.00s)
+=== RUN   TestTrusted
+=== RUN   TestTrusted/unconfigured
+=== RUN   TestTrusted/trusted
+=== RUN   TestTrusted/untrusted
+--- PASS: TestTrusted (0.00s)
+    --- PASS: TestTrusted/unconfigured (0.00s)
+    --- PASS: TestTrusted/trusted (0.00s)
+    --- PASS: TestTrusted/untrusted (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/container/dummy	0.004s
+=== RUN   TestCreate
+--- PASS: TestCreate (0.00s)
+=== RUN   TestOpen
+--- PASS: TestOpen (0.00s)
+=== RUN   TestIncrementNonce
+=== RUN   TestIncrementNonce/one
+=== RUN   TestIncrementNonce/carry
+=== RUN   TestIncrementNonce/wrap
+--- PASS: TestIncrementNonce (0.00s)
+    --- PASS: TestIncrementNonce/one (0.00s)
+    --- PASS: TestIncrementNonce/carry (0.00s)
+    --- PASS: TestIncrementNonce/wrap (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/cookie	0.003s
+=== RUN   TestASN1CiphertextVerify
+=== RUN   TestASN1CiphertextVerify/RFC3526ModPGroup3072
+=== RUN   TestASN1CiphertextVerify/NIST-P384
+--- PASS: TestASN1CiphertextVerify (0.00s)
+    --- PASS: TestASN1CiphertextVerify/RFC3526ModPGroup3072 (0.00s)
+    --- PASS: TestASN1CiphertextVerify/NIST-P384 (0.00s)
+=== RUN   TestX509Unmarshaller
+--- PASS: TestX509Unmarshaller (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/crypto/elgamal	0.008s
+=== RUN   TestDigestInfo
+=== RUN   TestDigestInfo/SHA-224
+=== RUN   TestDigestInfo/SHA-256
+=== RUN   TestDigestInfo/SHA-384
+=== RUN   TestDigestInfo/SHA-512
+--- PASS: TestDigestInfo (0.00s)
+    --- PASS: TestDigestInfo/SHA-224 (0.00s)
+    --- PASS: TestDigestInfo/SHA-256 (0.00s)
+    --- PASS: TestDigestInfo/SHA-384 (0.00s)
+    --- PASS: TestDigestInfo/SHA-512 (0.00s)
+=== RUN   TestPEMDecode
+=== RUN   TestPEMDecode/PEM
+=== RUN   TestPEMDecode/DER
+=== RUN   TestPEMDecode/trailing_data
+=== RUN   TestPEMDecode/wrong_type
+=== RUN   TestPEMDecode/with_headers
+--- PASS: TestPEMDecode (0.00s)
+    --- PASS: TestPEMDecode/PEM (0.00s)
+    --- PASS: TestPEMDecode/DER (0.00s)
+    --- PASS: TestPEMDecode/trailing_data (0.00s)
+    --- PASS: TestPEMDecode/wrong_type (0.00s)
+    --- PASS: TestPEMDecode/with_headers (0.00s)
+=== RUN   TestNonce44Bytes
+--- PASS: TestNonce44Bytes (0.00s)
+=== RUN   TestRDNSequenceEqual
+=== RUN   TestRDNSequenceEqual/nil
+=== RUN   TestRDNSequenceEqual/empty
+=== RUN   TestRDNSequenceEqual/empty_nil
+=== RUN   TestRDNSequenceEqual/non-empty_nil
+=== RUN   TestRDNSequenceEqual/equal
+=== RUN   TestRDNSequenceEqual/types
+=== RUN   TestRDNSequenceEqual/values
+=== RUN   TestRDNSequenceEqual/not_comparable
+=== RUN   TestRDNSequenceEqual/reordered_sequence
+=== RUN   TestRDNSequenceEqual/reordered_set
+=== RUN   TestRDNSequenceEqual/missing_RDN
+=== RUN   TestRDNSequenceEqual/missing_attribute
+--- PASS: TestRDNSequenceEqual (0.00s)
+    --- PASS: TestRDNSequenceEqual/nil (0.00s)
+    --- PASS: TestRDNSequenceEqual/empty (0.00s)
+    --- PASS: TestRDNSequenceEqual/empty_nil (0.00s)
+    --- PASS: TestRDNSequenceEqual/non-empty_nil (0.00s)
+    --- PASS: TestRDNSequenceEqual/equal (0.00s)
+    --- PASS: TestRDNSequenceEqual/types (0.00s)
+    --- PASS: TestRDNSequenceEqual/values (0.00s)
+    --- PASS: TestRDNSequenceEqual/not_comparable (0.00s)
+    --- PASS: TestRDNSequenceEqual/reordered_sequence (0.00s)
+    --- PASS: TestRDNSequenceEqual/reordered_set (0.00s)
+    --- PASS: TestRDNSequenceEqual/missing_RDN (0.00s)
+    --- PASS: TestRDNSequenceEqual/missing_attribute (0.00s)
+=== RUN   TestEncodeDecodeRDNSequence
+=== RUN   TestEncodeDecodeRDNSequence/nil
+=== RUN   TestEncodeDecodeRDNSequence/empty
+=== RUN   TestEncodeDecodeRDNSequence/single
+=== RUN   TestEncodeDecodeRDNSequence/multiple
+=== RUN   TestEncodeDecodeRDNSequence/multi-value
+=== RUN   TestEncodeDecodeRDNSequence/escape
+=== RUN   TestEncodeDecodeRDNSequence/spaces
+=== RUN   TestEncodeDecodeRDNSequence/unknown
+=== RUN   TestEncodeDecodeRDNSequence/non-string
+--- PASS: TestEncodeDecodeRDNSequence (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/nil (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/empty (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/single (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/multiple (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/multi-value (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/escape (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/spaces (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/unknown (0.00s)
+    --- PASS: TestEncodeDecodeRDNSequence/non-string (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/cryptoutil	0.006s
+?   	ivxv.ee/common/collector/identity	[no test files]
+=== RUN   ExampleWalk
+--- PASS: ExampleWalk (0.00s)
+=== RUN   ExampleCausedBy
+--- PASS: ExampleCausedBy (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/errors	0.006s
+=== RUN   TestSeverity
+=== RUN   TestSeverity/debug
+=== RUN   TestSeverity/info
+=== RUN   TestSeverity/err
+=== RUN   TestSeverity/alert
+--- PASS: TestSeverity (0.00s)
+    --- PASS: TestSeverity/debug (0.00s)
+    --- PASS: TestSeverity/info (0.00s)
+    --- PASS: TestSeverity/err (0.00s)
+    --- PASS: TestSeverity/alert (0.00s)
+=== RUN   TestDebug
+=== RUN   TestDebug/enabled
+=== RUN   TestDebug/disabled
+--- PASS: TestDebug (0.00s)
+    --- PASS: TestDebug/enabled (0.00s)
+    --- PASS: TestDebug/disabled (0.00s)
+=== RUN   TestFormat
+caused by other: ivxv.ee/common/collector/log.OtherError{}
+=== RUN   TestFormat/minimal
+=== RUN   TestFormat/minimal_pointer
+=== RUN   TestFormat/connection_ID
+=== RUN   TestFormat/session_ID
+=== RUN   TestFormat/string
+=== RUN   TestFormat/url-encoded
+=== RUN   TestFormat/truncate
+=== RUN   TestFormat/number
+=== RUN   TestFormat/array
+=== RUN   TestFormat/slice
+=== RUN   TestFormat/base64
+=== RUN   TestFormat/sensitive
+=== RUN   TestFormat/map
+=== RUN   TestFormat/struct
+=== RUN   TestFormat/stringer
+=== RUN   TestFormat/error
+=== RUN   TestFormat/nested
+=== RUN   TestFormat/nested_empty
+=== RUN   TestFormat/nested_empty_pointer
+=== RUN   TestFormat/gen
+=== RUN   TestFormat/alert
+=== RUN   TestFormat/time
+=== RUN   TestFormat/time_nano
+=== RUN   TestFormat/certificate
+--- PASS: TestFormat (0.00s)
+    --- PASS: TestFormat/minimal (0.00s)
+    --- PASS: TestFormat/minimal_pointer (0.00s)
+    --- PASS: TestFormat/connection_ID (0.00s)
+    --- PASS: TestFormat/session_ID (0.00s)
+    --- PASS: TestFormat/string (0.00s)
+    --- PASS: TestFormat/url-encoded (0.00s)
+    --- PASS: TestFormat/truncate (0.00s)
+    --- PASS: TestFormat/number (0.00s)
+    --- PASS: TestFormat/array (0.00s)
+    --- PASS: TestFormat/slice (0.00s)
+    --- PASS: TestFormat/base64 (0.00s)
+    --- PASS: TestFormat/sensitive (0.00s)
+    --- PASS: TestFormat/map (0.00s)
+    --- PASS: TestFormat/struct (0.00s)
+    --- PASS: TestFormat/stringer (0.00s)
+    --- PASS: TestFormat/error (0.00s)
+    --- PASS: TestFormat/nested (0.00s)
+    --- PASS: TestFormat/nested_empty (0.00s)
+    --- PASS: TestFormat/nested_empty_pointer (0.00s)
+    --- PASS: TestFormat/gen (0.00s)
+    --- PASS: TestFormat/alert (0.00s)
+    --- PASS: TestFormat/time (0.00s)
+    --- PASS: TestFormat/time_nano (0.00s)
+    --- PASS: TestFormat/certificate (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/log	0.004s
+?   	ivxv.ee/common/collector/q11n	[no test files]
+?   	ivxv.ee/common/collector/q11n/ocsp	[no test files]
+?   	ivxv.ee/common/collector/q11n/tsp	[no test files]
+?   	ivxv.ee/common/collector/status	[no test files]
+?   	ivxv.ee/common/collector/status/client	[no test files]
+?   	ivxv.ee/common/collector/storage	[no test files]
+?   	ivxv.ee/common/collector/storage/etcd	[no test files]
+?   	ivxv.ee/common/collector/storage/file	[no test files]
+?   	ivxv.ee/common/collector/storage/memory	[no test files]
+?   	ivxv.ee/common/collector/token	[no test files]
+=== RUN   TestAuthentication
+=== PAUSE TestAuthentication
+=== RUN   TestCertificate
+=== PAUSE TestCertificate
+=== RUN   TestSigning
+=== PAUSE TestSigning
+=== CONT  TestAuthentication
+=== CONT  TestSigning
+=== CONT  TestCertificate
+--- PASS: TestCertificate (0.28s)
+polling signing
+polling authentication
+polling signing
+polling authentication
+=== NAME  TestSigning
+    mid_test.go:158: failed to verify authentication challenge signature: ivxv.ee/common/collector/mid.VerifyAuthenticationSignatureError{Err:x509: ECDSA verification failure, }
+--- FAIL: TestSigning (5.34s)
+--- PASS: TestAuthentication (5.53s)
+FAIL
+FAIL	ivxv.ee/common/collector/mid	5.539s
+=== RUN   TestCheckOCSPOfIDCardWithParsingOCSPURLFromConf
+    ocsp_test.go:58: Error ivxv.ee/common/collector/ocsp.CheckResponseError{Err:ivxv.ee/common/collector/ocsp.CheckResponseCommonError{Err:ivxv.ee/common/collector/ocsp.ResponderCertificateError{Err:ivxv.ee/common/collector/ocsp.ResponderCertificateNotFoundError{Responder:C=EE,O=SK ID Solutions AS,2.5.4.97=#130e4e545245452d3130373437303133,CN=DEMO of KLASS3-SK 2016 OCSP RESPONDER 2026, }, }, }, }
+--- FAIL: TestCheckOCSPOfIDCardWithParsingOCSPURLFromConf (0.15s)
+panic: runtime error: invalid memory address or nil pointer dereference [recovered]
+	panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x30 pc=0x6e020a]
+
+goroutine 7 [running]:
+testing.tRunner.func1.2({0x721800, 0xa0a0a0})
+	/home/audit/tools/go/src/testing/testing.go:1632 +0x230
+testing.tRunner.func1()
+	/home/audit/tools/go/src/testing/testing.go:1635 +0x35e
+panic({0x721800?, 0xa0a0a0?})
+	/home/audit/tools/go/src/runtime/panic.go:791 +0x132
+ivxv.ee/common/collector/ocsp.TestCheckOCSPOfIDCardWithParsingOCSPURLFromConf(0xc00011e680)
+	/home/audit/audit/ivxv-reconstructed/common/collector/ocsp/ocsp_test.go:61 +0x34a
+testing.tRunner(0xc00011e680, 0x7b0cf0)
+	/home/audit/tools/go/src/testing/testing.go:1690 +0xf4
+created by testing.(*T).Run in goroutine 1
+	/home/audit/tools/go/src/testing/testing.go:1743 +0x390
+FAIL	ivxv.ee/common/collector/ocsp	0.152s
+=== RUN   TestRead
+=== RUN   TestRead/0_of_0_with_limit_0
+=== RUN   TestRead/8_of_16_with_limit_32
+=== RUN   TestRead/16_of_16_with_limit_32
+=== RUN   TestRead/16_of_16_with_limit_16
+=== RUN   TestRead/32_of_32_with_limit_16
+=== RUN   TestRead/16_of_32_with_limit_16
+=== RUN   TestRead/32_of_16_with_limit_16
+=== RUN   TestRead/quick
+--- PASS: TestRead (0.00s)
+    --- PASS: TestRead/0_of_0_with_limit_0 (0.00s)
+    --- PASS: TestRead/8_of_16_with_limit_32 (0.00s)
+    --- PASS: TestRead/16_of_16_with_limit_32 (0.00s)
+    --- PASS: TestRead/16_of_16_with_limit_16 (0.00s)
+    --- PASS: TestRead/32_of_32_with_limit_16 (0.00s)
+    --- PASS: TestRead/16_of_32_with_limit_16 (0.00s)
+    --- PASS: TestRead/32_of_16_with_limit_16 (0.00s)
+    --- PASS: TestRead/quick (0.00s)
+=== RUN   TestReadError
+--- PASS: TestReadError (0.00s)
+=== RUN   Example
+--- PASS: Example (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/safereader	0.003s
+=== RUN   TestCheckSize
+=== RUN   TestCheckSize/simple
+=== RUN   TestCheckSize/nested
+=== RUN   TestCheckSize/simple_too_big
+=== RUN   TestCheckSize/simple_pointer_too_big
+=== RUN   TestCheckSize/nested_too_big
+=== RUN   TestCheckSize/nested_pointer_too_big
+--- PASS: TestCheckSize (0.00s)
+    --- PASS: TestCheckSize/simple (0.00s)
+    --- PASS: TestCheckSize/nested (0.00s)
+    --- PASS: TestCheckSize/simple_too_big (0.00s)
+    --- PASS: TestCheckSize/simple_pointer_too_big (0.00s)
+    --- PASS: TestCheckSize/nested_too_big (0.00s)
+    --- PASS: TestCheckSize/nested_pointer_too_big (0.00s)
+=== RUN   TestVerifyOriginValid
+--- PASS: TestVerifyOriginValid (0.00s)
+=== RUN   TestVerifyOriginInValid
+--- PASS: TestVerifyOriginInValid (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/server	0.003s
+=== RUN   TestAuthentication
+=== PAUSE TestAuthentication
+=== RUN   TestCertificate
+=== PAUSE TestCertificate
+=== RUN   TestSigning
+=== PAUSE TestSigning
+=== CONT  TestAuthentication
+=== CONT  TestSigning
+=== CONT  TestCertificate
+=== NAME  TestSigning
+    smartid_test.go:79: failed to start authentication session: ivxv.ee/common/collector/smartid.AuthenticateError{Err:ivxv.ee/common/collector/smartid.StartSessionError{Err:ivxv.ee/common/collector/smartid.ErrorResponseError{HTTPStatus:471 , SessionID:, }, }, }
+--- FAIL: TestSigning (0.27s)
+=== NAME  TestAuthentication
+    smartid_test.go:79: failed to start authentication session: ivxv.ee/common/collector/smartid.AuthenticateError{Err:ivxv.ee/common/collector/smartid.StartSessionError{Err:ivxv.ee/common/collector/smartid.ErrorResponseError{HTTPStatus:471 , SessionID:, }, }, }
+--- FAIL: TestAuthentication (0.27s)
+=== NAME  TestCertificate
+    smartid_test.go:79: failed to start authentication session: ivxv.ee/common/collector/smartid.AuthenticateError{Err:ivxv.ee/common/collector/smartid.StartSessionError{Err:ivxv.ee/common/collector/smartid.ErrorResponseError{HTTPStatus:471 , SessionID:, }, }, }
+--- FAIL: TestCertificate (0.29s)
+FAIL
+FAIL	ivxv.ee/common/collector/smartid	0.296s
+=== RUN   TestStatusReqBuilder
+--- PASS: TestStatusReqBuilder (0.00s)
+=== RUN   TestStatusRespBuilder
+--- PASS: TestStatusRespBuilder (0.00s)
+=== RUN   TestVerifyReqBuilder
+--- PASS: TestVerifyReqBuilder (0.00s)
+=== RUN   TestCastAnyToRPCStatusReq
+--- PASS: TestCastAnyToRPCStatusReq (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/status/client/rpc	0.004s
+=== RUN   TestCorrectBearer
+--- PASS: TestCorrectBearer (0.00s)
+=== RUN   TestWithoutTimeStampBearer
+--- PASS: TestWithoutTimeStampBearer (0.00s)
+=== RUN   TestWithoutNonceBearer
+--- PASS: TestWithoutNonceBearer (0.00s)
+=== RUN   TestWithoutSignatureBearer
+--- PASS: TestWithoutSignatureBearer (0.00s)
+=== RUN   TestWithoutPayloadBearer
+--- PASS: TestWithoutPayloadBearer (0.00s)
+=== RUN   TestWithoutRawBearerBearer
+--- PASS: TestWithoutRawBearerBearer (0.00s)
+=== RUN   TestEmptyBearerDoesntImplementHeader
+--- PASS: TestEmptyBearerDoesntImplementHeader (0.00s)
+=== RUN   TestEmptyBearerDoesntImplementSignature
+--- PASS: TestEmptyBearerDoesntImplementSignature (0.00s)
+=== RUN   TestEmptyBearerDoesntImplementVerify
+--- PASS: TestEmptyBearerDoesntImplementVerify (0.00s)
+=== RUN   TestRawBearerUnmarshalBadRawBearer
+--- PASS: TestRawBearerUnmarshalBadRawBearer (0.00s)
+=== RUN   TestRawBearerBadBase64Signature
+--- PASS: TestRawBearerBadBase64Signature (0.00s)
+=== RUN   TestRawBearerBadBase64Payload
+--- PASS: TestRawBearerBadBase64Payload (0.00s)
+=== RUN   TestRawBearerBadSplitRawBearerToken
+--- PASS: TestRawBearerBadSplitRawBearerToken (0.00s)
+=== RUN   TestRawBearerDoesntImplementHeader
+--- PASS: TestRawBearerDoesntImplementHeader (0.00s)
+=== RUN   TestRawBearerRegex
+--- PASS: TestRawBearerRegex (0.00s)
+=== RUN   TestSplitRawBearer
+--- PASS: TestSplitRawBearer (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/token/custom	0.003s
+=== RUN   TestUnmarshalWithoutRawToken
+--- PASS: TestUnmarshalWithoutRawToken (0.00s)
+=== RUN   TestUnmarshalWithBadBase64Signature
+--- PASS: TestUnmarshalWithBadBase64Signature (0.00s)
+=== RUN   TestVerifyWithBadHashAlgoForOrigin
+--- PASS: TestVerifyWithBadHashAlgoForOrigin (0.00s)
+=== RUN   TestVerifyWithBadMajorRelease
+--- PASS: TestVerifyWithBadMajorRelease (0.00s)
+=== RUN   TestRawWebeidTokenDoesntImplementHeaderMethod
+--- PASS: TestRawWebeidTokenDoesntImplementHeaderMethod (0.00s)
+=== RUN   TestRawWebeidTokenDoesntImplementPayload
+--- PASS: TestRawWebeidTokenDoesntImplementPayload (0.00s)
+=== RUN   TestCertifyReturnsUserCert
+--- PASS: TestCertifyReturnsUserCert (0.00s)
+=== RUN   TestRawWebeidTokenImplementsSignature
+--- PASS: TestRawWebeidTokenImplementsSignature (0.00s)
+=== RUN   TestFormatRegex
+--- PASS: TestFormatRegex (0.00s)
+=== RUN   TestFormatMajorRelease
+--- PASS: TestFormatMajorRelease (0.00s)
+=== RUN   TestAlgorithmRegex
+--- PASS: TestAlgorithmRegex (0.00s)
+=== RUN   TestHashIt
+--- PASS: TestHashIt (0.00s)
+=== RUN   TestHashAlgorithm
+--- PASS: TestHashAlgorithm (0.00s)
+=== RUN   TestCorrectWebeidToken
+--- PASS: TestCorrectWebeidToken (0.00s)
+=== RUN   TestBadUnverifiedCertificateWebeidToken
+--- PASS: TestBadUnverifiedCertificateWebeidToken (0.00s)
+=== RUN   TestBadAlgorithmWebeidToken
+--- PASS: TestBadAlgorithmWebeidToken (0.00s)
+=== RUN   TestBadSignatureWebeidToken
+--- PASS: TestBadSignatureWebeidToken (0.00s)
+=== RUN   TestBadFormatWebeidToken
+--- PASS: TestBadFormatWebeidToken (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/token/webeid	0.013s
+=== RUN   TestCreate
+    tsp_test.go:48: ivxv.ee/common/collector/tsp.SignedDataCheckError{Err:ivxv.ee/common/collector/tsp.UntrustedSigningCertificateError{Err:ivxv.ee/common/collector/tsp.IASNCertificateNotFoundError{Issuer:C=EE,O=SK ID Solutions AS,2.5.4.97=#130e4e545245452d3130373437303133,CN=TEST of SK TSA CA 2023E, Serial:167064708827675857109352168043996578923, }, }, }
+--- FAIL: TestCreate (0.11s)
+=== RUN   TestCheck
+--- PASS: TestCheck (0.00s)
+FAIL
+FAIL	ivxv.ee/common/collector/tsp	0.114s
+=== RUN   TestScalar_Apply
+=== RUN   TestScalar_Apply/bool
+=== RUN   TestScalar_Apply/byte_slice
+=== RUN   TestScalar_Apply/invalid
+=== RUN   TestScalar_Apply/int64
+=== RUN   TestScalar_Apply/uint64
+=== RUN   TestScalar_Apply/string
+--- PASS: TestScalar_Apply (0.00s)
+    --- PASS: TestScalar_Apply/bool (0.00s)
+    --- PASS: TestScalar_Apply/byte_slice (0.00s)
+    --- PASS: TestScalar_Apply/invalid (0.00s)
+    --- PASS: TestScalar_Apply/int64 (0.00s)
+    --- PASS: TestScalar_Apply/uint64 (0.00s)
+    --- PASS: TestScalar_Apply/string (0.00s)
+=== RUN   TestSequence_Apply
+=== RUN   TestSequence_Apply/array
+=== RUN   TestSequence_Apply/invalid
+=== RUN   TestSequence_Apply/slice
+--- PASS: TestSequence_Apply (0.00s)
+    --- PASS: TestSequence_Apply/array (0.00s)
+    --- PASS: TestSequence_Apply/invalid (0.00s)
+    --- PASS: TestSequence_Apply/slice (0.00s)
+=== RUN   TestMapping_Apply
+=== RUN   TestMapping_Apply/convertible
+=== RUN   TestMapping_Apply/invalid
+=== RUN   TestMapping_Apply/map
+=== RUN   TestMapping_Apply/struct
+--- PASS: TestMapping_Apply (0.00s)
+    --- PASS: TestMapping_Apply/convertible (0.00s)
+    --- PASS: TestMapping_Apply/invalid (0.00s)
+    --- PASS: TestMapping_Apply/map (0.00s)
+    --- PASS: TestMapping_Apply/struct (0.00s)
+=== RUN   TestLex
+=== RUN   TestLex/comment
+=== RUN   TestLex/content
+=== RUN   TestLex/literal
+=== RUN   TestLex/mapping
+=== RUN   TestLex/sequence
+=== RUN   TestLex/reference
+=== RUN   TestLex/secondary
+=== RUN   TestLex/carriage_return
+=== RUN   TestLex/bom
+--- PASS: TestLex (0.00s)
+    --- PASS: TestLex/comment (0.00s)
+    --- PASS: TestLex/content (0.00s)
+    --- PASS: TestLex/literal (0.00s)
+    --- PASS: TestLex/mapping (0.00s)
+    --- PASS: TestLex/sequence (0.00s)
+    --- PASS: TestLex/reference (0.00s)
+    --- PASS: TestLex/secondary (0.00s)
+    --- PASS: TestLex/carriage_return (0.00s)
+    --- PASS: TestLex/bom (0.00s)
+=== RUN   TestParse
+=== RUN   TestParse/reference
+=== RUN   TestParse/secondary
+=== RUN   TestParse/indent
+=== RUN   TestParse/literal
+=== RUN   TestParse/mapping
+=== RUN   TestParse/mixed
+=== RUN   TestParse/scalar
+=== RUN   TestParse/sequence
+--- PASS: TestParse (0.00s)
+    --- PASS: TestParse/reference (0.00s)
+    --- PASS: TestParse/secondary (0.00s)
+    --- PASS: TestParse/indent (0.00s)
+    --- PASS: TestParse/literal (0.00s)
+    --- PASS: TestParse/mapping (0.00s)
+    --- PASS: TestParse/mixed (0.00s)
+    --- PASS: TestParse/scalar (0.00s)
+    --- PASS: TestParse/sequence (0.00s)
+=== RUN   TestUnmarshal
+--- PASS: TestUnmarshal (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/yaml	0.006s
+=== RUN   TestEndOfCentralDirectory
+--- PASS: TestEndOfCentralDirectory (0.01s)
+=== RUN   TestEndOfCentralDirectoryRegression
+--- PASS: TestEndOfCentralDirectoryRegression (0.00s)
+=== RUN   TestClassicalZipBombEndOfCentralDirectoryRegression
+--- PASS: TestClassicalZipBombEndOfCentralDirectoryRegression (0.00s)
+=== RUN   TestBetterZipBombEndOfCentralDirectoryRegression
+--- PASS: TestBetterZipBombEndOfCentralDirectoryRegression (0.00s)
+PASS
+ok  	ivxv.ee/common/collector/zip	0.013s
+FAIL
+make[2]: *** [../go/common.mk:29: test] Error 1
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make[1]: *** [Makefile:18: test] Error 2
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make: *** [Makefile:88: test-common/collector] Error 2

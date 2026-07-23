@@ -1,0 +1,7 @@
+2026-07-23T13:49:04Z
+track=strict
+source=/tmp/ivxv-phase3-strict-1784814341
+commit=2785872f84dffb56bbecc41b096a7ee0f2876e64
+command=make clean && make && make test
+scripts/phase3-build-track.sh: line 18: make: command not found
+exit_status=127

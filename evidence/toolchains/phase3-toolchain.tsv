@@ -1,0 +1,13 @@
+track	tool	version_or_status	source	evidence
+strict	make	NOT_INSTALLED	OS environment	evidence/build-a/environment.txt
+strict	go	NOT_INSTALLED	OS environment	evidence/build-a/environment.txt
+strict	java	NOT_INSTALLED	OS environment	evidence/build-a/environment.txt
+strict	gradle	NOT_INSTALLED	OS environment	evidence/build-a/environment.txt
+strict	dpkg-buildpackage	NOT_INSTALLED	OS environment	evidence/build-a/environment.txt
+strict	python3	3.10.12	OS environment	evidence/build-a/environment.txt
+reconstructed	make	NOT_INSTALLED	OS environment	evidence/build-reconstruction/environment.txt
+reconstructed	go	NOT_INSTALLED	OS environment	evidence/build-reconstruction/environment.txt
+reconstructed	java	NOT_INSTALLED	OS environment	evidence/build-reconstruction/environment.txt
+reconstructed	gradle	NOT_INSTALLED	OS environment	evidence/build-reconstruction/environment.txt
+reconstructed	dpkg-buildpackage	NOT_INSTALLED	OS environment	evidence/build-reconstruction/environment.txt
+reconstructed	python3	3.10.12	OS environment	evidence/build-reconstruction/environment.txt

@@ -1,0 +1,7 @@
+UTC timestamp: 2026-07-23T13:48:03Z
+Working directory: /home/audit/audit/ivxv-reconstructed
+Command: bash -lc make\ java
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=C.UTF-8; LC_ALL=C.UTF-8
+Exit status: 127
+--- combined stdout and stderr ---
+bash: line 1: make: command not found

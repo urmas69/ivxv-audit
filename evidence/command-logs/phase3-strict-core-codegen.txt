@@ -1,0 +1,30 @@
+UTC timestamp: 2026-07-23T14:21:29Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ export\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org\ GOMODCACHE=/tmp/ivxv-phase3/strict-gomodcache\;\ cd\ /tmp/ivxv-phase3-strict-1784814341/core\;\ make\ codegen\ ONLINE=1\ GOMODCACHE=/tmp/ivxv-phase3/strict-gomodcache\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org
+Environment: PATH=/home/audit/tools/bin:/home/audit/tools/go/bin:/home/audit/tools/jdk/bin:/home/audit/tools/gradle/gradle-8.11/bin:/home/audit/tools/usr/bin:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 2
+--- combined stdout and stderr ---
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading golang.org/x/crypto v0.11.1-0.20230711161743-2e82bdd1719d
+go: downloading github.com/gtank/ristretto255 v0.1.2
+go: downloading github.com/prologic/bitcask v0.3.10
+go: downloading go.etcd.io/bbolt v1.3.2
+go: downloading github.com/plar/go-adaptive-radix-tree v1.0.4
+go: downloading golang.org/x/sys v0.10.0
+go: downloading github.com/pkg/errors v0.9.1
+go: downloading golang.org/x/exp v0.0.0-20221011201855-a3968a42eed6
+rm -rf bin/
+make -C cmd/errorgen all
+make[1]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/core/cmd/errorgen'
+rm -rf cmd/gen/gentmpl.go
+/home/audit/tools/go/bin/go generate ./...
+generate.go:26: running "./gentmpl.sh": fork/exec ./gentmpl.sh: permission denied
+make[1]: *** [Makefile:7: bin/gen] Error 1
+make[1]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/core/cmd/errorgen'
+make: *** [Makefile:34: --build-errorgen] Error 2

@@ -1,0 +1,47 @@
+UTC timestamp: 2026-07-23T14:24:50Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ export\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org\ GOMODCACHE=/tmp/ivxv-phase3/recon-gomodcache\;\ cd\ /home/audit/audit/ivxv-reconstructed\;\ make\ go\ ONLINE=1\ GOMODCACHE=/tmp/ivxv-phase3/recon-gomodcache\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 2
+--- combined stdout and stderr ---
+make -C common/collector gotools
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk gotools
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C common/collector goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk goimports
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C common/collector ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk all
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/common/collector/bin \
+	/home/audit/tools/go/bin/go install ./...
+# ivxv.ee/common/collector/cmd/verifier
+/home/audit/tools/go/pkg/tool/linux_amd64/link: running x86_64-linux-gnu-gcc-11 failed: exit status 1
+/home/audit/tools/usr/bin/x86_64-linux-gnu-gcc-11 -m64 -o $WORK/b178/exe/a.out -rdynamic /tmp/go-link-650686327/go.o /tmp/go-link-650686327/000000.o /tmp/go-link-650686327/000001.o /tmp/go-link-650686327/000002.o /tmp/go-link-650686327/000003.o /tmp/go-link-650686327/000004.o /tmp/go-link-650686327/000005.o /tmp/go-link-650686327/000006.o /tmp/go-link-650686327/000007.o /tmp/go-link-650686327/000008.o /tmp/go-link-650686327/000009.o /tmp/go-link-650686327/000010.o /tmp/go-link-650686327/000011.o /tmp/go-link-650686327/000012.o /tmp/go-link-650686327/000013.o /tmp/go-link-650686327/000014.o /tmp/go-link-650686327/000015.o /tmp/go-link-650686327/000016.o /tmp/go-link-650686327/000017.o /tmp/go-link-650686327/000018.o /tmp/go-link-650686327/000019.o -O2 -g -lresolv -O2 -g -lpthread
+/usr/bin/ld: cannot find /usr/lib/x86_64-linux-gnu/libc_nonshared.a: No such file or directory
+collect2: error: ld returned 1 exit status
+
+make[2]: *** [../go/common.mk:12: all] Error 1
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make[1]: *** [Makefile:18: all] Error 2
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make: *** [Makefile:62: common/collector] Error 2

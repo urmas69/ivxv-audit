@@ -1,0 +1,22 @@
+Subject: [RECONSTRUCTION] Record module tidy and generator normalization
+
+The local replacement makes the inaccessible tivi.io/core sums obsolete and
+the generator script was not executable in the clone. Go module tidy removed
+the two obsolete sums in each affected module, and the research checkout
+normalized gentmpl.sh to executable so the published generator can run.
+
+diff --git a/common/collector/go.sum b/common/collector/go.sum
+--- a/common/collector/go.sum
++++ b/common/collector/go.sum
+@@ -89,2 +89,0 @@
+-tivi.io/core v0.2.2-0.20241127235149-149435f9e4f4 h1:NgIyqKugpgiIia6wiRM6I9E1XStcitd1x8wIs0z75f8=
+-tivi.io/core v0.2.2-0.20241127235149-149435f9e4f4/go.mod h1:iVb6IvZMOrl1JPCwSkeVv7sV7Cd9cDjmyCg4xOvRL+w=
+diff --git a/voting/go.sum b/voting/go.sum
+--- a/voting/go.sum
++++ b/voting/go.sum
+@@ -89,2 +89,0 @@
+-tivi.io/core v0.2.2-0.20241127235149-149435f9e4f4 h1:NgIyqKugpgiIia6wiRM6I9E1XStcitd1x8wIs0z75f8=
+-tivi.io/core v0.2.2-0.20241127235149-149435f9e4f4/go.mod h1:iVb6IvZMOrl1JPCwSkeVv7sV7Cd9cDjmyCg4xOvRL+w=
+diff --git a/core/cmd/errorgen/gentmpl.sh b/core/cmd/errorgen/gentmpl.sh
+old mode 100644
+new mode 100755

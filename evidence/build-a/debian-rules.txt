@@ -1,0 +1,86 @@
+#!/usr/bin/make -f
+
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+# disable testing of python module (module does not have unit tests)
+export PYBUILD_DISABLE = test
+
+%:
+	dh $@ --with python3
+
+override_dh_auto_clean:
+	# Do not clean Java applications nor documentation.
+	$(MAKE) clean-go clean-systemd
+
+	# Clean ivxv-admin.
+	# FIXME: The python build files should not live in the root directory,
+	#        but be hidden behind the Makefile facade like Go, Java, and
+	#        documentation are.
+	dh_auto_clean --package ivxv-admin --buildsystem pybuild
+
+override_dh_auto_build:
+	# Update version strings in subcomponents
+	$(MAKE) version
+
+	# Do not build Java applications nor documentation for Debian.
+	$(MAKE) go
+
+	# Build ivxv-admin.
+	# FIXME: The python build files should not live in the root directory,
+	#        but be hidden behind the Makefile facade like Go, Java, and
+	#        documentation are.
+	dh_auto_build --package ivxv-admin --buildsystem pybuild
+
+override_dh_auto_test:
+	# This target contains workarounds for DEB_BUILD_OPTIONS=nocheck bug
+	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=568897
+
+	# Do not test Java applications.
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	$(MAKE) test-go GOTESTFLAGS=-short
+endif
+
+	# Test ivxv-admin.
+	# FIXME: The python build files should not live in the root directory,
+	#        but be hidden behind the Makefile facade like Go, Java, and
+	#        documentation are.
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	dh_auto_test --package ivxv-admin --buildsystem pybuild
+endif
+
+override_dh_auto_install:
+	# install ivxv-storage db
+	$(MAKE) -C storage ivxv_storage_db
+
+	dh_installsystemd
+	dh_auto_install --no-package ivxv-admin
+
+	# Install ivxv-admin.
+	# FIXME: The python build files should not live in the root directory,
+	#        but be hidden behind the Makefile facade like Go, Java, and
+	#        documentation are.
+	dh_auto_install --package ivxv-admin --buildsystem pybuild --destdir debian/ivxv-admin/
+	install -d debian/ivxv-admin/etc/ssl/certs
+	cat collector-admin/sk-certs/*.crt > debian/ivxv-admin/etc/ssl/certs/sk-juur.crt
+
+	# 1. `cp ivxv-admin-agent.service /lib/systemd/system/`
+	# 2. `systemctl enable ivxv-admin-agent.service`
+	dh_installsystemd --package ivxv-admin --name ivxv-admin-agent ivxv-admin-agent.service
+
+# Without that target you will get:
+#     Normalizing XXX using File::StripNondeterminism::handlers::zip
+# `dh_strip_nondeterminism` itself removes a timestamp from an archive
+# which means that each wheel's hash, after that, will differ as well,
+# this will lead to `pip3 install --require-hashes` failure
+override_dh_strip_nondeterminism:
+	dh_strip_nondeterminism --no-package=python3-ivxv-common
+
+# Silently skip dh_installinit to avoid redundant code in postinst/postrm
+# scripts as packages do not use obsolete init system.
+override_dh_installinit:
+
+# Go >= 1.19 alread compresses ELF section in binaries that are produced during `go build/install`
+# dwz: ./ivxv-XXX/usr/bin/ivxv-XXX: Found compressed .debug_abbrev section, not attempting dwz compression
+override_dh_dwz:

@@ -1,0 +1,19 @@
+Subject: [RECONSTRUCTION] Use the published local core snapshot
+
+This experimental patch substitutes the inaccessible tivi.io/core pseudo-version
+with the root core/ module published in the fixed IVXV tree. It is not claimed
+to reproduce the KOV2025 dependency: no public evidence proves byte equivalence,
+and the patch changes module resolution semantics.
+
+diff --git a/common/collector/go.mod b/common/collector/go.mod
+--- a/common/collector/go.mod
++++ b/common/collector/go.mod
+@@ -29,0 +30,2 @@
++
++replace tivi.io/core => ../../core
+diff --git a/voting/go.mod b/voting/go.mod
+--- a/voting/go.mod
++++ b/voting/go.mod
+@@ -35,0 +36,2 @@
++
++replace tivi.io/core => ../core

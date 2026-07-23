@@ -1,0 +1,103 @@
+UTC timestamp: 2026-07-23T14:30:31Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ cd\ /home/audit/audit/ivxv-reconstructed\;\ make\ test-java\ ONLINE=1
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 0
+--- combined stdout and stderr ---
+make -C common/java test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/java'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle test -g=/home/audit/audit/ivxv-reconstructed/common/external/java/
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :jar
+> Task :compileTestFixturesJava UP-TO-DATE
+> Task :processTestFixturesResources NO-SOURCE
+> Task :testFixturesClasses UP-TO-DATE
+> Task :testFixturesJar
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+
+BUILD SUCCESSFUL in 983ms
+5 actionable tasks: 2 executed, 3 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/java'
+make -C key test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/key'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle test -g=/home/audit/audit/ivxv-reconstructed/common/external/java/
+> Task :common:compileJava UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :common:compileTestFixturesJava UP-TO-DATE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :common:processResources UP-TO-DATE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar
+> Task :common:processTestFixturesResources NO-SOURCE
+> Task :common:testFixturesClasses UP-TO-DATE
+> Task :common:testFixturesJar
+> Task :test NO-SOURCE
+> Task :common:compileTestJava NO-SOURCE
+> Task :common:processTestResources NO-SOURCE
+> Task :common:testClasses UP-TO-DATE
+> Task :common:test SKIPPED
+
+BUILD SUCCESSFUL in 945ms
+6 actionable tasks: 2 executed, 4 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/key'
+make -C processor test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/processor'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle test -g=/home/audit/audit/ivxv-reconstructed/common/external/java/
+> Task :common:compileJava UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :common:compileTestFixturesJava UP-TO-DATE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :common:processResources UP-TO-DATE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar
+> Task :common:processTestFixturesResources NO-SOURCE
+> Task :common:testFixturesClasses UP-TO-DATE
+> Task :common:testFixturesJar
+> Task :test NO-SOURCE
+> Task :common:compileTestJava NO-SOURCE
+> Task :common:processTestResources NO-SOURCE
+> Task :common:testClasses UP-TO-DATE
+> Task :common:test SKIPPED
+
+BUILD SUCCESSFUL in 909ms
+6 actionable tasks: 2 executed, 4 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/processor'
+make -C auditor test
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/auditor'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle test -g=/home/audit/audit/ivxv-reconstructed/common/external/java/
+> Task :common:compileJava UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :common:compileTestFixturesJava UP-TO-DATE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :common:processResources UP-TO-DATE
+> Task :common:classes UP-TO-DATE
+> Task :common:jar
+> Task :common:processTestFixturesResources NO-SOURCE
+> Task :common:testFixturesClasses UP-TO-DATE
+> Task :common:testFixturesJar
+> Task :test NO-SOURCE
+> Task :common:compileTestJava NO-SOURCE
+> Task :common:processTestResources NO-SOURCE
+> Task :common:testClasses UP-TO-DATE
+> Task :common:test SKIPPED
+
+BUILD SUCCESSFUL in 873ms
+6 actionable tasks: 2 executed, 4 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/auditor'

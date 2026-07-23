@@ -1,0 +1,126 @@
+make: Entering directory '/home/audit/audit/ivxv-reconstructed/core'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/
+make -C cmd/errorgen all
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/core/cmd/errorgen'
+rm -rf cmd/gen/gentmpl.go
+/home/audit/tools/go/bin/go generate ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/core/cmd/errorgen/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/core/cmd/errorgen'
+/home/audit/audit/ivxv-reconstructed/core/cmd/errorgen/bin/errorgen -base /home/audit/audit/ivxv-reconstructed/core/ ./...
+make: Leaving directory '/home/audit/audit/ivxv-reconstructed/core'
+?   	tivi.io/core	[no test files]
+?   	tivi.io/core/cmd/cms	[no test files]
+?   	tivi.io/core/cmd/ts	[no test files]
+?   	tivi.io/core/common/files	[no test files]
+?   	tivi.io/core/crypto	[no test files]
+?   	tivi.io/core/crypto/asn1	[no test files]
+# tivi.io/core/crypto/ecdsa [tivi.io/core/crypto/ecdsa.test]
+crypto/ecdsa/ecdsa.go:21:10: undefined: crypto2.RegisterPrivateKeyASN1Unmarshaller
+crypto/ecdsa/ecdsa.go:22:10: cannot use ASN1UnmarshalPrivateKey(g, key) (value of type PrivateKey) as "tivi.io/core/crypto".SigningPrivateKey value in return statement: PrivateKey does not implement "tivi.io/core/crypto".SigningPrivateKey (wrong type for method Fingerprint)
+		have Fingerprint() uint64
+		want Fingerprint() (uint64, error)
+crypto/ecdsa/ecdsa.go:36:27: sk.val undefined (type *group.Scalar has no field or method val)
+crypto/ecdsa/ecdsa.go:41:6: cannot use sk (variable of type *group.Scalar) as group.Scalar value in struct literal
+crypto/ecdsa/ecdsa.go:92:26: cannot use pubBytes (variable of type cryptobyte.String) as "tivi.io/core/encoding/asn1".DER value in argument to g.ElementOf
+crypto/ecdsa/ecdsa.go:174:35: cannot use privBytes (variable of type cryptobyte.String) as "tivi.io/core/encoding/asn1".DER value in argument to group.UnmarshalScalar
+crypto/ecdsa/ecdsa.go:179:37: sk.val undefined (type *group.Scalar has no field or method val)
+crypto/ecdsa/ecdsa.go:184:6: cannot use sk (variable of type *group.Scalar) as group.Scalar value in struct literal
+crypto/ecdsa/ecdsa.go:246:34: cannot use r (variable of type cryptobyte.String) as "tivi.io/core/encoding/asn1".DER value in argument to group.UnmarshalScalar
+crypto/ecdsa/ecdsa.go:251:34: cannot use s (variable of type cryptobyte.String) as "tivi.io/core/encoding/asn1".DER value in argument to group.UnmarshalScalar
+crypto/ecdsa/ecdsa.go:251:34: too many errors
+FAIL	tivi.io/core/crypto/ecdsa [build failed]
+?   	tivi.io/core/crypto/elgamal/distributed/x509	[no test files]
+# tivi.io/core/crypto/elgamal/homomorphic [tivi.io/core/crypto/elgamal/homomorphic.test]
+crypto/elgamal/homomorphic/homomorphic_test.go:92:24: tmp.MarshalASN1 undefined (type *Choice has no field or method MarshalASN1)
+FAIL	tivi.io/core/crypto/elgamal/homomorphic [build failed]
+?   	tivi.io/core/crypto/elgamal/internal/x509	[no test files]
+?   	tivi.io/core/crypto/elgamal/nizkp	[no test files]
+?   	tivi.io/core/crypto/elgamal/nizkp/ciphertext	[no test files]
+?   	tivi.io/core/crypto/elgamal/nizkp/key	[no test files]
+?   	tivi.io/core/crypto/elgamal/shamir	[no test files]
+?   	tivi.io/core/crypto/elgamal/x509	[no test files]
+--- FAIL: TestExists (0.01s)
+    gen_test.go:67: checking .
+        found Exists{Field} at testdata/exists/exists.go:4:9
+        generating testdata/exists/gen_types.go
+    gen_test.go:68: ./testgen [-v ./testdata/exists] succeeded unexpectedly
+FAIL
+FAIL	tivi.io/core/cmd/errorgen	0.771s
+ok  	tivi.io/core/common/tar	0.003s
+ok  	tivi.io/core/crypto/cades	0.005s
+ok  	tivi.io/core/crypto/cms	0.015s
+?   	tivi.io/core/crypto/util	[no test files]
+# tivi.io/core/crypto/x509 [tivi.io/core/crypto/x509.test]
+crypto/x509/x509_test.go:67:27: not enough arguments in call to decrypter.Decrypt
+	have ([]byte)
+	want ([]byte, bool)
+crypto/x509/x509_test.go:88:61: not enough arguments in call to provableDecrypter.ProvableDecrypt
+	have (*group.Scalar, []byte, []byte)
+	want (*group.Scalar, []byte, []byte, bool)
+FAIL	tivi.io/core/crypto/x509 [build failed]
+?   	tivi.io/core/crypto/x509/internal	[no test files]
+?   	tivi.io/core/crypto/x509/marshal	[no test files]
+?   	tivi.io/core/encoding/asn1	[no test files]
+?   	tivi.io/core/math/group/all	[no test files]
+?   	tivi.io/core/math/group/edwards25519	[no test files]
+?   	tivi.io/core/math/group/internal	[no test files]
+?   	tivi.io/core/test/fixtures	[no test files]
+?   	tivi.io/core/voterlist	[no test files]
+?   	tivi.io/core/voterlist/persistence	[no test files]
+ok  	tivi.io/core/crypto/elgamal	25.067s
+--- FAIL: TestEncryptProvableDecryptManyData (12.37s)
+    --- FAIL: TestEncryptProvableDecryptManyData/RFC3526ModPGroup3072 (0.61s)
+        distributed_test.go:343: tivi.io/core/crypto/elgamal/distributed.VerifyPublicKeyShareASN1UnmarshalDecryptionProofShareError{Err:tivi.io/core/crypto/elgamal/distributed.ASN1UnmarshalDecryptionProofShareTrailingBytesError{}}
+    --- FAIL: TestEncryptProvableDecryptManyData/RFC3526ModPGroup4096 (1.36s)
+        distributed_test.go:343: tivi.io/core/crypto/elgamal/distributed.VerifyPublicKeyShareASN1UnmarshalDecryptionProofShareError{Err:tivi.io/core/crypto/elgamal/distributed.ASN1UnmarshalDecryptionProofShareTrailingBytesError{}}
+    --- FAIL: TestEncryptProvableDecryptManyData/RFC3526ModPGroup8192 (10.04s)
+        distributed_test.go:343: tivi.io/core/crypto/elgamal/distributed.VerifyPublicKeyShareASN1UnmarshalDecryptionProofShareError{Err:tivi.io/core/crypto/elgamal/distributed.ASN1UnmarshalDecryptionProofShareTrailingBytesError{}}
+    --- FAIL: TestEncryptProvableDecryptManyData/RFC3526ModPGroup2048 (0.20s)
+        distributed_test.go:343: tivi.io/core/crypto/elgamal/distributed.VerifyPublicKeyShareASN1UnmarshalDecryptionProofShareError{Err:tivi.io/core/crypto/elgamal/distributed.ASN1UnmarshalDecryptionProofShareTrailingBytesError{}}
+    --- FAIL: TestEncryptProvableDecryptManyData/NIST-P256 (0.00s)
+        distributed_test.go:343: tivi.io/core/crypto/elgamal/distributed.VerifyPublicKeyShareASN1UnmarshalDecryptionProofShareError{Err:tivi.io/core/crypto/elgamal/distributed.ASN1UnmarshalDecryptionProofShareTrailingBytesError{}}
+    --- FAIL: TestEncryptProvableDecryptManyData/NIST-P384 (0.04s)
+        distributed_test.go:343: tivi.io/core/crypto/elgamal/distributed.VerifyPublicKeyShareASN1UnmarshalDecryptionProofShareError{Err:tivi.io/core/crypto/elgamal/distributed.ASN1UnmarshalDecryptionProofShareTrailingBytesError{}}
+    --- FAIL: TestEncryptProvableDecryptManyData/NIST-P521 (0.12s)
+        distributed_test.go:343: tivi.io/core/crypto/elgamal/distributed.VerifyPublicKeyShareASN1UnmarshalDecryptionProofShareError{Err:tivi.io/core/crypto/elgamal/distributed.ASN1UnmarshalDecryptionProofShareTrailingBytesError{}}
+    --- FAIL: TestEncryptProvableDecryptManyData/Edwards25519 (0.00s)
+        distributed_test.go:343: tivi.io/core/crypto/elgamal/distributed.VerifyPublicKeyShareASN1UnmarshalDecryptionProofShareError{Err:tivi.io/core/crypto/elgamal/distributed.ASN1UnmarshalDecryptionProofShareTrailingBytesError{}}
+FAIL
+FAIL	tivi.io/core/crypto/elgamal/distributed	123.643s
+--- FAIL: TestVerifyOCSPCertificate (0.41s)
+    --- FAIL: TestVerifyOCSPCertificate/good_certificate (0.15s)
+        ocsp_test.go:163: unexpected failure: verify ocsp response: verify response common: get responder certificate: responder verify: x509: certificate signed by unknown authority
+    --- FAIL: TestVerifyOCSPCertificate/revoked_certificate (0.05s)
+        ocsp_test.go:163: unexpected failure: verify ocsp response: verify response common: get responder certificate: responder verify: x509: certificate signed by unknown authority
+    --- FAIL: TestVerifyOCSPCertificate/unknown_certificate (0.05s)
+        ocsp_test.go:163: unexpected failure: verify ocsp response: verify response common: get responder certificate: responder verify: x509: certificate signed by unknown authority
+FAIL
+FAIL	tivi.io/core/crypto/ocsp	0.425s
+--- FAIL: TestRequestTimestamp (0.00s)
+    --- FAIL: TestRequestTimestamp/18 (0.11s)
+        timestamp_test.go:44: verify signed data: find certificate: certificate not found: issuer 'C=EE,O=SK ID Solutions AS,2.5.4.97=#130e4e545245452d3130373437303133,CN=TEST of SK TSA CA 2023E' serial '167064708827675857109352168043996578923'
+    --- FAIL: TestRequestTimestamp/17 (0.31s)
+        timestamp_test.go:44: verify signed data: find certificate: certificate not found: issuer 'C=EE,O=SK ID Solutions AS,2.5.4.97=#130e4e545245452d3130373437303133,CN=TEST of SK TSA CA 2023E' serial '167064708827675857109352168043996578923'
+    --- FAIL: TestRequestTimestamp/19 (0.51s)
+        timestamp_test.go:44: verify signed data: find certificate: certificate not found: issuer 'C=EE,O=SK ID Solutions AS,2.5.4.97=#130e4e545245452d3130373437303133,CN=TEST of SK TSA CA 2023E' serial '167064708827675857109352168043996578923'
+    --- FAIL: TestRequestTimestamp/15 (0.71s)
+        timestamp_test.go:44: verify signed data: find certificate: certificate not found: issuer 'C=EE,O=SK ID Solutions AS,2.5.4.97=#130e4e545245452d3130373437303133,CN=TEST of SK TSA CA 2023E' serial '167064708827675857109352168043996578923'
+    --- FAIL: TestRequestTimestamp/16 (0.80s)
+        timestamp_test.go:44: verify signed data: find certificate: certificate not found: issuer 'C=EE,O=SK ID Solutions AS,2.5.4.97=#130e4e545245452d3130373437303133,CN=TEST of SK TSA CA 2023E' serial '167064708827675857109352168043996578923'
+FAIL
+FAIL	tivi.io/core/crypto/timestamp	0.912s
+ok  	tivi.io/core/math	0.007s
+ok  	tivi.io/core/math/group	2.275s
+ok  	tivi.io/core/math/group/ecqp	0.011s
+ok  	tivi.io/core/math/group/modqp	0.003s
+ok  	tivi.io/core/math/polynomial	0.624s
+FAIL
+status=1

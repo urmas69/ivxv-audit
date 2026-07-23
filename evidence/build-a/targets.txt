@@ -1,0 +1,91 @@
+/home/audit/audit/ivxv/Makefile:17:.PHONY: help
+/home/audit/audit/ivxv/Makefile:18:help:
+/home/audit/audit/ivxv/Makefile:50:.PHONY: all
+/home/audit/audit/ivxv/Makefile:51:all: $(JAVADIRS) $(GODIRS) $(OTHERDIRS)
+/home/audit/audit/ivxv/Makefile:53:.PHONY: java
+/home/audit/audit/ivxv/Makefile:54:java: $(JAVADIRS)
+/home/audit/audit/ivxv/Makefile:56:.PHONY: go
+/home/audit/audit/ivxv/Makefile:57:go: $(GODIRS)
+/home/audit/audit/ivxv/Makefile:59:.PHONY: $(GODIRS)
+/home/audit/audit/ivxv/Makefile:65:.PHONY: $(JAVADIRS)
+/home/audit/audit/ivxv/Makefile:69:.PHONY: $(OTHERDIRS)
+/home/audit/audit/ivxv/Makefile:73:.PHONY: test
+/home/audit/audit/ivxv/Makefile:74:test: $(TESTDIRS)
+/home/audit/audit/ivxv/Makefile:76:.PHONY: test-java
+/home/audit/audit/ivxv/Makefile:77:test-java: $(JAVADIRS:%=test-%)
+/home/audit/audit/ivxv/Makefile:79:.PHONY: test-go
+/home/audit/audit/ivxv/Makefile:80:test-go: $(GODIRS:%=test-%)
+/home/audit/audit/ivxv/Makefile:82:.PHONY: test-python
+/home/audit/audit/ivxv/Makefile:83:test-python:
+/home/audit/audit/ivxv/Makefile:86:.PHONY: $(TESTDIRS)
+/home/audit/audit/ivxv/Makefile:91:.PHONY: install
+/home/audit/audit/ivxv/Makefile:92:install: $(patsubst %,install-%,$(GODIRS) systemd)
+/home/audit/audit/ivxv/Makefile:94:.PHONY: install-java
+/home/audit/audit/ivxv/Makefile:95:install-java: $(JAVADIRS:%=install-%)
+/home/audit/audit/ivxv/Makefile:97:.PHONY: $(INSTALLDIRS)
+/home/audit/audit/ivxv/Makefile:101:.PHONY: clean
+/home/audit/audit/ivxv/Makefile:102:clean: $(CLEANDIRS)
+/home/audit/audit/ivxv/Makefile:107:.PHONY: clean-java
+/home/audit/audit/ivxv/Makefile:108:clean-java: $(JAVADIRS:%=clean-%)
+/home/audit/audit/ivxv/Makefile:110:.PHONY: release-doc
+/home/audit/audit/ivxv/Makefile:111:release-doc: go
+/home/audit/audit/ivxv/Makefile:115:.PHONY: clean-go
+/home/audit/audit/ivxv/Makefile:116:clean-go: $(GODIRS:%=clean-%)
+/home/audit/audit/ivxv/Makefile:118:.PHONY: $(CLEANDIRS)
+/home/audit/audit/ivxv/Makefile:122:.PHONY: external
+/home/audit/audit/ivxv/Makefile:123:external:
+/home/audit/audit/ivxv/Makefile:127:.PHONY: update-external
+/home/audit/audit/ivxv/Makefile:128:update-external:
+/home/audit/audit/ivxv/Makefile:132:.PHONY: version
+/home/audit/audit/ivxv/Makefile:133:version:
+/home/audit/audit/ivxv/Makefile:141:.PHONY: --gotools
+/home/audit/audit/ivxv/Makefile:142:--gotools:
+/home/audit/audit/ivxv/xroad-service/Makefile:4:help:
+/home/audit/audit/ivxv/xroad-service/Makefile:8:all:
+/home/audit/audit/ivxv/xroad-service/Makefile:11:clean:
+/home/audit/audit/ivxv/systemd/Makefile:4:.PHONY: all
+/home/audit/audit/ivxv/systemd/Makefile:5:all: $(OUTPUT)
+/home/audit/audit/ivxv/systemd/Makefile:17:.PHONY: install
+/home/audit/audit/ivxv/systemd/Makefile:18:install: all
+/home/audit/audit/ivxv/systemd/Makefile:22:.PHONY: clean
+/home/audit/audit/ivxv/systemd/Makefile:23:clean:
+/home/audit/audit/ivxv/storage/Makefile:5:.PHONY:ivxv_storage_db
+/home/audit/audit/ivxv/storage/Makefile:6:ivxv_storage_db:
+/home/audit/audit/ivxv/Documentation/Makefile:27:.PHONY: all
+/home/audit/audit/ivxv/Documentation/Makefile:28:all: release
+/home/audit/audit/ivxv/Documentation/Makefile:30:.PHONY: pdf
+/home/audit/audit/ivxv/Documentation/Makefile:31:pdf: $(PDFDOCS)
+/home/audit/audit/ivxv/Documentation/Makefile:36:.PHONY: $(PDFDOCS)
+/home/audit/audit/ivxv/Documentation/Makefile:42:.PHONY: diff
+/home/audit/audit/ivxv/Documentation/Makefile:43:diff: $(DIFFDOCS)
+/home/audit/audit/ivxv/Documentation/Makefile:45:.PHONY: $(DIFFDOCS)
+/home/audit/audit/ivxv/Documentation/Makefile:51:.PHONY: html
+/home/audit/audit/ivxv/Documentation/Makefile:52:html: $(HTMLDOCS)
+/home/audit/audit/ivxv/Documentation/Makefile:54:.PHONY: $(HTMLDOCS)
+/home/audit/audit/ivxv/Documentation/Makefile:101:.PHONY: release
+/home/audit/audit/ivxv/Documentation/Makefile:102:release: $(RELEASEDOCSET) $(RELEASEDOCSEN)
+/home/audit/audit/ivxv/Documentation/Makefile:104:.PHONY: $(RELEASEDOCSET)
+/home/audit/audit/ivxv/Documentation/Makefile:128:.PHONY: $(RELEASEDOCSEN)
+/home/audit/audit/ivxv/Documentation/Makefile:139:.PHONY: clean
+/home/audit/audit/ivxv/Documentation/Makefile:140:clean: $(CLEANDOCS)
+/home/audit/audit/ivxv/Documentation/Makefile:145:.PHONY: $(CLEANDOCS)
+/home/audit/audit/ivxv/core/Makefile:13:.PHONY: help
+/home/audit/audit/ivxv/core/Makefile:14:help:
+/home/audit/audit/ivxv/core/Makefile:22:.PHONY: lint
+/home/audit/audit/ivxv/core/Makefile:23:lint: codegen
+/home/audit/audit/ivxv/core/Makefile:27:.PHONY: test
+/home/audit/audit/ivxv/core/Makefile:28:test: lint
+/home/audit/audit/ivxv/core/Makefile:32:.PHONY: --build-errorgen
+/home/audit/audit/ivxv/core/Makefile:33:--build-errorgen: clean
+/home/audit/audit/ivxv/core/Makefile:38:.PHONY: codegen
+/home/audit/audit/ivxv/core/Makefile:39:codegen: --build-errorgen
+/home/audit/audit/ivxv/core/Makefile:43:.PHONY: clean
+/home/audit/audit/ivxv/core/Makefile:44:clean:
+/home/audit/audit/ivxv/collector-admin/Makefile:1:check:
+/home/audit/audit/ivxv/debian/rules:13:override_dh_auto_clean:
+/home/audit/audit/ivxv/debian/rules:23:override_dh_auto_build:
+/home/audit/audit/ivxv/debian/rules:36:override_dh_auto_test:
+/home/audit/audit/ivxv/debian/rules:53:override_dh_auto_install:
+/home/audit/audit/ivxv/debian/rules:77:override_dh_strip_nondeterminism:
+/home/audit/audit/ivxv/debian/rules:82:override_dh_installinit:
+/home/audit/audit/ivxv/debian/rules:86:override_dh_dwz:

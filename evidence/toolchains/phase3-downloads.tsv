@@ -1,0 +1,8 @@
+artifact	version	original_url	verified_metadata	bytes	sha256	track
+GNU Make	4.3-4.1build1	Ubuntu Jammy archive pool/main/m/make-dfsg/make_4.3-4.1build1_amd64.deb	apt-cache SHA256 080b79a1a1623a2e6c6eead37d62b15fdf2c3dbfeafe8ecf5e31c54eb09eadcc	179742	see downloaded-file-sha256sums.txt	both
+Go	1.23.12	https://go.dev/dl/go1.23.12.linux-amd64.tar.gz	go.dev dl JSON SHA256 d3847fef834e9db11bf64e3fb34db9c04db14e068eeb064f49af747010454f90	73666637	d3847fef834e9db11bf64e3fb34db9c04db14e068eeb064f49af747010454f90	both
+Gradle	8.11	https://services.gradle.org/distributions/gradle-8.11-bin.zip	official Gradle checksum 57dafb5c2622c6cc08b993c85b7c06956a2f53536432a30ead46166dbca0f1e9	136917193	57dafb5c2622c6cc08b993c85b7c06956a2f53536432a30ead46166dbca0f1e9	both
+Temurin JDK	21.0.11+10	https://api.adoptium.net/v3/assets/latest/21/hotspot?vendor=eclipse&architecture=x64&image_type=jdk&os=linux	Adoptium API package checksum 4b2220e232a97997b436ca6ab15cbf70171ecff52958a46159dfa5a8c44ca4de	207513939	4b2220e232a97997b436ca6ab15cbf70171ecff52958a46159dfa5a8c44ca4de	both
+GCC/G++	11.4.0-1ubuntu1~22.04.3	Ubuntu Jammy archive packages	apt package metadata and extracted files	see downloaded-file-sizes.tsv	see downloaded-file-sha256sums.txt	both
+dpkg-dev/debhelper	1.21.1ubuntu2.6 / 13.6ubuntu1	Ubuntu Jammy archive packages	apt package metadata and extracted files	see downloaded-file-sizes.tsv	see downloaded-file-sha256sums.txt	reconstruction
+fakeroot	1.28-1ubuntu1	Ubuntu Jammy archive packages	apt package metadata and extracted files	see downloaded-file-sizes.tsv	see downloaded-file-sha256sums.txt	reconstruction

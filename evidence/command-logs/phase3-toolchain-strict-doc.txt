@@ -1,0 +1,18 @@
+UTC timestamp: 2026-07-23T14:18:00Z
+Working directory: /tmp/ivxv-phase3-strict-1784814341
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ make\ Documentation
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=C.UTF-8; LC_ALL=C.UTF-8
+Exit status: 2
+--- combined stdout and stderr ---
+make -C Documentation
+make[1]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/Documentation'
+mkdir -p "/tmp/ivxv-phase3-strict-1784814341/Documentation/_build/release/1. Ülddokumendid"
+make -C public/uldsisukord install-pdf DESTDIR="/tmp/ivxv-phase3-strict-1784814341/Documentation/_build/release/1. Ülddokumendid"
+make[2]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/Documentation/public/uldsisukord'
+#if [ -d "model" ]; then make -C model clean; fi
+/bin/sh: 1: sphinx-build: not found
+make[2]: *** [../../common.mk:59: clean] Error 127
+make[2]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/Documentation/public/uldsisukord'
+make[1]: *** [Makefile:107: release-et-public/uldsisukord] Error 2
+make[1]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/Documentation'
+make: *** [Makefile:71: Documentation] Error 2
