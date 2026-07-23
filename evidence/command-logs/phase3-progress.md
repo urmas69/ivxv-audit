@@ -29,13 +29,12 @@ Updated: 2026-07-23 UTC
 
 ## Current work
 
-- Final report reconciliation, source-state verification, commit, and push.
+- Phase 3 complete after user-local toolchain continuation.
 
 ## Remaining work
 
-- Phase 3 completion commit and push. Build A, Build B, independent comparison,
-  deployment/E2E testing, and final audit report remain pending outside this
-  phase.
+- Phase 3 complete. Build A, Build B, independent comparison, deployment/E2E
+  testing, and final audit report remain pending outside this phase.
 
 ## Failed approaches
 
@@ -58,6 +57,5 @@ Updated: 2026-07-23 UTC
 
 ## Last successful commit
 
-- `c9f35fb` — Complete Phase 3 clean-room build investigation (pushed to
-  `origin/phase-3-clean-room-build`). Update after the reopened completion
-  commit.
+- `9ab1295` — Run Phase 3 builds with user-local toolchains (pushed to
+  `origin/phase-3-clean-room-build`).
