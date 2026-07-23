@@ -1,0 +1,21 @@
+UTC: 2026-07-23T11:36:44Z
+CWD: /home/audit/audit/ivxv-audit
+COMMAND: curl -sS -L --max-time 20 https://proxy.golang.org/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.{info,mod,zip}
+URL: https://proxy.golang.org/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.info
+HTTP: 404
+FINAL_URL: https://proxy.golang.org/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.info
+SIZE: 281
+BODY:
+not found: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 8.8.8.8:53: no such hostURL: https://proxy.golang.org/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.mod
+HTTP: 404
+FINAL_URL: https://proxy.golang.org/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.mod
+SIZE: 281
+BODY:
+not found: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 8.8.8.8:53: no such hostURL: https://proxy.golang.org/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip
+HTTP: 404
+FINAL_URL: https://proxy.golang.org/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip
+SIZE: 281
+BODY:
+not found: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 8.8.8.8:53: no such hostCOMMAND: git -C /home/audit/audit/ivxv cat-file -t 149435f9e4f4
+fatal: Not a valid object name 149435f9e4f4
+EXIT_STATUS: 128
