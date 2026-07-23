@@ -1,0 +1,26 @@
+UTC timestamp: 2026-07-23T12:29:16Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: git ls-remote --symref https://github.com/valimised/ivxv.git
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 0
+--- combined stdout and stderr ---
+ref: refs/heads/published	HEAD
+2785872f84dffb56bbecc41b096a7ee0f2876e64	HEAD
+2785872f84dffb56bbecc41b096a7ee0f2876e64	refs/heads/published
+c41b2d5d7c4962fc3750491b03d4cc8e3256e576	refs/pull/10/head
+02bfa07e419ac56f661e3222a4a0f51faa9888c7	refs/pull/11/head
+f75772d4e38af0508348dfdf0c15cb1c2265bb85	refs/pull/12/head
+45ba5c32acedf0dab8af6be6ab3d9501351e8e90	refs/pull/13/head
+0ad701963f6fa26f1bbc821753123ef72720cee0	refs/pull/14/head
+a4274de1a3301acc6d85c5adcbcee53384e1326d	refs/pull/4/head
+0a33af4a0c80650c47caba5c3ec16d638146a23a	refs/pull/5/head
+93f1cf5a3c2f9de33a4a31dec1c36387ff631a56	refs/pull/6/head
+45456370882cd2058a8f5d2c4aec5ba60130abbf	refs/pull/9/head
+7c3b9902471c92e9cfd20f10f9226ae5f8299de2	refs/tags/v1.10.4-KOV2025
+2785872f84dffb56bbecc41b096a7ee0f2876e64	refs/tags/v1.10.4-KOV2025^{}
+64d6ef255df947a3c7aa0fa52bd18b6f1408fdca	refs/tags/v1.7.7-KOV2021
+49160800174473502e0bee4c8fa87b7ec75bd6f6	refs/tags/v1.7.7-KOV2021^{}
+cfacf6cda888aa46c809171acb106ee400b61509	refs/tags/v1.8.2-RK2023
+8a432f7b8d4ed0bb0871f005f650c13bf3250766	refs/tags/v1.8.2-RK2023^{}
+6d572ede7626bfb6bad690d6374394d53ff2c701	refs/tags/v1.9.10-EP2024
+023e072ad22b70f56b0b174789ea4ea349753ee6	refs/tags/v1.9.10-EP2024^{}

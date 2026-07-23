@@ -1,0 +1,9 @@
+repository	ref	object	retrieved_utc	observation	evidence
+https://github.com/valimised/ivxv.git	HEAD	2785872f84dffb56bbecc41b096a7ee0f2876e64	2026-07-23T12:29:16Z	symbolic target refs/heads/published	evidence/command-logs/02-official-refs.txt
+https://github.com/valimised/ivxv.git	refs/heads/published	2785872f84dffb56bbecc41b096a7ee0f2876e64	2026-07-23T12:29:16Z	only advertised branch	evidence/command-logs/02-official-refs.txt
+https://github.com/valimised/ivxv.git	refs/tags/v1.10.4-KOV2025	7c3b9902471c92e9cfd20f10f9226ae5f8299de2	2026-07-23T12:29:16Z	annotated tag; peeled object is fixed commit	evidence/command-logs/02-official-refs.txt
+https://github.com/valimised/ivxv.git	refs/tags/v1.9.10-EP2024	6d572ede7626bfb6bad690d6374394d53ff2c701	2026-07-23T12:29:16Z	annotated tag; peeled commit 023e072ad22b70f56b0b174789ea4ea349753ee6	evidence/command-logs/02-official-refs.txt
+https://github.com/valimised/ivxv.git	refs/tags/v1.8.2-RK2023	cfacf6cda888aa46c809171acb106ee400b61509	2026-07-23T12:29:16Z	annotated tag; peeled commit 8a432f7b8d4ed0bb0871f005f650c13bf3250766	evidence/command-logs/02-official-refs.txt
+https://github.com/valimised/ivxv.git	refs/tags/v1.7.7-KOV2021	64d6ef255df947a3c7aa0fa52bd18b6f1408fdca	2026-07-23T12:29:16Z	annotated tag; peeled commit 49160800174473502e0bee4c8fa87b7ec75bd6f6	evidence/command-logs/02-official-refs.txt
+https://github.com/urmas69/ivxv.git	HEAD	2785872f84dffb56bbecc41b096a7ee0f2876e64	2026-07-23T12:29:16Z	symbolic target refs/heads/published	evidence/command-logs/03-mirror-refs.txt
+https://github.com/urmas69/ivxv.git	refs/heads/published	2785872f84dffb56bbecc41b096a7ee0f2876e64	2026-07-23T12:29:16Z	matches official published branch	evidence/command-logs/03-mirror-refs.txt
