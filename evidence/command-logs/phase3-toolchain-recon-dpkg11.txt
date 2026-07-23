@@ -1,0 +1,230 @@
+UTC timestamp: 2026-07-23T14:36:47Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ export\ PERL5LIB=/home/audit/tools/usr/share/perl5:/home/audit/tools/usr/share/perl\;\ cd\ /home/audit/audit/ivxv-reconstructed\;\ dpkg-buildpackage\ -d\ --root-command=/home/audit/audit/ivxv-audit/scripts/fakeroot-local\ -us\ -uc\ -b
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 2
+--- combined stdout and stderr ---
+dpkg-buildpackage: info: source package ivxv
+dpkg-buildpackage: info: source version 1.10.3
+dpkg-buildpackage: info: source distribution jammy
+dpkg-buildpackage: info: source changed by IVXV Developer <info@ivotingcentre.ee>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ /home/audit/audit/ivxv-audit/scripts/fakeroot-local debian/rules clean
+dh clean --with python3
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed'
+# Do not clean Java applications nor documentation.
+/home/audit/tools/usr/bin/make clean-go clean-systemd
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed'
+/home/audit/tools/usr/bin/make -C common/collector clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+/home/audit/tools/usr/bin/make -f ../go/common.mk clean
+make[4]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading golang.org/x/crypto v0.27.0
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+rm -rf bin/ pkg/
+make[4]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+rm -rf common/collector/server/tlsciphersuites.go
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+/home/audit/tools/usr/bin/make -C sessionstatus/api clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+/home/audit/tools/usr/bin/make -C proxy clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/proxy'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/proxy'
+/home/audit/tools/usr/bin/make -C mid clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/mid'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/mid'
+/home/audit/tools/usr/bin/make -C smartid clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/smartid'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/smartid'
+/home/audit/tools/usr/bin/make -C choices clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/choices'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/choices'
+/home/audit/tools/usr/bin/make -C voting clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/voting'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading golang.org/x/crypto v0.27.0
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+go: downloading github.com/gtank/ristretto255 v0.1.2
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/voting'
+/home/audit/tools/usr/bin/make -C verification clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/verification'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/verification'
+/home/audit/tools/usr/bin/make -C storage clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/storage'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/storage'
+/home/audit/tools/usr/bin/make -C votesorder clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+/home/audit/tools/usr/bin/make -C webeid clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/webeid'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/webeid'
+/home/audit/tools/usr/bin/make -C sessionstatus clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+rm -rf bin/ pkg/
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+/home/audit/tools/usr/bin/make -C systemd clean
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/systemd'
+rm -f ivxv-choices@.service ivxv-mid@.service ivxv-smartid@.service ivxv-webeid@.service ivxv-proxy@.service ivxv-storage@.service ivxv-voting@.service ivxv-verification@.service ivxv-votesorder@.service ivxv-sessionstatus@.service
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/systemd'
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed'
+# Clean ivxv-admin.
+# FIXME: The python build files should not live in the root directory,
+#        but be hidden behind the Makefile facade like Go, Java, and
+#        documentation are.
+dh_auto_clean --package ivxv-admin --buildsystem pybuild
+I: pybuild base:239: python3.10 setup.py clean
+running clean
+removing '/home/audit/audit/ivxv-reconstructed/.pybuild/cpython3_3.10/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.10' does not exist -- can't clean it
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed'
+   dh_clean
+ debian/rules build
+dh build --with python3
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed'
+# Update version strings in subcomponents
+/home/audit/tools/usr/bin/make version
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed'
+python3 common/tools/update_project_version.py
+Traceback (most recent call last):
+  File "/home/audit/audit/ivxv-reconstructed/common/tools/update_project_version.py", line 80, in <module>
+    exit(main())
+  File "/home/audit/audit/ivxv-reconstructed/common/tools/update_project_version.py", line 61, in main
+    update_version("tests/features/steps/__init__.py",
+  File "/home/audit/audit/ivxv-reconstructed/common/tools/update_project_version.py", line 20, in update_version
+    with open(filename) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'tests/features/steps/__init__.py'
+make[2]: *** [Makefile:134: version] Error 1
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed'
+make[1]: *** [debian/rules:25: override_dh_auto_build] Error 2
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed'
+make: *** [debian/rules:11: build] Error 2
+dpkg-buildpackage: error: debian/rules build subprocess returned exit status 2

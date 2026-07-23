@@ -1,0 +1,222 @@
+UTC timestamp: 2026-07-23T14:23:07Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ export\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org\ GOMODCACHE=/tmp/ivxv-phase3/recon-gomodcache\;\ cd\ /home/audit/audit/ivxv-reconstructed\;\ make\ clean\ GOMODCACHE=/tmp/ivxv-phase3/recon-gomodcache\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 2
+--- combined stdout and stderr ---
+make -C common/java clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/java'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle clean -g=/home/audit/audit/ivxv-reconstructed/common/external/java/ --offline
+
+Welcome to Gradle 8.11!
+
+Here are the highlights of this release:
+ - Parallel load and store for Configuration Cache
+ - Java compilation errors at the end of the build output
+ - Consolidated report for warnings and deprecations
+
+For more details see https://docs.gradle.org/8.11/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :clean UP-TO-DATE
+
+BUILD SUCCESSFUL in 5s
+1 actionable task: 1 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/java'
+make -C key clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/key'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle clean -g=/home/audit/audit/ivxv-reconstructed/common/external/java/ --offline
+> Task :clean UP-TO-DATE
+> Task :common:clean UP-TO-DATE
+
+BUILD SUCCESSFUL in 845ms
+2 actionable tasks: 2 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/key'
+make -C processor clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/processor'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle clean -g=/home/audit/audit/ivxv-reconstructed/common/external/java/ --offline
+> Task :clean UP-TO-DATE
+> Task :common:clean UP-TO-DATE
+
+BUILD SUCCESSFUL in 751ms
+2 actionable tasks: 2 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/processor'
+make -C auditor clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/auditor'
+/home/audit/audit/ivxv-reconstructed/common/external/gradle-8.11/bin/gradle clean -g=/home/audit/audit/ivxv-reconstructed/common/external/java/ --offline
+> Task :clean UP-TO-DATE
+> Task :common:clean UP-TO-DATE
+
+BUILD SUCCESSFUL in 747ms
+2 actionable tasks: 2 up-to-date
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/auditor'
+make -C common/collector clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk clean
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading golang.org/x/crypto v0.27.0
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+go: downloading go.etcd.io/etcd/client/pkg/v3 v3.5.17
+go: downloading go.uber.org/zap v1.17.0
+go: downloading golang.org/x/sys v0.25.0
+go: downloading github.com/gogo/protobuf v1.3.2
+go: downloading github.com/golang/protobuf v1.5.4
+go: downloading google.golang.org/genproto/googleapis/api v0.0.0-20240903143218-8af14fe29dc1
+go: downloading github.com/coreos/go-semver v0.3.0
+go: downloading github.com/coreos/go-systemd/v22 v22.3.2
+go: downloading go.uber.org/atomic v1.7.0
+go: downloading go.uber.org/multierr v1.6.0
+go: downloading google.golang.org/protobuf v1.34.2
+go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20240903143218-8af14fe29dc1
+go: downloading golang.org/x/net v0.29.0
+go: downloading golang.org/x/text v0.18.0
+rm -rf bin/ pkg/
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+rm -rf common/collector/server/tlsciphersuites.go
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C sessionstatus/api clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+make -C proxy clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/proxy'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/proxy'
+make -C mid clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/mid'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/mid'
+make -C smartid clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/smartid'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/smartid'
+make -C choices clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/choices'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/choices'
+make -C voting clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/voting'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+go: downloading github.com/gtank/ristretto255 v0.1.2
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/voting'
+make -C verification clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/verification'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/verification'
+make -C storage clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/storage'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/storage'
+make -C votesorder clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+make -C webeid clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/webeid'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/webeid'
+make -C sessionstatus clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+find . -not -path \*/testdata/\* \( \
+	-name gen_types.go -o \
+	-name gen_types_test.go -o \
+	-name gen_import.go -o \
+	-name gen_import_dev.go \
+	\) -delete
+/home/audit/tools/go/bin/go clean -i ./...
+rm -rf bin/ pkg/
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+make -C systemd clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/systemd'
+rm -f ivxv-choices@.service ivxv-mid@.service ivxv-smartid@.service ivxv-webeid@.service ivxv-proxy@.service ivxv-storage@.service ivxv-voting@.service ivxv-verification@.service ivxv-votesorder@.service ivxv-sessionstatus@.service
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/systemd'
+make -C Documentation clean
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/Documentation'
+make -C public/arhitektuur clean
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/Documentation/public/arhitektuur'
+#if [ -d "model" ]; then make -C model clean; fi
+/bin/sh: 1: sphinx-build: not found
+make[2]: *** [../../common.mk:59: clean] Error 127
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/Documentation/public/arhitektuur'
+make[1]: *** [Makefile:147: clean-public/arhitektuur] Error 2
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/Documentation'
+make: *** [Makefile:120: clean-Documentation] Error 2

@@ -1,0 +1,15 @@
+UTC timestamp: 2026-07-23T14:32:09Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ export\ PERL5LIB=/home/audit/tools/usr/share/perl5:/home/audit/tools/usr/share/perl\;\ cd\ /home/audit/audit/ivxv-reconstructed\;\ dpkg-buildpackage\ -d\ -us\ -uc\ -b
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 1
+--- combined stdout and stderr ---
+dpkg-buildpackage: info: source package ivxv
+dpkg-buildpackage: info: source version 1.10.3
+dpkg-buildpackage: info: source distribution jammy
+dpkg-buildpackage: info: source changed by IVXV Developer <info@ivotingcentre.ee>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+fakeroot: preload library `libfakeroot-sysv.so' not found, aborting.
+dpkg-buildpackage: error: fakeroot debian/rules clean subprocess returned exit status 1

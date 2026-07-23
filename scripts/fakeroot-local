@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+exec /home/audit/tools/usr/bin/fakeroot-sysv \
+  -l /home/audit/tools/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so \
+  -f /home/audit/tools/usr/bin/faked-sysv "$@"

@@ -1,0 +1,361 @@
+UTC timestamp: 2026-07-23T14:26:31Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ export\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org\ GOMODCACHE=/tmp/ivxv-phase3/recon-gomodcache\ CGO_ENABLED=0\;\ cd\ /home/audit/audit/ivxv-reconstructed\;\ make\ go\ ONLINE=1\ CGO_ENABLED=0\ GOMODCACHE=/tmp/ivxv-phase3/recon-gomodcache\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 0
+--- combined stdout and stderr ---
+make -C common/collector gotools
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk gotools
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C common/collector goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk goimports
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C common/collector ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk all
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/common/collector/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C common/collector
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -f ../go/common.mk all
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[3]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/common/collector/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/collector'
+make -C sessionstatus/api goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+make -C sessionstatus/api ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/sessionstatus/api/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+make -C sessionstatus/api
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/sessionstatus/api/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus/api'
+make -C proxy goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/proxy'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/proxy'
+make -C proxy ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/proxy'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/proxy/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/proxy'
+make -C proxy
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/proxy'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/proxy/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/proxy'
+make -C mid goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/mid'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/mid'
+make -C mid ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/mid'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/mid/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/mid'
+make -C mid
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/mid'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/mid/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/mid'
+make -C smartid goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/smartid'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/smartid'
+make -C smartid ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/smartid'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/smartid/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/smartid'
+make -C smartid
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/smartid'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/smartid/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/smartid'
+make -C choices goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/choices'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/choices'
+make -C choices ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/choices'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/choices/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/choices'
+make -C choices
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/choices'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/choices/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/choices'
+make -C voting goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/voting'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/voting'
+make -C voting ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/voting'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/voting/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/voting'
+make -C voting
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/voting'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/voting/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/voting'
+make -C verification goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/verification'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/verification'
+make -C verification ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/verification'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/verification/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/verification'
+make -C verification
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/verification'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/verification/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/verification'
+make -C storage goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/storage'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/storage'
+make -C storage ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/storage'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/storage/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/storage'
+make -C storage
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/storage'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/storage/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/storage'
+make -C votesorder goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+make -C votesorder ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/votesorder/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+make -C votesorder
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/votesorder/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/votesorder'
+make -C webeid goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/webeid'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/webeid'
+make -C webeid ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/webeid'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/webeid/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/webeid'
+make -C webeid
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/webeid'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/webeid/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/webeid'
+make -C sessionstatus goimports
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+/home/audit/audit/ivxv-reconstructed/scripts/goimports.sh ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+make -C sessionstatus ONLINE=1
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/sessionstatus/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+make -C sessionstatus
+make[1]: Entering directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'
+/home/audit/tools/go/bin/go mod tidy
+make -C /home/audit/audit/ivxv-reconstructed/common/tools/go all ROOTDIR=/home/audit/audit/ivxv-reconstructed/
+make[2]: Entering directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/audit/audit/ivxv-reconstructed/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+/home/audit/audit/ivxv-reconstructed/common/tools/go/bin/gen -base /home/audit/audit/ivxv-reconstructed/ ./...
+env GOBIN=/home/audit/audit/ivxv-reconstructed/sessionstatus/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[1]: Leaving directory '/home/audit/audit/ivxv-reconstructed/sessionstatus'

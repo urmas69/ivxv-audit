@@ -1,0 +1,101 @@
+UTC timestamp: 2026-07-23T14:17:54Z
+Working directory: /tmp/ivxv-phase3-strict-1784814341
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ make\ go\ ONLINE=1
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=C.UTF-8; LC_ALL=C.UTF-8
+Exit status: 2
+--- combined stdout and stderr ---
+make -C common/collector gotools
+make[1]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -f ../go/common.mk gotools
+make[2]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -C /tmp/ivxv-phase3-strict-1784814341/common/tools/go all ROOTDIR=/tmp/ivxv-phase3-strict-1784814341/
+make[3]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/tools/go'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/tools/go'
+make[2]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make[1]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -C common/collector goimports
+make[1]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -f ../go/common.mk goimports
+make[2]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+/tmp/ivxv-phase3-strict-1784814341/scripts/goimports.sh ./...
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+go: downloading golang.org/x/crypto v0.27.0
+go: downloading tivi.io/core v0.2.2-0.20241127235149-149435f9e4f4
+go: downloading go.etcd.io/etcd/client/pkg/v3 v3.5.17
+go: downloading go.uber.org/zap v1.17.0
+go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20240903143218-8af14fe29dc1
+go: downloading github.com/gogo/protobuf v1.3.2
+go: downloading github.com/golang/protobuf v1.5.4
+go: downloading github.com/coreos/go-semver v0.3.0
+go: downloading google.golang.org/genproto/googleapis/api v0.0.0-20240903143218-8af14fe29dc1
+go: downloading github.com/coreos/go-systemd/v22 v22.3.2
+go: downloading golang.org/x/net v0.29.0
+go: downloading google.golang.org/protobuf v1.34.2
+go: downloading golang.org/x/sys v0.25.0
+go: downloading go.uber.org/atomic v1.7.0
+go: downloading go.uber.org/multierr v1.6.0
+go: downloading golang.org/x/text v0.18.0
+crypto/elgamal/ciphertext.go:10:2: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+crypto/elgamal/ciphertext.go:11:2: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+crypto/elgamal/ciphertext.go:12:2: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+crypto/elgamal/ciphertext.go:13:2: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+make[2]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make[1]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -C common/collector ONLINE=1
+make[1]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -f ../go/common.mk all
+make[2]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+/home/audit/tools/go/bin/go mod tidy
+go: downloading tivi.io/core v0.2.2-0.20241127235149-149435f9e4f4
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	tivi.io/core/crypto: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	tivi.io/core/crypto/elgamal: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	tivi.io/core/encoding/asn1: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	tivi.io/core/math/group: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/crypto/elgamal tested by
+	ivxv.ee/common/collector/crypto/elgamal.test imports
+	tivi.io/core/crypto/x509: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/crypto/elgamal tested by
+	ivxv.ee/common/collector/crypto/elgamal.test imports
+	tivi.io/core/math/group/all: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/storage/etcd imports
+	google.golang.org/grpc/codes tested by
+	google.golang.org/grpc/codes.test imports
+	github.com/google/go-cmp/cmp: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/storage/etcd imports
+	go.etcd.io/etcd/client/v3 imports
+	go.etcd.io/etcd/client/pkg/v3/logutil tested by
+	go.etcd.io/etcd/client/pkg/v3/logutil.test imports
+	github.com/stretchr/testify/require: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/storage/etcd imports
+	go.etcd.io/etcd/client/v3 imports
+	go.uber.org/zap tested by
+	go.uber.org/zap.test imports
+	github.com/pkg/errors: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/storage/etcd imports
+	go.etcd.io/etcd/client/v3 imports
+	go.uber.org/zap tested by
+	go.uber.org/zap.test imports
+	github.com/stretchr/testify/assert: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/storage/etcd imports
+	go.etcd.io/etcd/client/v3 imports
+	go.uber.org/zap/zapcore tested by
+	go.uber.org/zap/zapcore.test imports
+	gopkg.in/yaml.v2: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+go: ivxv.ee/common/collector/storage/etcd imports
+	google.golang.org/grpc/status tested by
+	google.golang.org/grpc/status.test imports
+	google.golang.org/protobuf/testing/protocmp imports
+	github.com/google/go-cmp/cmp/cmpopts: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: unrecognized import path "tivi.io/core": https fetch: Get "https://scceiv-public.gitlab-pages.ivotingcentre.ee/tivi.io-go-get-1/": dial tcp: lookup scceiv-public.gitlab-pages.ivotingcentre.ee on 127.0.0.53:53: no such host
+make[2]: *** [../go/common.mk:54: tidy] Error 1
+make[2]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make[1]: *** [Makefile:18: all] Error 2
+make[1]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make: *** [Makefile:62: common/collector] Error 2

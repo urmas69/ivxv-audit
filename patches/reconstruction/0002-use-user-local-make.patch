@@ -1,0 +1,14 @@
+Subject: [RECONSTRUCTION] Point Debian rules at user-local GNU make
+
+The VM has no /usr/bin/make. This research-only shebang change lets the
+packaging script reach its next dependency check using the extracted official
+Ubuntu GNU Make binary. It is not part of the published IVXV tree.
+
+diff --git a/debian/rules b/debian/rules
+--- a/debian/rules
++++ b/debian/rules
+@@ -1,3 +1,3 @@
+-#!/usr/bin/make -f
++#!/home/audit/tools/usr/bin/make -f
+
+ # See debhelper(7) (uncomment to enable)

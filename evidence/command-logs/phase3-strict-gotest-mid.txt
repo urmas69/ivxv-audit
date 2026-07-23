@@ -1,0 +1,46 @@
+UTC timestamp: 2026-07-23T14:18:39Z
+Working directory: /home/audit/audit/ivxv-audit
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ export\ GOPROXY=https://proxy.golang.org\,direct\ GOSUMDB=sum.golang.org\ GOMODCACHE=/tmp/ivxv-phase3/strict-gomodcache\;\ cd\ /tmp/ivxv-phase3-strict-1784814341/mid\;\ go\ test\ ./...
+Environment: PATH=/home/audit/tools/bin:/home/audit/tools/go/bin:/home/audit/tools/jdk/bin:/home/audit/tools/gradle/gradle-8.11/bin:/home/audit/tools/usr/bin:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=en_US.UTF-8; LC_ALL=C.UTF-8
+Exit status: 1
+--- combined stdout and stderr ---
+# ivxv.ee/common/collector/age
+../common/collector/age/age.go:70:15: undefined: UnlinkedMethodError
+../common/collector/age/age.go:75:15: undefined: LocationError
+../common/collector/age/age.go:90:10: undefined: GetAgeError
+../common/collector/age/age.go:98:9: undefined: TooYoungError
+../common/collector/age/age.go:110:15: undefined: EstPICInvalidFormat
+../common/collector/age/age.go:117:9: undefined: EstPICParseDOBError
+# ivxv.ee/common/collector/yaml
+../common/collector/yaml/lexer.go:48:16: undefined: Canceled
+../common/collector/yaml/ast.go:56:12: undefined: InvalidInt64Error
+../common/collector/yaml/ast.go:62:12: undefined: InvalidUint64Error
+../common/collector/yaml/ast.go:72:12: undefined: InvalidBoolError
+../common/collector/yaml/ast.go:78:13: undefined: InvalidBase64Error
+../common/collector/yaml/ast.go:86:12: undefined: InvalidScalarError
+../common/collector/yaml/ast.go:102:7: undefined: ApplyScalarError
+../common/collector/yaml/ast.go:123:12: undefined: InvalidArrayLengthError
+../common/collector/yaml/ast.go:128:12: undefined: InvalidSliceError
+../common/collector/yaml/ast.go:158:7: undefined: ApplySequenceError
+../common/collector/yaml/ast.go:158:7: too many errors
+# ivxv.ee/common/collector/identity
+../common/collector/identity/identity.go:50:15: undefined: UnlinkedTypeError
+../common/collector/identity/identity.go:58:14: undefined: CNEmptyDNError
+../common/collector/identity/identity.go:64:9: undefined: EmptyCNError
+../common/collector/identity/identity.go:72:14: undefined: SerialEmptyDNError
+../common/collector/identity/identity.go:78:9: undefined: EmptySerialError
+../common/collector/identity/identity.go:90:14: undefined: PNOEEEmptyDNError
+# runtime/cgo
+/home/audit/tools/usr/bin/../lib/gcc/x86_64-linux-gnu/11/cc1: error while loading shared libraries: libisl.so.23: cannot open shared object file: No such file or directory
+# ivxv.ee/common/collector/safereader
+../common/collector/safereader/reader.go:12:9: undefined: LimitExceededError
+../common/collector/safereader/reader.go:20:6: undefined: LimitExceededError
+FAIL	ivxv.ee/mid/internal/sessionstatus/rpc [build failed]
+# ivxv.ee/common/collector/cookie
+../common/collector/cookie/cookie.go:36:15: undefined: KeyError
+../common/collector/cookie/cookie.go:39:15: undefined: CipherError
+../common/collector/cookie/cookie.go:46:15: undefined: InitNonceError
+../common/collector/cookie/cookie.go:80:15: undefined: ShortCookieError
+../common/collector/cookie/cookie.go:88:15: undefined: OpenError
+FAIL	ivxv.ee/mid/service/mid [build failed]
+FAIL

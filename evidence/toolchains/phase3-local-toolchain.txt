@@ -1,0 +1,11 @@
+retrieval_utc=2026-07-23
+installation_root=/home/audit/tools
+temporary_download_root=/tmp/ivxv-tools-download
+make=GNU Make 4.3
+go=go1.23.12 linux/amd64
+java=OpenJDK 21.0.11 LTS
+gradle=Gradle 8.11
+gcc=GCC 11.4.0 Ubuntu package extraction
+dpkg-buildpackage=dpkg-dev 1.21.1ubuntu2.6 package extraction
+fakeroot=fakeroot 1.28-1ubuntu1 plus libfakeroot extraction
+privileged_install=not used; sudo -n unavailable

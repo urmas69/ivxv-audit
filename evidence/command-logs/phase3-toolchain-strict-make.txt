@@ -1,0 +1,51 @@
+UTC timestamp: 2026-07-23T14:17:25Z
+Working directory: /tmp/ivxv-phase3-strict-1784814341
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ make
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=C.UTF-8; LC_ALL=C.UTF-8
+Exit status: 0
+--- combined stdout and stderr ---
+usage: make all           Build all components
+       make test          Run unit tests for all components
+       make install       Install all collector components to $DESTDIR
+       make install-java  Install all application components to $DESTDIR
+       make clean         Clean the repository
+
+       make <component>          Build the component (listed below)
+       make test-<component>     Run unit tests for the component
+       make install-<component>  Install the component to $DESTDIR
+       make clean-<component>    Clean the component
+
+       make external         Checkout common/external to the expected version
+       make update-external  Checkout common/external to the latest version
+       make version          Update version numbers in all known locations to
+                             the last entry in debian/changelog
+
+Components:
+  systemd
+  Documentation
+
+  java  (meta-component which includes all of the following)
+  common/java
+  key
+  processor
+  auditor
+
+  go  (meta-component which includes all of the following)
+  common/collector
+  sessionstatus/api
+  proxy
+  mid
+  smartid
+  choices
+  voting
+  verification
+  storage
+  votesorder
+  webeid
+  sessionstatus
+
+All rules can be suffixed with "-dev" to call them in development mode instead,
+e.g., make all-dev.
+
+Read README.rst in both the repository root and specific component directories
+for more details.

@@ -1,0 +1,88 @@
+UTC timestamp: 2026-07-23T14:17:25Z
+Working directory: /tmp/ivxv-phase3-strict-1784814341
+Command: bash -lc source\ /home/audit/audit/ivxv-audit/scripts/phase3-toolchain-env.sh\;\ make\ go
+Environment: PATH=/home/audit/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/audit/.codex/tmp/arg0/codex-arg0zMXHvu:/home/audit/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; LANG=C.UTF-8; LC_ALL=C.UTF-8
+Exit status: 2
+--- combined stdout and stderr ---
+make -C common/collector gotools
+make[1]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -f ../go/common.mk gotools
+make[2]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -C /tmp/ivxv-phase3-strict-1784814341/common/tools/go all ROOTDIR=/tmp/ivxv-phase3-strict-1784814341/
+make[3]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/tools/go'
+/home/audit/tools/go/bin/go generate ./...
+env GOBIN=/tmp/ivxv-phase3-strict-1784814341/common/tools/go/bin \
+	/home/audit/tools/go/bin/go install ./...
+make[3]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/tools/go'
+make[2]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make[1]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -C common/collector goimports
+make[1]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -f ../go/common.mk goimports
+make[2]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+/tmp/ivxv-phase3-strict-1784814341/scripts/goimports.sh ./...
+go: downloading golang.org/x/crypto v0.27.0
+go: downloading tivi.io/core v0.2.2-0.20241127235149-149435f9e4f4
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+crypto/elgamal/ciphertext.go:7:2: golang.org/x/crypto@v0.27.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/golang.org/x/crypto/@v/v0.27.0.zip: no such file or directory
+crypto/elgamal/ciphertext.go:8:2: golang.org/x/crypto@v0.27.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/golang.org/x/crypto/@v/v0.27.0.zip: no such file or directory
+crypto/elgamal/ciphertext.go:10:2: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+crypto/elgamal/ciphertext.go:11:2: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+crypto/elgamal/ciphertext.go:12:2: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+crypto/elgamal/ciphertext.go:13:2: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+storage/etcd/etcd.go:15:2: go.etcd.io/etcd/api/v3@v3.5.17: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/go.etcd.io/etcd/api/v3/@v/v3.5.17.zip: no such file or directory
+storage/etcd/etcd.go:16:2: go.etcd.io/etcd/client/v3@v3.5.17: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/go.etcd.io/etcd/client/v3/@v/v3.5.17.zip: no such file or directory
+storage/etcd/etcd.go:17:2: go.etcd.io/etcd/client/v3@v3.5.17: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/go.etcd.io/etcd/client/v3/@v/v3.5.17.zip: no such file or directory
+storage/etcd/etcd.go:18:2: google.golang.org/grpc@v1.68.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/google.golang.org/grpc/@v/v1.68.0.zip: no such file or directory
+storage/etcd/etcd.go:19:2: google.golang.org/grpc@v1.68.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/google.golang.org/grpc/@v/v1.68.0.zip: no such file or directory
+storage/etcd/etcd.go:20:2: google.golang.org/grpc@v1.68.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/google.golang.org/grpc/@v/v1.68.0.zip: no such file or directory
+github.com/coreos/go-semver@v0.3.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/github.com/coreos/go-semver/@v/v0.3.0.mod: no such file or directory
+make[2]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make[1]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -C common/collector ONLINE=
+make[1]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make -f ../go/common.mk all
+make[2]: Entering directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+/home/audit/tools/go/bin/go mod tidy
+go: downloading golang.org/x/crypto v0.27.0
+go: downloading tivi.io/core v0.2.2-0.20241127235149-149435f9e4f4
+go: downloading go.etcd.io/etcd/api/v3 v3.5.17
+go: downloading go.etcd.io/etcd/client/v3 v3.5.17
+go: downloading google.golang.org/grpc v1.68.0
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	golang.org/x/crypto/cryptobyte: golang.org/x/crypto@v0.27.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/golang.org/x/crypto/@v/v0.27.0.zip: no such file or directory
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	golang.org/x/crypto/cryptobyte/asn1: golang.org/x/crypto@v0.27.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/golang.org/x/crypto/@v/v0.27.0.zip: no such file or directory
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	tivi.io/core/crypto: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	tivi.io/core/crypto/elgamal: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	tivi.io/core/encoding/asn1: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+go: ivxv.ee/common/collector/crypto/elgamal imports
+	tivi.io/core/math/group: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+go: ivxv.ee/common/collector/storage/etcd imports
+	go.etcd.io/etcd/api/v3/v3rpc/rpctypes: go.etcd.io/etcd/api/v3@v3.5.17: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/go.etcd.io/etcd/api/v3/@v/v3.5.17.zip: no such file or directory
+go: ivxv.ee/common/collector/storage/etcd imports
+	go.etcd.io/etcd/client/v3: go.etcd.io/etcd/client/v3@v3.5.17: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/go.etcd.io/etcd/client/v3/@v/v3.5.17.zip: no such file or directory
+go: ivxv.ee/common/collector/storage/etcd imports
+	go.etcd.io/etcd/client/v3/clientv3util: go.etcd.io/etcd/client/v3@v3.5.17: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/go.etcd.io/etcd/client/v3/@v/v3.5.17.zip: no such file or directory
+go: ivxv.ee/common/collector/storage/etcd imports
+	google.golang.org/grpc/codes: google.golang.org/grpc@v1.68.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/google.golang.org/grpc/@v/v1.68.0.zip: no such file or directory
+go: ivxv.ee/common/collector/storage/etcd imports
+	google.golang.org/grpc/grpclog: google.golang.org/grpc@v1.68.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/google.golang.org/grpc/@v/v1.68.0.zip: no such file or directory
+go: ivxv.ee/common/collector/storage/etcd imports
+	google.golang.org/grpc/status: google.golang.org/grpc@v1.68.0: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/google.golang.org/grpc/@v/v1.68.0.zip: no such file or directory
+go: ivxv.ee/common/collector/crypto/elgamal tested by
+	ivxv.ee/common/collector/crypto/elgamal.test imports
+	tivi.io/core/crypto/x509: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+go: ivxv.ee/common/collector/crypto/elgamal tested by
+	ivxv.ee/common/collector/crypto/elgamal.test imports
+	tivi.io/core/math/group/all: tivi.io/core@v0.2.2-0.20241127235149-149435f9e4f4: reading file:///tmp/ivxv-phase3-strict-1784814341/common/external/go/cache/download/tivi.io/core/@v/v0.2.2-0.20241127235149-149435f9e4f4.zip: no such file or directory
+make[2]: *** [../go/common.mk:54: tidy] Error 1
+make[2]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make[1]: *** [Makefile:18: all] Error 2
+make[1]: Leaving directory '/tmp/ivxv-phase3-strict-1784814341/common/collector'
+make: *** [Makefile:62: common/collector] Error 2

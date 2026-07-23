@@ -1,0 +1,31 @@
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 g++ amd64 4:11.2.0-1ubuntu1 [1412 B]
+Get:2 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 gcc amd64 4:11.2.0-1ubuntu1 [5112 B]
+Get:3 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
+Get:4 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils amd64 2.38-4ubuntu2.12 [3184 B]
+Get:5 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11 amd64 11.4.0-1ubuntu1~22.04.3 [10.0 MB]
+Get:6 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11 amd64 11.4.0-1ubuntu1~22.04.3 [11.4 MB]
+Get:7 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11 amd64 11.4.0-1ubuntu1~22.04.3 [20.1 MB]
+Get:8 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.13 [2101 kB]
+Get:9 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [2517 kB]
+Get:10 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [2101 kB]
+Get:11 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-186.196 [1361 kB]
+Fetched 49.8 MB in 3s (19.3 MB/s)
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 debhelper all 13.6ubuntu1 [923 kB]
+Get:2 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 dpkg-dev all 1.21.1ubuntu2.6 [922 kB]
+Fetched 1845 kB in 0s (5902 kB/s)
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libgmp10 amd64 2:6.2.1+dfsg-3ubuntu1 [250 kB]
+Get:2 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libisl23 amd64 0.24-2build1 [727 kB]
+Get:3 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libmpc3 amd64 1.2.1-2build1 [46.9 kB]
+Fetched 1024 kB in 0s (4094 kB/s)
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdpkg-perl all 1.21.1ubuntu2.6 [237 kB]
+Fetched 237 kB in 0s (1169 kB/s)
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 fakeroot amd64 1.28-1ubuntu1 [60.4 kB]
+Fetched 60.4 kB in 0s (503 kB/s)
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libfakeroot amd64 1.28-1ubuntu1 [31.5 kB]
+Fetched 31.5 kB in 0s (341 kB/s)
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libdebhelper-perl all 13.6ubuntu1 [67.2 kB]
+Fetched 67.2 kB in 0s (616 kB/s)
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 dh-autoreconf all 20 [16.1 kB]
+Get:2 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 dh-exec amd64 0.23.4build2 [25.0 kB]
+Get:3 http://de.archive.ubuntu.com/ubuntu jammy/universe amd64 dh-python all 5.20220403 [106 kB]
+Fetched 147 kB in 0s (844 kB/s)
