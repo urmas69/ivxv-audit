@@ -1,20 +1,19 @@
 # IVXV Phase 4 source-code security and correctness audit
 
-## Executive conclusion
+## Interim conclusion — Phase 4 in progress
 
-The fixed commit was reviewed across collector, voting, processing, anonymization, cryptography, verification, auditor, storage, administration, configuration, logging and parser paths. Three findings are recorded: two confirmed reproducibility/robustness/documentation issues concerning the external etcd dependency and one uncertain PyYAML safety lead. No confirmed ballot-integrity, cryptographic-bypass, or voter-privacy vulnerability was established by this review.
+Preliminary source tracing has begun across collector, voting, processing, anonymization, cryptography, verification, auditor, storage, administration, configuration, logging and parser paths. One confirmed robustness finding and one uncertain PyYAML lead remain; the missing etcd artifact is retained in Phase 2 dependency findings. This report is explicitly not a completion claim.
 
 This report separates fixed-source observations from Phase 3 reconstruction behavior and audit-added inventories. Reconstruction binaries are not evidence of KOV2025 production equivalence. The immutable source checkout remained at the specified commit and clean.
 
 ## Method and coverage
 
-Manual source tracing was combined with deterministic inventories and Phase 3 test logs. Component status is in [review-coverage.tsv](../evidence/source-audit/review-coverage.tsv); entry points, trust boundaries and data flows are linked from [architecture-and-trust-boundaries.md](architecture-and-trust-boundaries.md). Findings are canonicalized in [source-code-findings.csv](../findings/source-code-findings.csv) and JSON.
+Manual source tracing is being combined with deterministic inventories and Phase 3 test logs. Component status is intentionally not-started in [review-coverage.tsv](../evidence/source-audit/review-coverage.tsv) until substantive path and test evidence exists. Findings are canonicalized in [source-code-findings.csv](../findings/source-code-findings.csv) and JSON.
 
 ## Findings
 
 * IVXV-SRC-001 (confirmed, Medium): storage hard-codes `/usr/bin/etcd`.
 * IVXV-SRC-002 (uncertain, Medium): command-file parsing invokes PyYAML `Loader`; reachability depends on signed-container trust.
-* IVXV-SRC-003 (confirmed, Medium): published source does not uniquely provide the external etcd deployment artifact.
 
 Unresolved leads remain separate and are not findings. No production service was contacted and no exploitation code was produced.
 

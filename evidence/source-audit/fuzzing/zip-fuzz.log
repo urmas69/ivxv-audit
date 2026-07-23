@@ -1,0 +1,1 @@
+scripts/source-audit/run_parser_fuzz.sh: line 5: cd: /home/audit/audit/ivx: No such file or directory

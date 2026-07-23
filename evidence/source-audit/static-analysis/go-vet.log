@@ -1,0 +1,4 @@
+go version go1.23.12 linux/amd64
+go: cannot find main module, but found .git/config in /home/audit/audit/ivxv
+	to create a module there, run:
+	go mod init

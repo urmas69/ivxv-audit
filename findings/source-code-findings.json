@@ -1,5 +1,4 @@
 [
   {"id":"IVXV-SRC-001","title":"Storage daemon hard-codes system etcd path","status":"confirmed","category":"robustness","severity":"Medium","confidence":"High","component":"storage","source_paths":"storage/service/storage/main.go:295","evidence":"evidence/source-audit/trust-boundaries.tsv"},
-  {"id":"IVXV-SRC-002","title":"Command-file YAML uses PyYAML Loader","status":"uncertain","category":"security","severity":"Medium","confidence":"Medium","component":"collector-admin","source_paths":"collector-admin/ivxv_admin/command_file.py:408-424","evidence":"evidence/source-audit/unresolved-leads.tsv"},
-  {"id":"IVXV-SRC-003","title":"Published build relies on external etcd executable","status":"confirmed","category":"documentation mismatch","severity":"Medium","confidence":"High","component":"storage","source_paths":"storage/service/storage/main.go:141-295","evidence":"reports/dependency-provenance.md"}
+  {"id":"IVXV-SRC-002","title":"Command-file YAML uses PyYAML Loader","status":"uncertain","category":"security","severity":"Medium","confidence":"Medium","component":"collector-admin","source_paths":"collector-admin/ivxv_admin/command_file.py:408-424","evidence":"evidence/source-audit/unresolved-leads.tsv"}
 ]
