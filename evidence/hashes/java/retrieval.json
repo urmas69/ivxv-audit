@@ -1,0 +1,7 @@
+{
+  "note": "Artifacts were hashed but not stored or executed.",
+  "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+  "repository": "Maven Central canonical host",
+  "retrieval_utc": "2026-07-23T12:30:55.697268+00:00",
+  "tool": "Python urllib"
+}

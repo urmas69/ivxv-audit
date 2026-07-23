@@ -1,0 +1,6 @@
+{
+  "note": "Hashes are registry-published SHA-256 values; this script does not execute artifacts.",
+  "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+  "retrieval_utc": "2026-07-23T12:30:49.034506+00:00",
+  "tool": "Python urllib"
+}
