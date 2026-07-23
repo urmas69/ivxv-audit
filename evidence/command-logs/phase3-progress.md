@@ -18,7 +18,7 @@ Updated: 2026-07-23 UTC
 
 ## Current work
 
-- Final validation, report review, README update, commit, and push.
+- Phase 3 complete.
 
 ## Remaining work
 
@@ -41,5 +41,5 @@ Updated: 2026-07-23 UTC
 
 ## Last successful commit
 
-- `5b17fcf` — Add Phase 3 clean-room build specification. (Update this field
-  after the completion commit.)
+- `c9f35fb` — Complete Phase 3 clean-room build investigation (pushed to
+  `origin/phase-3-clean-room-build`).
