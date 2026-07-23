@@ -1,0 +1,4 @@
+track	module	exit_status	first_failure	log
+phase3-strict-gotest6	choices	0		phase3-strict-gotest6-choices.txt
+phase3-strict-gotest6	sessionstatus	0		phase3-strict-gotest6-sessionstatus.txt
+phase3-strict-gotest6	sessionstatus_api	0		phase3-strict-gotest6-sessionstatus_api.txt

@@ -1,0 +1,15 @@
+track	module	exit_status	first_failure	log
+phase3-recon-gotest	choices	0		phase3-recon-gotest-choices.txt
+phase3-recon-gotest	common_collector	1	--- FAIL: TestOpen (0.12s)	phase3-recon-gotest-common_collector.txt
+phase3-recon-gotest	common_tools_go	0		phase3-recon-gotest-common_tools_go.txt
+phase3-recon-gotest	core	1	crypto/ecdsa/ecdsa.go:21:10: undefined: crypto2.RegisterPrivateKeyASN1Unmarshaller	phase3-recon-gotest-core.txt
+phase3-recon-gotest	mid	0		phase3-recon-gotest-mid.txt
+phase3-recon-gotest	proxy	0		phase3-recon-gotest-proxy.txt
+phase3-recon-gotest	sessionstatus	0		phase3-recon-gotest-sessionstatus.txt
+phase3-recon-gotest	sessionstatus_api	0		phase3-recon-gotest-sessionstatus_api.txt
+phase3-recon-gotest	smartid	0		phase3-recon-gotest-smartid.txt
+phase3-recon-gotest	storage	0		phase3-recon-gotest-storage.txt
+phase3-recon-gotest	verification	0		phase3-recon-gotest-verification.txt
+phase3-recon-gotest	votesorder	0		phase3-recon-gotest-votesorder.txt
+phase3-recon-gotest	voting	0		phase3-recon-gotest-voting.txt
+phase3-recon-gotest	webeid	0		phase3-recon-gotest-webeid.txt

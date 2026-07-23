@@ -1,0 +1,117 @@
+--- PASS: TestCheck (0.00s)
+--- PASS: TestEstPIC (0.00s)
+ok  	ivxv.ee/common/collector/age	0.003s
+--- PASS: TestVerify (0.00s)
+ok  	ivxv.ee/common/collector/auth/dummy	0.004s
+--- PASS: TestNew (0.01s)
+ok  	ivxv.ee/common/collector/conf	0.017s
+--- PASS: TestASiCEMagic (0.00s)
+--- PASS: TestReadManifest (0.00s)
+--- PASS: TestOpen (0.13s)
+--- PASS: TestWriteXML (0.00s)
+--- PASS: TestWriteXMLSignedInfo (0.00s)
+--- PASS: TestToReaderAt (0.00s)
+--- PASS: TestParserToken (0.00s)
+--- PASS: TestParseXML (0.00s)
+ok  	ivxv.ee/common/collector/container/bdoc	0.139s
+--- PASS: TestDummy (0.00s)
+--- PASS: TestTrusted (0.00s)
+ok  	ivxv.ee/common/collector/container/dummy	0.004s
+--- PASS: TestCreate (0.00s)
+--- PASS: TestOpen (0.00s)
+--- PASS: TestIncrementNonce (0.00s)
+ok  	ivxv.ee/common/collector/cookie	0.003s
+--- PASS: TestASN1CiphertextVerify (0.00s)
+--- PASS: TestX509Unmarshaller (0.00s)
+ok  	ivxv.ee/common/collector/crypto/elgamal	0.008s
+--- PASS: TestDigestInfo (0.00s)
+--- PASS: TestPEMDecode (0.00s)
+--- PASS: TestNonce44Bytes (0.00s)
+--- PASS: TestRDNSequenceEqual (0.00s)
+--- PASS: TestEncodeDecodeRDNSequence (0.00s)
+ok  	ivxv.ee/common/collector/cryptoutil	0.006s
+--- PASS: ExampleWalk (0.00s)
+--- PASS: ExampleCausedBy (0.00s)
+ok  	ivxv.ee/common/collector/errors	0.006s
+--- PASS: TestSeverity (0.00s)
+--- PASS: TestDebug (0.00s)
+--- PASS: TestFormat (0.00s)
+ok  	ivxv.ee/common/collector/log	0.004s
+--- PASS: TestCertificate (0.28s)
+--- FAIL: TestSigning (5.34s)
+--- PASS: TestAuthentication (5.53s)
+FAIL
+FAIL	ivxv.ee/common/collector/mid	5.539s
+--- FAIL: TestCheckOCSPOfIDCardWithParsingOCSPURLFromConf (0.15s)
+FAIL	ivxv.ee/common/collector/ocsp	0.152s
+--- PASS: TestRead (0.00s)
+--- PASS: TestReadError (0.00s)
+--- PASS: Example (0.00s)
+ok  	ivxv.ee/common/collector/safereader	0.003s
+--- PASS: TestCheckSize (0.00s)
+--- PASS: TestVerifyOriginValid (0.00s)
+--- PASS: TestVerifyOriginInValid (0.00s)
+ok  	ivxv.ee/common/collector/server	0.003s
+--- FAIL: TestSigning (0.27s)
+--- FAIL: TestAuthentication (0.27s)
+--- FAIL: TestCertificate (0.29s)
+FAIL
+FAIL	ivxv.ee/common/collector/smartid	0.296s
+--- PASS: TestStatusReqBuilder (0.00s)
+--- PASS: TestStatusRespBuilder (0.00s)
+--- PASS: TestVerifyReqBuilder (0.00s)
+--- PASS: TestCastAnyToRPCStatusReq (0.00s)
+ok  	ivxv.ee/common/collector/status/client/rpc	0.004s
+--- PASS: TestCorrectBearer (0.00s)
+--- PASS: TestWithoutTimeStampBearer (0.00s)
+--- PASS: TestWithoutNonceBearer (0.00s)
+--- PASS: TestWithoutSignatureBearer (0.00s)
+--- PASS: TestWithoutPayloadBearer (0.00s)
+--- PASS: TestWithoutRawBearerBearer (0.00s)
+--- PASS: TestEmptyBearerDoesntImplementHeader (0.00s)
+--- PASS: TestEmptyBearerDoesntImplementSignature (0.00s)
+--- PASS: TestEmptyBearerDoesntImplementVerify (0.00s)
+--- PASS: TestRawBearerUnmarshalBadRawBearer (0.00s)
+--- PASS: TestRawBearerBadBase64Signature (0.00s)
+--- PASS: TestRawBearerBadBase64Payload (0.00s)
+--- PASS: TestRawBearerBadSplitRawBearerToken (0.00s)
+--- PASS: TestRawBearerDoesntImplementHeader (0.00s)
+--- PASS: TestRawBearerRegex (0.00s)
+--- PASS: TestSplitRawBearer (0.00s)
+ok  	ivxv.ee/common/collector/token/custom	0.003s
+--- PASS: TestUnmarshalWithoutRawToken (0.00s)
+--- PASS: TestUnmarshalWithBadBase64Signature (0.00s)
+--- PASS: TestVerifyWithBadHashAlgoForOrigin (0.00s)
+--- PASS: TestVerifyWithBadMajorRelease (0.00s)
+--- PASS: TestRawWebeidTokenDoesntImplementHeaderMethod (0.00s)
+--- PASS: TestRawWebeidTokenDoesntImplementPayload (0.00s)
+--- PASS: TestCertifyReturnsUserCert (0.00s)
+--- PASS: TestRawWebeidTokenImplementsSignature (0.00s)
+--- PASS: TestFormatRegex (0.00s)
+--- PASS: TestFormatMajorRelease (0.00s)
+--- PASS: TestAlgorithmRegex (0.00s)
+--- PASS: TestHashIt (0.00s)
+--- PASS: TestHashAlgorithm (0.00s)
+--- PASS: TestCorrectWebeidToken (0.00s)
+--- PASS: TestBadUnverifiedCertificateWebeidToken (0.00s)
+--- PASS: TestBadAlgorithmWebeidToken (0.00s)
+--- PASS: TestBadSignatureWebeidToken (0.00s)
+--- PASS: TestBadFormatWebeidToken (0.00s)
+ok  	ivxv.ee/common/collector/token/webeid	0.013s
+--- FAIL: TestCreate (0.11s)
+--- PASS: TestCheck (0.00s)
+FAIL
+FAIL	ivxv.ee/common/collector/tsp	0.114s
+--- PASS: TestScalar_Apply (0.00s)
+--- PASS: TestSequence_Apply (0.00s)
+--- PASS: TestMapping_Apply (0.00s)
+--- PASS: TestLex (0.00s)
+--- PASS: TestParse (0.00s)
+--- PASS: TestUnmarshal (0.00s)
+ok  	ivxv.ee/common/collector/yaml	0.006s
+--- PASS: TestEndOfCentralDirectory (0.01s)
+--- PASS: TestEndOfCentralDirectoryRegression (0.00s)
+--- PASS: TestClassicalZipBombEndOfCentralDirectoryRegression (0.00s)
+--- PASS: TestBetterZipBombEndOfCentralDirectoryRegression (0.00s)
+ok  	ivxv.ee/common/collector/zip	0.013s
+FAIL
