@@ -1,0 +1,5 @@
+boundary	owner	input	assumption	evidence
+TB1	collector	identity provider and signed container	upstream authentication and PKI trusted	common/collector; webeid; smartid
+TB2	storage	service API	etcd endpoint and filesystem protected	storage/service/storage/main.go:295
+TB3	processor	ballot box and revocation lists	offline inputs authentic and complete	processor/src/main/java/ee/ivxv/processor/tool
+TB4	auditor	proofs/manifests	externally supplied files authentic	auditor/src/main/java/ee/ivxv/audit/tools

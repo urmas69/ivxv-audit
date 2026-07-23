@@ -1,0 +1,3 @@
+# Architecture and trust boundaries
+
+Fixed source: `2785872f84dffb56bbecc41b096a7ee0f2876e64`. The online path is voter identity provider → `common/collector` → `storage`; offline processing is `processor` check/squash/revoke/anonymize → `auditor` decrypt/proof/tally. Go services expose configured service protocols; Java tools consume signed containers and ballot-box files. The storage daemon starts an external etcd process at `storage/service/storage/main.go:295`. Trust assumptions and data flows are enumerated in [trust-boundaries.tsv](../evidence/source-audit/trust-boundaries.tsv) and [data-flow-inventory.tsv](../evidence/source-audit/data-flow-inventory.tsv). This is a source map, not proof of deployed topology.

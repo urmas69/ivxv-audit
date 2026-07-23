@@ -1,0 +1,5 @@
+property	invariant	source	test_or_evidence	status
+ballot conservation	accepted = retained + superseded + rejected	processor/src/main/java/ee/ivxv/processor	no dedicated audit test	untested
+identity separation	anonymous output omits voter identifier and linkage	processor/.../BallotBox.java; RevokeAndAnonymizeTool.java	static trace	needs targeted fixture
+revote ordering	latest qualified ballot selected per voter	processor/.../BallotBox.java	unit tests present	reviewed
+revocation idempotence	repeated revoke/restore does not alter unrelated voter	processor/.../RevokeTool.java	no dedicated test	untested

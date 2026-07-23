@@ -1,0 +1,5 @@
+flow_id	from	to	data	security_property	source
+F1	voter authentication	collector	signed ballot/container	authenticity and eligibility	common/collector; webeid; smartid
+F2	collector	storage	identified ballot	durability and acknowledgement	common/collector; storage
+F3	processor	anonymizer	accepted ballots and revocation lists	latest vote and paper cancellation	processor/src/main/java/ee/ivxv/processor/tool
+F4	anonymizer	auditor/decrypt	anonymous ballot box	identity separation and proof verification	processor; auditor

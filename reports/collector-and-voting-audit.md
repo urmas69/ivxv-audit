@@ -1,0 +1,3 @@
+# Collector and voting audit
+
+Source review covered `common/collector`, `webeid`, `smartid`, `voting`, `mid`, `proxy`, and `storage`. Authentication is delegated to configured identity services; collector code validates signed containers and persists identified ballots. Revoting and qualification are completed offline by processor tools, so the online acknowledgement is not itself proof that a ballot will be tallied. Retry/concurrency semantics depend on storage service behavior and deployment. No production endpoint was contacted. Detailed entry points are in the source-audit inventory. A complete end-to-end fixture was unavailable; conclusions are therefore source-grounded and reconstruction results are not attributed to production.

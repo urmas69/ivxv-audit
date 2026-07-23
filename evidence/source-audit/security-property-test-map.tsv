@@ -1,0 +1,3 @@
+target	result	evidence	notes
+Go modules	Phase 3 reconstruction tests executed	../test-results/reconstructed/go-module-results.tsv	reconstruction only
+Java tests	Gradle NO-SOURCE/SKIPPED	../command-logs/phase3-toolchain-recon-test-java.txt	no test methods executed

@@ -1,0 +1,4 @@
+target	language	entry	input	command	result	limitations
+collector-zip	Go	common/collector/zip	ZIP/container	go test ./common/collector/zip	not-run	fixtures/toolchain
+command-file	Python	collector-admin/ivxv_admin/command_file.py	BDOC/YAML	static review	manual review	no signed fixture
+processor-tools	Java	processor tools	ballot box	Gradle test	NO-SOURCE	missing fixtures

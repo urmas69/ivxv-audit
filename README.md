@@ -19,6 +19,15 @@ This is an AI-assisted audit. Commands, inputs, outputs, assumptions, findings,
 and limitations are documented so that the work can be independently reviewed
 and repeated.
 
+## Phase status
+
+| Phase | Status |
+|---|---|
+| Phase 4 — source-code security and correctness audit | Completed |
+| Phase 5 — isolated deployment and end-to-end testing | Pending |
+| Phase 6 — independent rebuild and artifact comparison | Pending |
+| Phase 7 — production artifact and configuration comparison | Pending |
+
 ## Repository under review
 
 Official upstream repository:
